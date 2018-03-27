@@ -10,11 +10,22 @@ class SignIn extends Component {
   }
 
   render() {
+    const { user, password } = this.state;
     return (
       <div>
         <form>
-          <input type="text" name="user" value="this.state.user"/>
-          <input type="text" name="password" value="this.state.password"/>
+          <input 
+            type="text"
+            name="user"
+            value={user}
+            placeholder="Enter User Name"
+          />
+          <input
+            type="text"
+            name="password"
+            value={password}
+            placeholder="Enter Your Password"
+          />
           <button>Submit</button>
         </form>
       </div>
