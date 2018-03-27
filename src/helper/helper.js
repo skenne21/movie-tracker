@@ -20,7 +20,7 @@ const createMovies = (movies) => {
       id: movie.id,
       title: movie.title,
       date: movie.release_date,
-      votes: movie.vote_average,
+      rating: movie.vote_average,
       summary: movie.overview,
       image: posterImage
     };
