@@ -6,8 +6,19 @@ import { Switch, Route } from 'react-router-dom';
 
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      movies:[]
+    }
+  }
+
+  fetchMovies = async () => {
+    const movies = await movieData.fetchRecentMovies();
+    this.setState({movies})
+  }
   componentDidMount() {
-    movieData.fetchRecentMovies();
+    this.fetchMovies();
   }
 
   render() {
