@@ -12,8 +12,6 @@ export class App extends Component {
     this.props.fetchMovies(movies)
   }
 
-  console.log()
-
   componentDidMount() {
     this.fetchMovies();
   }
