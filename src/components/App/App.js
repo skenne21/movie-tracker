@@ -9,7 +9,7 @@ export class App extends Component {
   
   fetchMovies = async () => {
     const movies = await movieData.fetchRecentMovies();
-    // this.props.fetchMovies(movies)
+    this.props.fetchMovies(movies)
   }
 
   componentDidMount() {
