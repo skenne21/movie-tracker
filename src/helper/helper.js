@@ -1,5 +1,3 @@
-// working
-
 import { apiKey }  from '../apiKey.js';
 const apiCall = `?api_key=${apiKey}`
 const apiroot = `https://api.themoviedb.org/3/movie/`
@@ -10,6 +8,7 @@ export const fetchRecentMovies = async () => {
   const response = await fetch(`${apiroot}now_playing${apiCall}&${language}&${page}`)
   const apiData = await response.json();
   const movies = await createMovies(apiData.results);
+  console.log(apiData.results);
   return movies;
  }
 
