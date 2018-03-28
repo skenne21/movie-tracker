@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Movie = ({movie}) => {
-  const { 
+  const {
     title,
     id,
     rating,
@@ -15,7 +15,7 @@ const Movie = ({movie}) => {
       <img src={image} alt='movie poster'/>
       <p className='rating'>{rating}</p>
       <p className='date'>{date}</p>
-      <p className='summary'>Summary:{summary}</p>
+      <p className='summary'>Summary: {summary}</p>
     </article>
   )
 }
