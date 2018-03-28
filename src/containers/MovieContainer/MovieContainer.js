@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Movie from '../../components/Movie/Movie';
-import * as movieData from '../../helper/helper';
+import * as movieData from '../../helper/apiCall';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
