@@ -2,9 +2,9 @@ import { cleanMovies } from './cleanMovies';
 import { rawData, cleanData } from '../mocks/mockMovieData';
 
 describe('cleanMovies method', () => {
-  it('Should have been called with the apiData', () => {
-    const expected = rawData;
-    cleanMovies(rawData.results)
-    expect(cleanMovies).toHaveBeenCalledWith(expected)
-  })
-})
+  it('Should return a cleanMovie object', () => {
+    const expected = cleanData;
+    const movies = cleanMovies(rawData.results);
+    expect(movies).toEqual(expected);
+  });
+});

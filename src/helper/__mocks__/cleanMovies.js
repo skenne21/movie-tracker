@@ -1,3 +1,3 @@
-import { mockClean } from '../../mocks/mockMovieData'
+import { cleanData } from '../../mocks/mockMovieData'
 
-export const cleanMovies = jest.fn().mockImplementation(() => mockClean)
+export const cleanMovies = jest.fn().mockImplementation(() => cleanData)

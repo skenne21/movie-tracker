@@ -1,7 +1,9 @@
-import { fetchRecentMovies, createMovies } from './apiCall';
+import { fetchRecentMovies } from './apiCall';
 import { apiKey } from '../apiKey.js';
 import * as mockData from '../mocks/mockMovieData';
+import { cleanMovies} from './cleanMovies'
 
+jest.mock('./cleanMovies');
 
 describe('Helper', () => {
 
@@ -22,9 +24,15 @@ describe('Helper', () => {
     });
 
     it('Should return a clean array with movie objects', async () => {
-      const expected = mockData.cleanData
+      const expected = mockData.cleanData;
       const movies = await fetchRecentMovies();
-      expect(movies).toEqual(expected)
+      expect(movies).toEqual(expected);
+    })
+
+    it('Should have called cleanMovies  with the correct params', () => {
+      fetchRecentMovies()
+      const expected = mockData.rawData.results
+      expect(cleanMovies).toHaveBeenCalledWith(expected)
     })
 
   });

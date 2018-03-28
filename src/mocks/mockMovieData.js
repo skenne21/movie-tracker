@@ -26,25 +26,6 @@ export const rawData = {
   ]
 }
 
-export const semiCleanData = [
-  {
-    id:337167,
-    summary: "Believing they have left behind...",
-    image:undefined,
-    date:"2018-02-07",
-    title:"Fifty Shades Freed",
-    rating:6.1
-  },{
-    id:284054,
-    summary:"King T'Challa returns home....",
-    image:undefined,
-    date:"2018-02-13",
-    title:"Black Panther",
-    rating:7.4
-  }
-]
-
-
 export const cleanData = [
   {
     id:337167,
