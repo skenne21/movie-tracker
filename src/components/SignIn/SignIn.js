@@ -18,10 +18,11 @@ class SignIn extends Component {
   async componentDidMount() {
     const signIn = await fetch('/api/users/', {
       method: 'POST',
-      body: JSON.stringify({name: 'Taylor', email: 'tman2272@aol.com', password: 'password'}),
+      body: JSON.stringify({email: 'tman2272@aol.com', password: 'password'}),
       headers: {'Content-Type': 'application/json'},
     });
-    console.log(signIn);
+    const json = await signIn.json()
+    console.table(json)
   }
   handleSubmit = async (event) => {
     // event.preventDefault();
