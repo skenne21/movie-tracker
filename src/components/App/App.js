@@ -3,6 +3,7 @@ import './App.css';
 import SignIn from '../../containers/signinContainer/signinContainer';
 import { Switch, Route } from 'react-router-dom';
 import MovieWrapper from '../../containers/movieContainer/movieContainer';
+import CreateAccount from '../CreateAccount/CreateAccount';
 import * as movieData from '../../helper/apiCall';
 import PropTypes from 'prop-types';
 
@@ -28,6 +29,9 @@ export class App extends Component {
           <Route
             path="/login"
             render={({history}) => <SignIn history={history}/>} />
+          <Route
+            path="/account"
+            render={({history}) => <CreateAccount history={history}/>} />
         </Switch>
       </div>
     );
