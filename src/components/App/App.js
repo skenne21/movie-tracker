@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import SignIn from '../../containers/signinContainer/signinContainer';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import MovieWrapper from '../../containers/movieContainer/movieContainer';
 import * as movieData from '../../helper/apiCall';
 import PropTypes from 'prop-types';
@@ -38,4 +38,4 @@ App.propTypes = {
   fetchMovies: PropTypes.func
 };
 
-export default withRouter(App);
+export default App;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink, withRouter} from 'react-router-dom';
 import {signIn} from '../../helper/apiCall';
 
 class SignIn extends Component {
@@ -8,7 +7,7 @@ class SignIn extends Component {
     this.state = {
       email: '',
       password: '',
-      errorMessage: '',
+      errorMessage: ''
     };
   }
 
@@ -21,7 +20,7 @@ class SignIn extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.user.length ? this.handleSignOut() : this.handleSignIn(event)
+    this.props.user.length ? this.handleSignOut() : this.handleSignIn(event);
   }
 
   handleSignIn = async (event) => {
@@ -31,7 +30,7 @@ class SignIn extends Component {
     user.status ?
       this.handleUser(user.data)
       :
-      this.handleError(user.error)
+      this.handleError(user.error);
 
     this.setState({
       email: '',
@@ -40,9 +39,9 @@ class SignIn extends Component {
   }
 
   handleUser = (user) => {
-    this.props.handleUser(user)
-    this.props.history.push('/')
-    console.log(this.props.history)
+    this.props.handleUser(user);
+    this.props.history.push('/');
+    console.log(this.props.history);
   }
 
   handleSignOut = () => {
@@ -51,7 +50,7 @@ class SignIn extends Component {
 
   handleError = (error) => {
     this.setState({errorMessage: error.message});
-    alert('Email and Password do not match!')
+    alert('Email and Password do not match!');
   }
 
   createAccount = async () => {
@@ -77,7 +76,7 @@ class SignIn extends Component {
             placeholder="Enter Your Password"
             onChange={this.handleChange}
           />
-        <button>{this.props.user.length ? "Sign Out": "Sign In"}</button><br/>
+          <button>{this.props.user.length ? "Sign Out": "Sign In"}</button><br/>
           <p>tman2272@aol.com password</p>
         </form>
       </div>
@@ -85,4 +84,4 @@ class SignIn extends Component {
   }
 }
 
-export default withRouter(SignIn);
+export default SignIn;
