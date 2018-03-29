@@ -4,12 +4,13 @@ import SignIn from '../SignIn/SignIn';
 import { Switch, Route } from 'react-router-dom';
 import MovieWrapper from '../../containers/movieContainer/movieContainer';
 import * as movieData from '../../helper/apiCall';
+import PropTypes from 'prop-types';
 
 export class App extends Component {
 
   fetchMovies = async () => {
     const movies = await movieData.fetchRecentMovies();
-    this.props.fetchMovies(movies)
+    this.props.fetchMovies(movies);
   }
 
   componentDidMount() {
@@ -28,5 +29,9 @@ export class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  fetchMovies: PropTypes.func
+};
 
 export default App;
