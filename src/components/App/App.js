@@ -21,7 +21,7 @@ export class App extends Component {
       <div className="App">
         <header>MovieTracker</header>
         <Switch>
-          <Route exact  path="/" component={MovieWrapper}/>
+          <Route exact path="/" component={MovieWrapper}/>
           <Route path="/login" component={SignIn} />
         </Switch>
       </div>
