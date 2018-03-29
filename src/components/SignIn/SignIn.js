@@ -5,26 +5,57 @@ class SignIn extends Component {
     super(props)
     this.state = {
       user: '',
-      password: ''
+      password: '',
+      fetchedUser: ''
     }
   }
+  handleChange = (event) => {
+    const {name, value} = event.target;
+    this.setState({
+      [name]: value
+    })
+  }
+  async componentDidMount() {
+    const signIn = await fetch('/api/users/', {
+      method: 'POST',
+      body: JSON.stringify({name: 'Taylor', email: 'tman2272@aol.com', password: 'password'}),
+      headers: {'Content-Type': 'application/json'},
+    });
+    console.log(signIn);
+  }
+  handleSubmit = async (event) => {
+    // event.preventDefault();
+
+    // const signIn = await fetch('api/users', {
+    //   method: 'post',
+    //   body: JSON.stringify({email: 'tim@aol.com', password: 'password'}),
+    //   headers: {'Content-Type': 'application/json'},
+    // });
+    // const response = signIn.json();
+    // console.log(signIn);
+    //
+    // this.setState({fetchedUser: response})
+  }
+
 
   render() {
     const { user, password } = this.state;
     return (
       <div>
-        <form>
-          <input 
+        <form onSubmit={this.handleSubmit}>
+          <input
             type="text"
             name="user"
             value={user}
             placeholder="Enter User Name"
+            onChange={this.handleChange}
           />
           <input
             type="text"
             name="password"
             value={password}
             placeholder="Enter Your Password"
+            onChange={this.handleChange}
           />
           <button>Submit</button>
         </form>
