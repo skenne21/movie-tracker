@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {signIn} from '../../helper/apiCall';
 
 class SignIn extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class SignIn extends Component {
       email: '',
       password: '',
       errorMessage: '',
-      fetchedUser: ''
+      fetchedUser: {}
     };
   }
   handleChange = (event) => {
@@ -22,23 +23,10 @@ class SignIn extends Component {
     event.preventDefault();
     const email = this.state.email.toLowerCase();
     const password = this.state.password;
-    
-    this.signIn(event, email, password);
-  }
-
-  signIn = async (event, email, password) => {
-    try {
-      const signIn = await fetch('/api/users', {
-        method: 'POST',
-        body: JSON.stringify({email, password}),
-        headers: {'Content-Type': 'application/json'}
-      });
-      const json = await signIn.json();
-      console.table(json);
-    } catch (error) {
-      alert('Email or Password is Incorrect. Please try again.');
-      this.setState({errorMessage: error.message});
-    }
+    const user = await signIn(event, email, password);
+    user.status ? this.setState({fetchedUser: user.data}) : 
+      this.setState({errorMessage: user.error.message});
+    console.log(user);
   }
 
   createAccount = async () => {
