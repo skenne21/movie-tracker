@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import SignIn from '../../containers/signinContainer/signinContainer';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import MovieWrapper from '../../containers/movieContainer/movieContainer';
 import * as movieData from '../../helper/apiCall';
 import PropTypes from 'prop-types';
@@ -21,9 +21,13 @@ export class App extends Component {
     return (
       <div className="App">
         <header>MovieTracker</header>
-        <Switch>
-          <Route exact path="/" component={MovieWrapper}/>
-          <Route path="/login" component={SignIn} />
+        <Switch>)
+          <Route
+            exact path="/"
+            render= {({history}) => <MovieWrapper history={history}/>}/>
+          <Route
+            path="/login"
+            render={({history}) => <SignIn history={history}/>} />
         </Switch>
       </div>
     );
@@ -34,4 +38,4 @@ App.propTypes = {
   fetchMovies: PropTypes.func
 };
 
-export default App;
+export default withRouter(App);
