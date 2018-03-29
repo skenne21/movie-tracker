@@ -7,6 +7,7 @@ class SignIn extends Component {
       name: '',
       email: '',
       password: '',
+      errorMessage: '',
       fetchedUser: ''
     };
   }
@@ -19,18 +20,30 @@ class SignIn extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    // const email = this.state.email;
-    // const password = this.state.password;
-
-    const signIn = await fetch('/api/users', {
-      method: 'POST',
-      body: JSON.stringify({email: 'tman2272@aol.com', password: 'password'}),
-      headers: {'Content-Type': 'application/json'}
-    });
-    const json = await signIn.json();
-    console.table(json);
+    const email = this.state.email.toLowerCase();
+    const password = this.state.password;
+    
+    this.signIn(event, email, password);
   }
 
+  signIn = async (event, email, password) => {
+    try {
+      const signIn = await fetch('/api/users', {
+        method: 'POST',
+        body: JSON.stringify({email, password}),
+        headers: {'Content-Type': 'application/json'}
+      });
+      const json = await signIn.json();
+      console.table(json);
+    } catch (error) {
+      alert('Email or Password is Incorrect. Please try again.');
+      this.setState({errorMessage: error.message});
+    }
+  }
+
+  createAccount = async () => {
+
+  }
 
   render() {
     const { email, password } = this.state;
