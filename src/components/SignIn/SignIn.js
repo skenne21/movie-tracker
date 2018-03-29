@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink, withRouter} from 'react-router-dom';
 import {signIn} from '../../helper/apiCall';
 
 class SignIn extends Component {
@@ -28,7 +29,7 @@ class SignIn extends Component {
     const password = this.state.password;
     const user = await signIn(event, email, password);
     user.status ?
-      this.props.handleUser(user.data)
+      this.handleUser(user.data)
       :
       this.handleError(user.error)
 
@@ -36,6 +37,12 @@ class SignIn extends Component {
       email: '',
       password: ''
     });
+  }
+
+  handleUser = (user) => {
+    this.props.handleUser(user)
+    this.props.history.push('/')
+    console.log(this.props.history)
   }
 
   handleSignOut = () => {
@@ -78,4 +85,4 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+export default withRouter(SignIn);
