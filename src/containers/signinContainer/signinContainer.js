@@ -9,7 +9,8 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  handleUser: (user) => dispatch(actions.addUser(user))
+  handleUser: (user) => dispatch(actions.addUser(user)),
+  removeUser: () => dispatch(actions.removeUser())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

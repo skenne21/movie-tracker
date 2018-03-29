@@ -5,11 +5,9 @@ class SignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
       email: '',
       password: '',
       errorMessage: '',
-      fetchedUser: {}
     };
   }
 
@@ -20,17 +18,28 @@ class SignIn extends Component {
     });
   }
 
-  handleSubmit = async (event) => {
+  handleSubmit = (event) => {
     event.preventDefault();
+    this.props.user.length ? this.handleSignOut() : this.handleSignIn(event)
+  }
+
+  handleSignIn = async (event) => {
     const email = this.state.email.toLowerCase();
     const password = this.state.password;
     const user = await signIn(event, email, password);
-    user.status ? 
-      this.props.handleUser(user.data) 
-      : 
+    user.status ?
+      this.props.handleUser(user.data)
+      :
       this.handleError(user.error)
-  
-    console.log(user);
+
+    this.setState({
+      email: '',
+      password: ''
+    });
+  }
+
+  handleSignOut = () => {
+    this.props.removeUser();
   }
 
   handleError = (error) => {
@@ -61,7 +70,7 @@ class SignIn extends Component {
             placeholder="Enter Your Password"
             onChange={this.handleChange}
           />
-          <button>Submit</button><br/>
+        <button>{this.props.user.length ? "Sign Out": "Sign In"}</button><br/>
           <p>tman2272@aol.com password</p>
         </form>
       </div>
