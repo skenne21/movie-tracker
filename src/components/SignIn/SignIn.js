@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import {signIn} from '../../helper/apiCall';
+import { NavLink } from 'react-router-dom';
+import { signIn } from '../../helper/apiCall';
+
 
 class SignIn extends Component {
   constructor(props) {
@@ -63,10 +65,10 @@ class SignIn extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <input
-            type="text"
+            type="email"
             name="email"
             value={email}
-            placeholder="Enter User Name"
+            placeholder="Enter Email"
             onChange={this.handleChange}
           />
           <input
@@ -76,9 +78,10 @@ class SignIn extends Component {
             placeholder="Enter Your Password"
             onChange={this.handleChange}
           />
-          <button>{this.props.user.length ? "Sign Out": "Sign In"}</button><br/>
+        <button type="Submit">{this.props.user.length ? "Sign Out": "Sign In"}</button><br/>
           <p>tman2272@aol.com password</p>
         </form>
+        <NavLink to="/account">Create an Account</NavLink>
       </div>
     );
   }

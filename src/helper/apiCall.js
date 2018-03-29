@@ -20,10 +20,27 @@ export const signIn = async (event, email, password) => {
       headers: {'Content-Type': 'application/json'}
     });
     const user = await signIn.json();
-    console.table(user);
     return user;
   } catch (error) {
     return ({error});
   }
 };
 
+export const postCreateUser = async (userInfo) => {
+  const lowerCased = userInfo.email.toLowerCase();
+  userInfo.email = lowerCased
+
+  try {
+    const createUser = await fetch('/api/users/new', {
+      method: 'POST',
+      body: JSON.stringify(userInfo),
+      headers: {'Content-Type': 'application/json'}
+    })
+    const user = await createUser.json();
+
+    return user;
+
+  } catch (error){
+    return ({error})
+  }
+}
