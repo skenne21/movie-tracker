@@ -12,6 +12,7 @@ class SignIn extends Component {
       fetchedUser: {}
     };
   }
+
   handleChange = (event) => {
     const {name, value} = event.target;
     this.setState({
@@ -24,9 +25,17 @@ class SignIn extends Component {
     const email = this.state.email.toLowerCase();
     const password = this.state.password;
     const user = await signIn(event, email, password);
-    user.status ? this.setState({fetchedUser: user.data}) : 
-      this.setState({errorMessage: user.error.message});
+    user.status ? 
+      this.props.handleUser(user.data) 
+      : 
+      this.handleError(user.error)
+  
     console.log(user);
+  }
+
+  handleError = (error) => {
+    this.setState({errorMessage: error.message});
+    alert('Email and Password do not match!')
   }
 
   createAccount = async () => {
