@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { signIn } from '../../helper/apiCall';
+import PropTypes from 'prop-types';
 
 
 class SignIn extends Component {
@@ -43,7 +44,6 @@ class SignIn extends Component {
   handleUser = (user) => {
     this.props.handleUser(user);
     this.props.history.push('/');
-    console.log(this.props.history);
   }
 
   handleSignOut = () => {
@@ -78,7 +78,9 @@ class SignIn extends Component {
             placeholder="Enter Your Password"
             onChange={this.handleChange}
           />
-        <button type="Submit">{this.props.user.length ? "Sign Out": "Sign In"}</button><br/>
+          <button type="Submit">{this.props.user.length ?
+            "Sign Out":
+            "Sign In"}</button><br/>
           <p>tman2272@aol.com password</p>
         </form>
         <NavLink to="/account">Create an Account</NavLink>
@@ -86,5 +88,12 @@ class SignIn extends Component {
     );
   }
 }
+
+SignIn.propTypes = {
+  user: PropTypes.object,
+  handleUser: PropTypes.func,
+  history: PropTypes.object,
+  removeUser: PropTypes.func
+};
 
 export default SignIn;
