@@ -1,0 +1,33 @@
+.movie {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  height: 100%;
+  background-color: purple;
+  border: 3px solid gray;
+  border-radius: 30px;
+  margin: 5px;
+}
+
+.movie p {
+  width: 80%;
+  margin: 4px auto;
+}
+
+#image {
+  width: 80%;
+}
+
+.favorites {
+  background-color: purple;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  font-size: 3em;
+  border-radius: 50%;
+  border: none;
+  color: #FFA500;
+}

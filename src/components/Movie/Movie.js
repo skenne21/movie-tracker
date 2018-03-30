@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { postFavorites } from '../../helper/apiCall';
+import './Movie.css';
 
 const Movie = ({movie, user, addFavorites}) => {
   const {
@@ -26,12 +27,14 @@ const Movie = ({movie, user, addFavorites}) => {
 
   return (
     <article className='movie'>
+      <button className='favorites'onClick={handleClick}>❤︎</button>
       <h1 className='title'>{title}</h1>
-      <img src={image} alt='movie poster'/>
+
+      <img id='image' src={image} alt='movie poster'/>
       <p className='rating'>{rating}</p>
       <p className='date'>{date}</p>
       <p className='summary'>Summary: {summary}</p>
-      <button onClick={handleClick}>❤︎</button>
+      
     </article>
   );
 };

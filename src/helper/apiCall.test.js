@@ -4,8 +4,8 @@ import * as mockData from '../mocks/mockMovieData';
 import { cleanMovies} from './cleanMovies';
 
 jest.mock('./cleanMovies');
-
-describe('Helper', () => {
+ 
+ describe('Helper', () => {
 
   describe('Fetch recent movies', () => {
     let response, url;
