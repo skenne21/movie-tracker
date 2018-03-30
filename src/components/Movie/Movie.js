@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Movie = ({movie, user}) => {
+const Movie = ({movie, user, addFavorites}) => {
   const {
     title,
     // eslint-disable-next-line
@@ -15,7 +15,7 @@ const Movie = ({movie, user}) => {
       !user.length ? 
         alert('Please LogIn or Create An Account!')
         :
-        ''
+        addFavorites(movie, user.id)
     }
 
   return (
