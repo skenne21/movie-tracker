@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { postFavorites } from '../../helper/apiCall';
 
 const Movie = ({movie, user, addFavorites}) => {
   const {
@@ -15,7 +16,12 @@ const Movie = ({movie, user, addFavorites}) => {
       !user.length ? 
         alert('Please LogIn or Create An Account!')
         :
-        addFavorites(movie, user.id)
+        createFavorites()
+    }
+
+    const createFavorites = () => {
+      const raw = postFavorites(movie, user[0].id)
+      // addFavorites(movie, user.id)
     }
 
   return (
