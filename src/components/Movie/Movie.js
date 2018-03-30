@@ -20,8 +20,9 @@ const Movie = ({movie, user, addFavorites}) => {
       createFavorites();
   };
 
-  const createFavorites = () => {
-    const raw = postFavorites(movie, user[0].id);
+  const createFavorites = async () => {
+    const favoritesId = await postFavorites(movie, user[0].id);
+    console.log(favoritesId)
     // addFavorites(movie, user.id)
   };
 
@@ -29,7 +30,6 @@ const Movie = ({movie, user, addFavorites}) => {
     <article className='movie'>
       <button className='favorites'onClick={handleClick}>❤︎</button>
       <h1 className='title'>{title}</h1>
-
       <img id='image' src={image} alt='movie poster'/>
       <p className='rating'>{rating}</p>
       <p className='date'>{date}</p>
@@ -41,7 +41,7 @@ const Movie = ({movie, user, addFavorites}) => {
 
 Movie.propTypes = {
   movie: PropTypes.object,
-  user: PropTypes.object
+  user: PropTypes.array
 };
 
 export default Movie;

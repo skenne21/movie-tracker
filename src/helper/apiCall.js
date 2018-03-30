@@ -30,7 +30,6 @@ export const signIn = async (event, email, password) => {
 export const postCreateUser = async (userInfo) => {
   const lowerCased = userInfo.email.toLowerCase();
   userInfo.email = lowerCased;
-
   try {
     const createUser = await fetch('/api/users/new', {
       method: 'POST',
@@ -38,20 +37,27 @@ export const postCreateUser = async (userInfo) => {
       headers: {'Content-Type': 'application/json'}
     });
     const user = await createUser.json();
-
     return user;
-
   } catch (error){
     return ({error});
   }
 };
 
 export const postFavorites = async (movie, userId) => {
-  const info = Object.assign({}, movie, {user:userId});
-  const response = await fetch('/users/favorites/new', {
+  const info = {
+    movie_id: movie.id,
+    user_id: userId,
+    title: movie.title,
+    poster_path: movie.image,
+    release_date: movie.date,
+    vote_average: movie.rating,
+    overview: movie.summary
+  }
+  const response = await fetch('/api/users/favorites/new', {
     method: 'POST',
     body: JSON.stringify(info),
     headers: {'Content-Type': 'application/json'}
   });
-  console.log(info);
+  const favoritesId = response.json();
+  return favoritesId;
 };
