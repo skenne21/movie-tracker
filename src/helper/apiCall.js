@@ -52,12 +52,26 @@ export const postFavorites = async (movie, userId) => {
     release_date: movie.date,
     vote_average: movie.rating,
     overview: movie.summary
-  }
-  const response = await fetch('/api/users/favorites/new', {
-    method: 'POST',
-    body: JSON.stringify(info),
-    headers: {'Content-Type': 'application/json'}
-  });
-  const favoritesId = response.json();
-  return favoritesId;
+  };
+  try {
+    const response = await fetch('/api/users/favorites/new', {
+      method: 'POST',
+      body: JSON.stringify(info),
+      headers: {'Content-Type': 'application/json'}
+    });
+    const favoritesId = response.json();
+    return favoritesId;
+  } catch (error) {
+    return error;
+  };
 };
+
+export const getFavorites = async (userId) => {
+  try {
+    const response = await fetch(`/api/users/${userId}/favorites`);
+    const info = await response.json();
+    return info.data;
+  } catch (error) {
+    return error
+  }  
+}

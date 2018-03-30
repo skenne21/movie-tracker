@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { postFavorites } from '../../helper/apiCall';
+import { postFavorites, getFavorites } from '../../helper/apiCall';
 import './Movie.css';
 
 const Movie = ({movie, user, addFavorites}) => {
@@ -21,9 +21,15 @@ const Movie = ({movie, user, addFavorites}) => {
   };
 
   const createFavorites = async () => {
-    const favoritesId = await postFavorites(movie, user[0].id);
-    console.log(favoritesId)
-    // addFavorites(movie, user.id)
+    const userFavorites = await getFavorites(user[0].id)
+    console.log({userFavorites})
+    if (!userFavorites.error) {
+      const  favorites = userFavorites.includes(movie)
+      console.log({favorites})
+      console.log({id})
+      favorites ? alert('You already love this movie!') : await postFavorites(movie, user[0].id)  
+    }
+    return
   };
 
   return (
@@ -34,7 +40,6 @@ const Movie = ({movie, user, addFavorites}) => {
       <p className='rating'>{rating}</p>
       <p className='date'>{date}</p>
       <p className='summary'>Summary: {summary}</p>
-      
     </article>
   );
 };
