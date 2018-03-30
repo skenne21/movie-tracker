@@ -12,3 +12,9 @@ export const addUser = (user) => ({
 export const removeUser = () => ({
   type: 'REMOVE_USER'
 })
+
+export const addFavorites = (movie, userId) => ({
+  type: 'ADD_FAVORITES',
+  movie,
+  userId
+})

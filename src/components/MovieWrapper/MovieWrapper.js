@@ -7,6 +7,8 @@ const MovieWrapper = (props) =>  {
     <Movie
       key={movie.id}
       movie={movie}
+      user={props.user}
+      addFavorites={props.addFavorites}
     />
   );
 

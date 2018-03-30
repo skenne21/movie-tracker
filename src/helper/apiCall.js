@@ -44,3 +44,14 @@ export const postCreateUser = async (userInfo) => {
     return ({error})
   }
 }
+
+export const postFavorites = async (movie, userId) => {
+  console.log({userId})
+  const data = Object.assign({}, movie, {user:userId})
+  const response = await fetch('/users/favorites/new', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {'Content-Type': 'application/json'}
+  })
+  console.log(data)
+}
