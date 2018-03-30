@@ -43,6 +43,7 @@ class SignIn extends Component {
 
   handleUser = (user) => {
     this.props.handleUser(user);
+    // localStorage.setItem('currentUser', JSON.stringify(user))
     this.props.history.push('/');
   }
 

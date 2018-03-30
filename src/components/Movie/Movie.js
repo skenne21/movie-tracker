@@ -14,7 +14,7 @@ const Movie = ({movie, user, addFavorites}) => {
     summary} = movie;
 
   const handleClick = () => {
-    !user.length ? 
+    !user.length ?
       alert('Please LogIn or Create An Account!')
       :
       createFavorites();
@@ -22,12 +22,11 @@ const Movie = ({movie, user, addFavorites}) => {
 
   const createFavorites = async () => {
     const userFavorites = await getFavorites(user[0].id)
-    console.log({userFavorites})
     if (!userFavorites.error) {
       const  favorites = userFavorites.find(fav => fav.movie_id === movie.id)
       console.log({favorites})
       console.log({id})
-      favorites ? alert('You already love this movie!') : await postFavorites(movie, user[0].id)  
+      favorites ? alert('You already love this movie!') : await postFavorites(movie, user[0].id) 
     }
     return
   };
