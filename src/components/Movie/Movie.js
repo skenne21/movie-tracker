@@ -24,7 +24,7 @@ const Movie = ({movie, user, addFavorites}) => {
     const userFavorites = await getFavorites(user[0].id)
     console.log({userFavorites})
     if (!userFavorites.error) {
-      const  favorites = userFavorites.includes(movie)
+      const  favorites = userFavorites.find(fav => fav.movie_id === movie.id)
       console.log({favorites})
       console.log({id})
       favorites ? alert('You already love this movie!') : await postFavorites(movie, user[0].id)  
