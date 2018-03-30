@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Movie = ({movie}) => {
+const Movie = ({movie, user}) => {
   const {
     title,
     // eslint-disable-next-line
@@ -9,7 +9,14 @@ const Movie = ({movie}) => {
     rating,
     image,
     date,
-    summary} = movie;
+    summary} = movie
+
+    const handleClick = () => {
+      !user.length ? 
+        alert('Please LogIn or Create An Account!')
+        :
+        ''
+    }
 
   return (
     <article className='movie'>
@@ -18,6 +25,7 @@ const Movie = ({movie}) => {
       <p className='rating'>{rating}</p>
       <p className='date'>{date}</p>
       <p className='summary'>Summary: {summary}</p>
+      <button onClick={handleClick}>❤︎</button>
     </article>
   );
 };

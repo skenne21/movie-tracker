@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
 export const mapStateToProps = state => ({
-  movies: state.movies
+  movies: state.movies,
+  user: state.user
 });
 
 export const mapDispatchToProps = dispatch => ({
