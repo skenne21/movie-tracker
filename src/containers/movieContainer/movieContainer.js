@@ -10,7 +10,8 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   fetchMovies: (movies) => dispatch(actions.loadMovies(movies)),
-  addFavorites: (movies, userId) => dispatch(actions.addFavorites(movies, userId))
+  addFavorites:
+   (movies, userId) => dispatch(actions.addFavorites(movies, userId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MovieWrapper);

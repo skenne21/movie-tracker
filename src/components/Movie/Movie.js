@@ -10,19 +10,19 @@ const Movie = ({movie, user, addFavorites}) => {
     rating,
     image,
     date,
-    summary} = movie
+    summary} = movie;
 
-    const handleClick = () => {
-      !user.length ? 
-        alert('Please LogIn or Create An Account!')
-        :
-        createFavorites()
-    }
+  const handleClick = () => {
+    !user.length ? 
+      alert('Please LogIn or Create An Account!')
+      :
+      createFavorites();
+  };
 
-    const createFavorites = () => {
-      const raw = postFavorites(movie, user[0].id)
-      // addFavorites(movie, user.id)
-    }
+  const createFavorites = () => {
+    const raw = postFavorites(movie, user[0].id);
+    // addFavorites(movie, user.id)
+  };
 
   return (
     <article className='movie'>
@@ -37,7 +37,8 @@ const Movie = ({movie, user, addFavorites}) => {
 };
 
 Movie.propTypes = {
-  movie: PropTypes.object
+  movie: PropTypes.object,
+  user: PropTypes.object
 };
 
 export default Movie;

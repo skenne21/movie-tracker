@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 export const rawData = {
   results: [{
     adult:false,
@@ -10,8 +11,8 @@ export const rawData = {
     video:false,
     vote_average:6.1,
     vote_count:1097
-    },
-    {
+  },
+  {
     adult:false,
     id:284054,
     overview:"King T'Challa returns home....",
@@ -22,9 +23,9 @@ export const rawData = {
     video:false,
     vote_average:7.4,
     vote_count:3477
-    }
+  }
   ]
-}
+};
 
 export const cleanData = [
   {
@@ -34,7 +35,7 @@ export const cleanData = [
     date:"2018-02-07",
     title:"Fifty Shades Freed",
     rating:6.1
-  },{
+  }, {
     id:284054,
     summary:"King T'Challa returns home....",
     image:"http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
@@ -42,5 +43,5 @@ export const cleanData = [
     title:"Black Panther",
     rating:7.4
   }
-]
+];
 

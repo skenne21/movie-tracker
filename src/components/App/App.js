@@ -3,7 +3,8 @@ import './App.css';
 import SignIn from '../../containers/signinContainer/signinContainer';
 import { Switch, Route } from 'react-router-dom';
 import MovieWrapper from '../../containers/movieContainer/movieContainer';
-import CreateAccount from '../../containers/createAccountContainer/createAccountContainer';
+import CreateAccount from
+  '../../containers/createAccountContainer/createAccountContainer';
 import * as movieData from '../../helper/apiCall';
 import PropTypes from 'prop-types';
 

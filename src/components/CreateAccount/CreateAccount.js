@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { postCreateUser, signIn } from '../../helper/apiCall';
+import PropTypes from 'prop-types';
 
 class CreateAccount extends Component {
   constructor() {
@@ -8,7 +9,7 @@ class CreateAccount extends Component {
       name: '',
       email: '',
       password: ''
-    }
+    };
   }
 
   handleChange = (event) => {
@@ -16,13 +17,15 @@ class CreateAccount extends Component {
 
     this.setState({
       [name]: value
-    })
+    });
   }
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    const createUser = await postCreateUser(this.state)
-    createUser.status ? this.handleNewUser(event) : this.handleError(createUser.error)
+    const createUser = await postCreateUser(this.state);
+    createUser.status ?
+      this.handleNewUser(event):
+      this.handleError(createUser.error);
 
   }
 
@@ -30,11 +33,11 @@ class CreateAccount extends Component {
     const { email, password } = this.state;
     const grabUser = await signIn(event, email, password);
     this.props.handleUser(grabUser.data);
-    this.props.history.push('/')
+    this.props.history.push('/');
   }
 
-  handleError = (error) => {
-    alert('Email already exists')
+  handleError = () => {
+    alert('Email already exists');
   }
 
   render() {
@@ -43,19 +46,19 @@ class CreateAccount extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <input type="text"
-                 name="name"
-                 value={name}
-                 placeholder="Enter Your name"
-                 onChange={this.handleChange}
-                 required
+            name="name"
+            value={name}
+            placeholder="Enter Your name"
+            onChange={this.handleChange}
+            required
           />
           <input
-              type="email"
-              name="email"
-              value={email}
-              placeholder="Enter Email"
-              onChange={this.handleChange}
-              required
+            type="email"
+            name="email"
+            value={email}
+            placeholder="Enter Email"
+            onChange={this.handleChange}
+            required
           />
           <input
             type="text"
@@ -68,8 +71,13 @@ class CreateAccount extends Component {
           <button type="submit">Submit</button>
         </form>
       </div>
-    )
+    );
   }
 }
+
+CreateAccount.propTypes = {
+  handleUser: PropTypes.func,
+  history: PropTypes.object
+};
 
 export default CreateAccount;

@@ -20,7 +20,9 @@ const MovieWrapper = (props) =>  {
 };
 
 MovieWrapper.propTypes = {
-  movies: PropTypes.array
+  movies: PropTypes.array,
+  user: PropTypes.object,
+  addFavorites: PropTypes.func
 };
 
 export default MovieWrapper;

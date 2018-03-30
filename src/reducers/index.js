@@ -8,6 +8,6 @@ const rootReducer = combineReducers({
   movies: moviesReducer,
   user: userReducer,
   favorites: favoritesReducer
-})
+});
 
 export default rootReducer;
