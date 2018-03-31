@@ -12,7 +12,6 @@ const Movie = ({movie, user, handleUser, favsMovie}) => {
     release_date,
     overview} = movie;
 
-  console.log(favsMovie)
   const handleClick = () => {
     !user.length ?
       alert('Please LogIn or Create An Account!')
@@ -23,7 +22,7 @@ const Movie = ({movie, user, handleUser, favsMovie}) => {
   const createFavorites = async () => {
     const userFavorites = await getFavorites(user[0].id)
     if (!userFavorites.error) {
-      const favorites = userFavorites.find(fav => fav.movie_id === movie.movie_id)
+      const favorites = userFavorites.find(fav => fav.movie_id === movie_id)
       favorites ?  updateFavorites(userFavorites) : addFavorites();
     }
     return
@@ -32,14 +31,13 @@ const Movie = ({movie, user, handleUser, favsMovie}) => {
   const addFavorites = async () => {
     await postFavorites(movie, user[0].id);
     const userFavorites = await getFavorites(user[0].id)
-    console.log(userFavorites)
     const updatedUser = Object.assign({}, ...user, {favorites: userFavorites});
     handleUser(updatedUser);
   }
 
   const updateFavorites = (userFavorites) => {
-    removeFavorites(user[0].id, movie.movie_id);
-    const newFavorites = userFavorites.filter( fav => fav.movie_id !== movie.movie_id);
+    removeFavorites(user[0].id, movie_id);
+    const newFavorites = userFavorites.filter( fav => fav.movie_id !== movie_id);
     const changedUser = Object.assign({}, ...user, {favorites: newFavorites});
     handleUser(changedUser);
   }
