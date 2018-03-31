@@ -23,20 +23,38 @@ export class App extends Component {
     return (
       <div className="App">
         <header>MovieTracker</header>
-        <NavLink to="/favorites">Words in between here</NavLink>
-        <Switch>)
+        <NavLink to="/favorites">Favorites</NavLink>
+        <Switch>
           <Route
             exact path="/"
-            render= {({history}) => <MovieWrapper history={history}/>} />
+            render= {({history, match}) => 
+              <MovieWrapper 
+                history={history}
+                match={match}
+              />} 
+          />
           <Route
             path="/login"
-            render={({history}) => <SignIn history={history}/>} />
+            render={({history}) => 
+              <SignIn 
+                history={history}
+              />} 
+          />
           <Route
             path="/account"
-            render={({history}) => <CreateAccount history={history}/>} />
+            render={({history}) => 
+              <CreateAccount 
+                history={history}
+              />} 
+          />
           <Route
             path="/favorites"
-            render={({history}) => <MovieWrapper history={history}/>} />
+            render={({history, match}) => 
+              <MovieWrapper 
+                history={history} 
+                match={match}
+              />} 
+          />
         </Switch>
       </div>
     );

@@ -1,41 +1,60 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Movie from '../Movie/Movie';
 import { getFavorites } from '../../helper/apiCall';
 import PropTypes from 'prop-types';
 
-// let movies = [];
-
 const MovieWrapper = (props) =>  {
-  const pathName = props.history.location.pathname;
+  
+  const determinePath = () => {
+    if(props.user.length) {
 
-  // const fetchFavorites = async () => {
-  //   const response = await getFavorites(props.user[0].id)
-  //   return Promise.resolve(response)
-  // }
+      switch(props.history.location.pathname) {
+      case "/":
+        return createMovie(props.movies)
+      case "/favorites":
+        return createMovie(props.user[0].favorites)
+      default:
+        return null;
+      }
+    }
+    else {
+      props.history.push('/login')
+      return (
+        <div></div>
+      )
+    }
+    
+  }
+  
+  const createMovie = (movies) => {
+    const mappedMovies = movies.map(movie => {
+      let selected;
 
-  //   if (props.user.length) {
-  //     fetchFavorites();
-  //   } else {
-  //     movies = props.movies
-  //   }
+      if(props.user.length) {
+        selected = props.user[0].favorites.find(favs => favs.movie_id === movie.movie_id)
+      }
+      
+      return <Movie
+        favsMovie={selected ? 'favs' : ''}
+        key={movie.movie_id}
+        movie={movie}
+        user={props.user}
+        addFavorites={props.addFavorites}
+        handleUser={props.handleUser}
+      />
+    });
 
-
-  const createMovie = props.movies.map(movie =>
-    <Movie
-      key={movie.id}
-      movie={movie}
-      user={props.user}
-      addFavorites={props.addFavorites}
-      handleUser={props.handleUser}
-    />
-  );
-
+    return (
+      <div className='movie'>
+        {mappedMovies}
+      </div>
+    )
+  }
+  
   return (
-    <div>
-      {createMovie}
-    </div>
-  );
-};
+    determinePath()
+  )
+}
 
 MovieWrapper.propTypes = {
   movies: PropTypes.array,

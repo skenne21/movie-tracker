@@ -44,15 +44,7 @@ export const postCreateUser = async (userInfo) => {
 };
 
 export const postFavorites = async (movie, userId) => {
-  const info = {
-    movie_id: movie.id,
-    user_id: userId,
-    title: movie.title,
-    poster_path: movie.image,
-    release_date: movie.date,
-    vote_average: movie.rating,
-    overview: movie.summary
-  };
+  const info = Object.assign({}, movie, {user_id: userId})
   try {
     const response = await fetch('/api/users/favorites/new', {
       method: 'POST',
