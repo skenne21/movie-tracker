@@ -70,6 +70,7 @@ export const getFavorites = async (userId) => {
   try {
     const response = await fetch(`/api/users/${userId}/favorites`);
     const info = await response.json();
+    
     return info.data;
   } catch (error) {
     return error
