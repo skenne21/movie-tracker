@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { postFavorites, getFavorites } from '../../helper/apiCall';
+import { postFavorites, getFavorites, removeFavorites } from '../../helper/apiCall';
 import './Movie.css';
 
-const Movie = ({movie, user, addFavorites}) => {
+const Movie = ({movie, user, handleUser}) => {
   const {
     title,
     // eslint-disable-next-line
@@ -14,7 +14,7 @@ const Movie = ({movie, user, addFavorites}) => {
     summary} = movie;
 
   const handleClick = () => {
-    !user.length ? 
+    !user.length ?
       alert('Please LogIn or Create An Account!')
       :
       createFavorites();
@@ -22,15 +22,26 @@ const Movie = ({movie, user, addFavorites}) => {
 
   const createFavorites = async () => {
     const userFavorites = await getFavorites(user[0].id)
-    console.log({userFavorites})
+    console.log(userFavorites)
     if (!userFavorites.error) {
-      const  favorites = userFavorites.find(fav => fav.movie_id === movie.id)
-      console.log({favorites})
-      console.log({id})
-      favorites ? alert('You already love this movie!') : await postFavorites(movie, user[0].id)  
+      const favorites = userFavorites.find(fav => fav.movie_id === movie.id)
+      favorites ?  updateFavorites(userFavorites) : addFavorites(userFavorites);
     }
     return
   };
+
+  const addFavorites = (userFavorites) => {
+    postFavorites(movie, user[0].id);
+    const updatedUser = Object.assign({}, ...user, {favorites: userFavorites});
+    handleUser(updatedUser);
+  }
+
+  const updateFavorites = (userFavorites) => {
+    removeFavorites(user[0].id, movie.id);
+    const newFavorites = userFavorites.filter( fav => fav.movie_id !== movie.id);
+    const changedUser = Object.assign({}, ...user, {favorites: newFavorites});
+    handleUser(changedUser);
+  }
 
   return (
     <article className='movie'>

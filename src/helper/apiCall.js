@@ -6,7 +6,7 @@ const language = `language=en-US`;
 const page = `page=1`;
 
 export const fetchRecentMovies = async () => {
-  const response = 
+  const response =
   await fetch(`${apiRoot}now_playing${apiCall}&${language}&${page}`);
   const apiData = await response.json();
   const movies = cleanMovies(apiData.results);
@@ -70,8 +70,23 @@ export const getFavorites = async (userId) => {
   try {
     const response = await fetch(`/api/users/${userId}/favorites`);
     const info = await response.json();
+    
     return info.data;
   } catch (error) {
     return error
-  }  
+  }
+}
+
+export const removeFavorites = async(user, movie) => {
+  const ids = {
+    user,
+    movie
+  }
+  const response = await fetch(`/api/users/${user}/favorites/${movie}`, {
+    method:'DELETE',
+    body: JSON.stringify(ids),
+    headers: {'Content-Type': 'application/json'}
+  });
+  const info = await response.json()
+  console.log(info)
 }
