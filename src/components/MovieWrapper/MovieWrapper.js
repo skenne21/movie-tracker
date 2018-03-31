@@ -26,6 +26,7 @@ const MovieWrapper = (props) =>  {
       movie={movie}
       user={props.user}
       addFavorites={props.addFavorites}
+      handleUser={props.handleUser}
     />
   );
 

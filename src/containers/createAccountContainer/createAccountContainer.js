@@ -7,7 +7,7 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  handleUser: (user) => dispatch(actions.addUser(user))
+  handleUser: (user) => dispatch(actions.updateUser(user))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateAccount);
