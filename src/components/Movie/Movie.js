@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { postFavorites, getFavorites, removeFavorites } from '../../helper/apiCall';
 import './Movie.css';
 
-const Movie = ({movie, user, handleUser}) => {
+const Movie = ({movie, user, handleUser, favsMovie}) => {
   const {
     title,
     movie_id,
@@ -12,6 +12,7 @@ const Movie = ({movie, user, handleUser}) => {
     release_date,
     overview} = movie;
 
+  console.log(favsMovie)
   const handleClick = () => {
     !user.length ?
       alert('Please LogIn or Create An Account!')
@@ -45,7 +46,7 @@ const Movie = ({movie, user, handleUser}) => {
 
   return (
     <article className='movie'>
-      <button className='favorites'onClick={handleClick}>❤︎</button>
+      <button id={favsMovie} className='favorites'onClick={handleClick}>❤︎</button>
       <h1 className='title'>{title}</h1>
       <img id='image' src={poster_path} alt='movie poster'/>
       <p className='rating'>{vote_average}</p>

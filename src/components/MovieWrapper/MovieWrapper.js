@@ -3,33 +3,22 @@ import Movie from '../Movie/Movie';
 import { getFavorites } from '../../helper/apiCall';
 import PropTypes from 'prop-types';
 
-class MovieWrapper extends Component  {
-  constructor(props) {
-    super(props)
+const MovieWrapper = (props) =>  {
   
-  }
+  const determinePath = () => {
+    if(props.user.length) {
 
-  
-
-  componentDidMount() {
-    this.determinePath()
-  }
-  
-
-  determinePath = () => {
-    if(this.props.user.length) {
-
-      switch(this.props.history.location.pathname) {
+      switch(props.history.location.pathname) {
       case "/":
-        return this.createMovie(this.props.movies)
+        return createMovie(props.movies)
       case "/favorites":
-        return this.createMovie(this.props.user[0].favorites)
+        return createMovie(props.user[0].favorites)
       default:
         return null;
       }
     }
     else {
-      this.props.history.push('/login')
+      props.history.push('/login')
       return (
         <div></div>
       )
@@ -37,14 +26,21 @@ class MovieWrapper extends Component  {
     
   }
   
-  createMovie = (movies) => {
+  const createMovie = (movies) => {
     const mappedMovies = movies.map(movie => {
+      let selected;
+
+      if(props.user.length) {
+        selected = props.user[0].favorites.find(favs => favs.movie_id === movie.movie_id)
+      }
+      
       return <Movie
+        favsMovie={selected ? 'favs' : ''}
         key={movie.movie_id}
         movie={movie}
-        user={this.props.user}
-        addFavorites={this.props.addFavorites}
-        handleUser={this.props.handleUser}
+        user={props.user}
+        addFavorites={props.addFavorites}
+        handleUser={props.handleUser}
       />
     });
 
@@ -55,11 +51,9 @@ class MovieWrapper extends Component  {
     )
   }
   
-  render() {
-    return (
-      this.determinePath()
-    )
-  }
+  return (
+    determinePath()
+  )
 }
 
 MovieWrapper.propTypes = {
