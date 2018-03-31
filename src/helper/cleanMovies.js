@@ -4,12 +4,12 @@ export const cleanMovies = (movies) => {
     const path = movie.poster_path;
     const image = `${url}${path}`;
     return {
-      id: movie.id,
+      movie_id: movie.id,
       title: movie.title,
-      date: movie.release_date,
-      rating: movie.vote_average,
-      summary: movie.overview,
-      image: image
+      release_date: movie.release_date,
+      vote_average: movie.vote_average,
+      overview: movie.overview,
+      poster_path: image
     };
   });
   return cleanMovies;

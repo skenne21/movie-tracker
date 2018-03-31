@@ -40,7 +40,7 @@ class MovieWrapper extends Component  {
   createMovie = (movies) => {
     const mappedMovies = movies.map(movie => {
       return <Movie
-        key={movie.id}
+        key={movie.movie_id}
         movie={movie}
         user={this.props.user}
         addFavorites={this.props.addFavorites}
