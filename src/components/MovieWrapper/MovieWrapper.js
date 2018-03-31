@@ -18,9 +18,11 @@ const MovieWrapper = (props) =>  {
       }
     }
     else {
-      props.history.push('/login')
       return (
-        <div></div>
+        <div> 
+          <p>To view favorites, login.</p>
+          {createMovie(props.movies)}
+        </div>
       )
     }
     
@@ -33,7 +35,7 @@ const MovieWrapper = (props) =>  {
       if(props.user.length) {
         selected = props.user[0].favorites.find(favs => favs.movie_id === movie.movie_id)
       }
-      
+
       return <Movie
         favsMovie={selected ? 'favs' : ''}
         key={movie.movie_id}
