@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { signIn } from '../../helper/apiCall';
+import { signIn, getFavorites } from '../../helper/apiCall';
 import PropTypes from 'prop-types';
 
 
@@ -31,21 +31,22 @@ class SignIn extends Component {
     const password = this.state.password;
     const user = await signIn(event, email, password);
     user.status ?
-      this.handleUser(user.data)
+      this.setupUser(user.data)
       :
       this.handleError(user.error);
-
     this.setState({
       email: '',
       password: ''
     });
   }
 
-  handleUser = (user) => {
-    this.props.handleUser(user);
+  setupUser = async (user) => {
+    const userFavorites = await getFavorites(user.id);
+    const newUser = Object.assign({}, user, {favorites: userFavorites})
+    this.props.handleUser(newUser);
     // localStorage.setItem('currentUser', JSON.stringify(user))
     this.props.history.push('/');
-  }
+  } 
 
   handleSignOut = () => {
     this.props.removeUser();

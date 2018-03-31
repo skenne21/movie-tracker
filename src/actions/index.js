@@ -13,8 +13,8 @@ export const removeUser = () => ({
   type: 'REMOVE_USER'
 });
 
-export const addFavorites = (movie, userId) => ({
+export const addFavorites = (movies, user) => ({
   type: 'ADD_FAVORITES',
-  movie,
-  userId
+  movies,
+  user
 });
