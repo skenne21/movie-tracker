@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Movie from '../Movie/Movie';
-import { getFavorites } from '../../helper/apiCall';
+import SignIn from '../../containers/signinContainer/signinContainer';
 import PropTypes from 'prop-types';
 
 const MovieWrapper = (props) =>  {
-  
+
   const determinePath = () => {
     if(props.user.length) {
 
@@ -19,15 +19,15 @@ const MovieWrapper = (props) =>  {
     }
     else {
       return (
-        <div> 
+        <div>
           <p>To view favorites, login.</p>
           {createMovie(props.movies)}
         </div>
       )
     }
-    
+
   }
-  
+
   const createMovie = (movies) => {
     const mappedMovies = movies.map(movie => {
       let selected;
@@ -48,11 +48,12 @@ const MovieWrapper = (props) =>  {
 
     return (
       <div className='movie'>
+        <SignIn history={props.history}/>
         {mappedMovies}
       </div>
     )
   }
-  
+
   return (
     determinePath()
   )
