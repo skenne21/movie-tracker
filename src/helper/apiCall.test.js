@@ -115,13 +115,224 @@ jest.mock('./cleanMovies');
     });
   });
 
-  describe('', () => {
+  describe('postCreateUser', () => {
+    let userInformation;
+    let results;
 
+    beforeEach(() => {
+      userInformation = {name: "Bug", email: "bugsarecool@gmail.com", password: "yes"}
+      results = {status: "success", message: "New user created", id: 20}
+    });
+
+    it('calls fetch with correct params', async () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(results)
+      }))
+      const expected = [
+        '/api/users/new',
+        {
+          method: 'POST',
+          body: JSON.stringify(userInformation),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      ]
+
+      await apiCalls.postCreateUser(userInformation)
+
+      expect(window.fetch).toHaveBeenCalledWith(...expected)
+    });
+
+    it('should throw an error', () => {
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          status: 500
+        })
+      )
+      const apiCall = apiCalls.postCreateUser(userInformation)
+
+      expect(apiCall).rejects.toEqual(Error('an error happened'))
+    });
+
+    it('should return a user object', async () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(results)
+      }))
+
+      const apiCall = await apiCalls.postCreateUser(userInformation)
+
+      expect(apiCall).toEqual(results)
+    });
   });
 
+  describe('postFavorites', () => {
+    let results;
+    let info;
+    let movie;
 
+    beforeEach(() => {
+      results = {
+        id: 11,
+        message: "Movie was added to favorites",
+        status: "success"
+      }
+      info = mockData.info;
+      movie = mockData.cleanMovie;
+    });
 
+    it('should be called with correct params', () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(results)
+      }))
 
+      const expected = [
+        '/api/users/favorites/new',
+        { method: 'POST',
+          body: JSON.stringify(info),
+          headers: {'Content-Type': 'application/json'}
+        }
+      ]
+
+      apiCalls.postFavorites(movie, 1);
+
+      expect(window.fetch).toHaveBeenCalledWith(...expected)
+    });
+
+    it('should throw an error', () => {
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          status: 500
+        })
+      )
+      const apiCall = apiCalls.postFavorites(movie, 1)
+
+      expect(apiCall).rejects.toEqual(Error('an error happened'))
+    });
+
+    it('should return a status-success object', async () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(results)
+      }));
+
+      const apiCall = await apiCalls.postFavorites(movie, 1);
+
+      expect(apiCall).toEqual(results)
+    });
+  });
+
+  describe('getFavorites', () => {
+    let results;
+
+    beforeEach(() => {
+      results = {
+        status: "success",
+        data: mockData.cleanData,
+        message: "Retrieved All favorites"
+      }
+    });
+
+    it('should be called with correct params', () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(results)
+      }))
+      const url = '/api/users/1/favorites'
+
+      apiCalls.getFavorites(1);
+
+      expect(window.fetch).toHaveBeenCalledWith(url)
+    });
+
+    it('should throw an error', () => {
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          status: 500
+        })
+      )
+      const apiCall = apiCalls.getFavorites(1)
+
+      expect(apiCall).rejects.toEqual(Error('an error happened'))
+    });
+
+    it('should return a resolved object of movies', async () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(results)
+      }));
+      const url = '/api/users/1/favorites'
+
+      const apiCall = await apiCalls.getFavorites(1);
+
+      expect(apiCall).toEqual(results.data)
+    });
+  });
+
+  describe('remove favorites', () => {
+    let results;
+    let userId;
+    let movieId;
+    let dataPassed;
+
+    beforeEach(() => {
+      results = {
+        body: 'ReadableStream',
+        bodyUsed: false,
+        headers: {},
+        ok: true,
+        redirected: false,
+        status: 200,
+        statusText: "OK",
+        type: "basic",
+        url: "http://localhost:3001/api/users/1/favorites/284054"
+      }
+      userId = 1;
+      movieId = 337167;
+      dataPassed = {user: userId, movie: movieId}
+    });
+
+    it('should be called with the correct params', () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(results)
+      }));
+      const expected = [
+        `/api/users/${userId}/favorites/${movieId}`,
+        {
+        method: 'DELETE',
+        body: JSON.stringify(dataPassed),
+        headers: {'Content-Type': 'application/json'}
+      }]
+
+      apiCalls.removeFavorites(userId, movieId)
+
+      expect(window.fetch).toHaveBeenCalledWith(...expected)
+    });
+
+    it('should throw an error', () => {
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          status: 500
+        })
+      )
+      const apiCall = apiCalls.removeFavorites(1, 11716)
+      expect(apiCall).rejects.toEqual(Error('an error happened'))
+    });
+
+    it('should return a resolved object', async () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(results)
+      }));
+
+      const apiCall = await apiCalls.removeFavorites(userId, movieId)
+      expect(apiCall).toEqual(results)
+    });
+  });
 
 
 
