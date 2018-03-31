@@ -29,19 +29,19 @@ export const rawData = {
 
 export const cleanData = [
   {
-    id:337167,
-    summary: "Believing they have left behind...",
-    image:"http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-    date:"2018-02-07",
+    movie_id:337167,
+    overview: "Believing they have left behind...",
+    poster_path:"http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+    release_date:"2018-02-07",
     title:"Fifty Shades Freed",
-    rating:6.1
+    vote_average:6.1
   }, {
-    id:284054,
-    summary:"King T'Challa returns home....",
-    image:"http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-    date:"2018-02-13",
+    movie_id:284054,
+    overview:"King T'Challa returns home....",
+    poster_path:"http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+    release_date:"2018-02-13",
     title:"Black Panther",
-    rating:7.4
+    vote_average:7.4
   }
 ];
 
@@ -54,4 +54,3 @@ export const cleanData = [
   //   vote_average: movie.vote_average,
   //   overview: movie.overview
   // };
-

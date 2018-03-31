@@ -23,7 +23,7 @@ export const signIn = async (event, email, password) => {
     const user = await signIn.json();
     return user;
   } catch (error) {
-    return ({error});
+    throw new Error("an error happened")
   }
 };
 
