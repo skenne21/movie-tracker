@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { postFavorites, getFavorites } from '../../helper/apiCall';
+import { postFavorites, getFavorites, removeFavorites } from '../../helper/apiCall';
 import './Movie.css';
 
 const Movie = ({movie, user, addFavorites}) => {
@@ -23,15 +23,8 @@ const Movie = ({movie, user, addFavorites}) => {
   const createFavorites = async () => {
     const userFavorites = await getFavorites(user[0].id)
     if (!userFavorites.error) {
-<<<<<<< HEAD
       const  favorites = userFavorites.find(fav => fav.movie_id === movie.id)
-      console.log({favorites})
-      console.log({id})
-      favorites ? alert('You already love this movie!') : await postFavorites(movie, user[0].id) 
-=======
-      const favorites = userFavorites.find(fav => fav.movie_id === movie.id)
-      favorites ? alert('You already love this movie!') : await postFavorites(movie, user[0].id)
->>>>>>> everything is broken and also terrible
+      favorites ? await removeFavorites(user[0].id, movie.id) : await postFavorites(movie, user[0].id)
     }
     return
   };

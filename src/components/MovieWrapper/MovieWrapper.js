@@ -3,24 +3,24 @@ import Movie from '../Movie/Movie';
 import { getFavorites } from '../../helper/apiCall';
 import PropTypes from 'prop-types';
 
-let movies = [];
+// let movies = [];
 
 const MovieWrapper = (props) =>  {
   const pathName = props.history.location.pathname;
 
-  const fetchFavorites = async () => {
-    const response = await getFavorites(props.user[0].id)
-    return Promise.resolve(response)
-  }
+  // const fetchFavorites = async () => {
+  //   const response = await getFavorites(props.user[0].id)
+  //   return Promise.resolve(response)
+  // }
 
-    if (props.user.length) {
-      fetchFavorites();
-    } else {
-      movies = props.movies
-    }
+  //   if (props.user.length) {
+  //     fetchFavorites();
+  //   } else {
+  //     movies = props.movies
+  //   }
 
 
-  const createMovie = movies.map(movie =>
+  const createMovie = props.movies.map(movie =>
     <Movie
       key={movie.id}
       movie={movie}

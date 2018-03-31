@@ -76,3 +76,17 @@ export const getFavorites = async (userId) => {
     return error
   }
 }
+
+export const removeFavorites = async(user, movie) => {
+  const ids = {
+    user,
+    movie
+  }
+  const response = await fetch(`/api/users/${user}/favorites/${movie}`, {
+    method:'DELETE',
+    body: JSON.stringify(ids),
+    headers: {'Content-Type': 'application/json'}
+  });
+  const info = await response.json()
+  console.log(info)
+}
