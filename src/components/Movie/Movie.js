@@ -22,16 +22,16 @@ const Movie = ({movie, user, handleUser}) => {
 
   const createFavorites = async () => {
     const userFavorites = await getFavorites(user[0].id)
-    console.log(userFavorites)
     if (!userFavorites.error) {
       const favorites = userFavorites.find(fav => fav.movie_id === movie.id)
-      favorites ?  updateFavorites(userFavorites) : addFavorites(userFavorites);
+      favorites ?  updateFavorites(userFavorites) : addFavorites();
     }
     return
   };
 
-  const addFavorites = (userFavorites) => {
-    postFavorites(movie, user[0].id);
+  const addFavorites = async () => {
+    await postFavorites(movie, user[0].id);
+    const userFavorites = await getFavorites(user[0].id)
     const updatedUser = Object.assign({}, ...user, {favorites: userFavorites});
     handleUser(updatedUser);
   }
