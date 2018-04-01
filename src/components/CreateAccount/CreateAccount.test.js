@@ -64,34 +64,13 @@ describe('CreateAccount', () => {
 
   })
 
-  it('Should call handleNewUSer if there is not an error', async () => {
-    const user = {
-      status: "success",
-      data: {
-        id: 13,
-        name: "bob",
-        password: "bugs",
-        email: "jhonson@aol.col"
-      }
-    };
-
+  it.only('Should call handleNewUSer if there is not an error', async () => {
     const mockEvent = { preventDefault: jest.fn()};
 
-    window.fetch = await jest.fn().mockImplementation(() => Promise.resolve(response))
-
-    const response = {
-      status: "true",
-      data: {
-        id: 13,
-        name: "bob",
-        password: "bugslife",
-        email: "jhon@aol.col"
-      }
-    }
     await wrapper.instance().handleSubmit(mockEvent)
 
     const spy = jest.spyOn(wrapper.instance(), 'handleNewUser')
 
-    expect(spy).toHaveBeenCalled();
+    await expect(spy).toHaveBeenCalled();
   })
 })

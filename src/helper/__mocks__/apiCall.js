@@ -16,7 +16,7 @@ export const signIn = jest.fn().mockImplementation(() => {
     data: {
       id: 13,
       name: "bob",
-      password: "bugs",
+      password: "bugs456",
       email: "jhonson@aol.col"
     }
   }
