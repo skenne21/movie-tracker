@@ -32,7 +32,7 @@ const MovieWrapper = (props) =>  {
     const mappedMovies = movies.map(movie => {
       let selected;
 
-      if(props.user.length) {
+      if(props.user.length && props.user[0].favorites) {
         selected = props.user[0].favorites.find(favs => favs.movie_id === movie.movie_id)
       }
 
