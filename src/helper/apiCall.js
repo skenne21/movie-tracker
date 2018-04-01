@@ -38,8 +38,9 @@ export const postCreateUser = async (userInfo) => {
     });
     const user = await createUser.json();
     return user;
-  } catch (error){
-    throw new Error("an error happened")
+  } catch (error) {
+    return error
+    // throw new Error("an error happened")
   }
 };
 

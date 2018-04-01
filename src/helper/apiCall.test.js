@@ -5,7 +5,7 @@ import { cleanMovies} from './cleanMovies';
 
 jest.mock('./cleanMovies');
 
- describe('Helper', () => {
+ describe.skip('Helper', () => {
 
   describe('Fetch recent movies', () => {
     let response, url;

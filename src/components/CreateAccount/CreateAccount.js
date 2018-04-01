@@ -30,8 +30,11 @@ class CreateAccount extends Component {
   }
 
   handleNewUser = async (event) => {
+    console.log(event)
     const { email, password } = this.state;
     const grabUser = await signIn(event, email, password);
+    console.log(grabUser)
+    console.log(grabUser)
     this.props.handleUser(grabUser.data);
     this.props.history.push('/');
   }
