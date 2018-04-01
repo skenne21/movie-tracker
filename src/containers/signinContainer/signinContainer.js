@@ -8,8 +8,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   handleUser: (user, favorites) => dispatch(actions.updateUser(user)),
-  removeUser: () => dispatch(actions.removeUser()),
-  // addFavorites: (movies, user) => dispatch(actions.addFavorites(movies, user))
+  removeUser: () => dispatch(actions.removeUser())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

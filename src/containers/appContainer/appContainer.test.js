@@ -1,4 +1,5 @@
 import { mapStateToProps, mapDispatchToProps } from './appContainer';
+import * as mocks from '../../mocks/mockMovieData';
 import * as actions from '../../actions/index';
 
 describe('appContainer', () => {
@@ -21,7 +22,7 @@ describe('appContainer', () => {
 
     it('should call dispatch with the correct params on fetchMovies', () => {
       const mockDispatch = jest.fn();
-      const movies = {};
+      const movies = mocks.cleanData;
       const mapped = mapDispatchToProps(mockDispatch);
       const expected = actions.loadMovies(movies);
 

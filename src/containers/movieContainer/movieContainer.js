@@ -4,7 +4,7 @@ import * as actions from '../../actions';
 
 export const mapStateToProps = state => ({
   movies: state.movies,
-  user: state.user,
+  user: state.user
 });
 
 export const mapDispatchToProps = dispatch => ({
