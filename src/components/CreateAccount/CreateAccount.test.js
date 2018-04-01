@@ -40,7 +40,29 @@ describe('CreateAccount', () => {
     expect(wrapper.state('name')).toEqual('Bob');
   })
 
-  it('Should call handleNewUSer if there is not an error', async () => {
+  it.skip('Should call handleError, if the user returns an error', () => {
+
+    const results = {error:"already exists."};
+
+    const mockEvent = { preventDefault: jest.fn()};
+
+
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: 'true',
+      json: () =>  Promise.resolve(results)
+    }));
+
+    wrapper.instance().handleSubmit(mockEvent);
+
+    const expected = jest.spyOn(wrapper.instance(), 'handleError')
+
+
+    expect(expected).toHaveBeenCalled()
+
+
+  })
+
+  it.skip('Should call handleNewUSer if there is not an error', async () => {
 
     const user = {
       status: "success",
@@ -54,30 +76,30 @@ describe('CreateAccount', () => {
 
     const mockEvent = { preventDefault: jest.fn()};
 
-    // const mockGrabUser = jest.fn().mockImplementation(() => Promise.resolve ({user}))
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: 'true',
+      json: () =>  Promise.resolve(response)
+    }));
 
-    // {status: "success", data: {…}, message: "Retrieved ONE User"}
-    // data: {
-    //   {id: 13, name: "bob", password: "bugs", email: "jhonson@aol.col"}
-
-    // }
-
-    const mockHandleNewUser = jest.fn()
+    const response = {
+      status: "true",
+      data: {
+        id: 13,
+        name: "bob",
+        password: "bugslife",
+        email: "jhon@aol.col"
+      }
+    }
 
     wrapper.instance().handleSubmit(mockEvent)
 
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve(results)
-    }));
-
-    
     const spy = jest.spyOn(wrapper.instance(), 'handleNewUser')
 
-    expect(spy).toHaveBeenCalledWith(mockEvent)
 
+    expect(spy).toHaveBeenCalled();
   })
 
+  
   
 })
 
