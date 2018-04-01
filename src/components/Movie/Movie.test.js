@@ -3,6 +3,7 @@ import { mount, shallow } from 'enzyme';
 import Movie from './Movie';
 import * as mocks from '../../mocks/mockMovieData'
 
+
 describe('Movie', () => {
   let wrapper;
   let mockUser;
@@ -52,10 +53,12 @@ describe('Movie', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call getFavorites', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve(mocks.cleanData));
-    wrapper.instance().createFavorites();
-    await wrapper.update();
+  it.skip('should call getFavorites', async () => {
+    wrapper.getFavorites = jest.fn().mockImplementation(() => Promise.resolve(mocks.cleanData));
+
+
+    wrapper.find('button').simulate('click')
+
     const expected = await wrapper.updateFavorites(mockUser.favorites)
 
     expect(expected).toHaveBeenCalled()
