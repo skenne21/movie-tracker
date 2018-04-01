@@ -29,29 +29,46 @@ export const rawData = {
 
 export const cleanData = [
   {
-    id:337167,
-    summary: "Believing they have left behind...",
-    image:"http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-    date:"2018-02-07",
+    movie_id: 337167,
+    overview: "Believing they have left behind...",
+    poster_path:"http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+    release_date:"2018-02-07",
     title:"Fifty Shades Freed",
-    rating:6.1
+    vote_average:6.1
   }, {
-    id:284054,
-    summary:"King T'Challa returns home....",
-    image:"http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-    date:"2018-02-13",
-    title:"Black Panther",
-    rating:7.4
+    movie_id: 284054,
+    overview: "King T'Challa returns home....",
+    poster_path: "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+    release_date: "2018-02-13",
+    title: "Black Panther",
+    vote_average: 7.4
   }
 ];
 
-  // const info = {
-  //   movie_id: movie.movie_id,
-  //   user_id: userId,
-  //   title: movie.title,
-  //   poster_path: movie.poster_path,
-  //   release_date: movie.release_date,
-  //   vote_average: movie.vote_average,
-  //   overview: movie.overview
-  // };
+export const cleanMovie = {
+    movie_id:337167,
+    overview: "Believing they have left behind...",
+    poster_path:"http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+    release_date:"2018-02-07",
+    title:"Fifty Shades Freed",
+    vote_average:6.1
+  }
 
+export const notFavorite = {
+  movie_id: 338970,
+  overview: "Lara Croft...",
+  poster_path:"http://image.tmdb.org/t/p/w185//ePyN2nX9t8SOl70eRW47Q29zUFO.jpg",
+  release_date: "2018-03-08",
+  title: "Tomb Raider",
+  vote_average: 6.2,
+}
+
+export const info =  {
+    movie_id: 337167,
+    overview: "Believing they have left behind...",
+    poster_path:"http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+    release_date:"2018-02-07",
+    title:"Fifty Shades Freed",
+    vote_average:6.1,
+    user_id: 1
+  }

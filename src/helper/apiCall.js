@@ -23,7 +23,7 @@ export const signIn = async (event, email, password) => {
     const user = await signIn.json();
     return user;
   } catch (error) {
-    return ({error});
+    throw new Error("an error happened")
   }
 };
 
@@ -39,7 +39,7 @@ export const postCreateUser = async (userInfo) => {
     const user = await createUser.json();
     return user;
   } catch (error){
-    return ({error});
+    throw new Error("an error happened")
   }
 };
 
@@ -54,7 +54,7 @@ export const postFavorites = async (movie, userId) => {
     const favoritesId = response.json();
     return favoritesId;
   } catch (error) {
-    return error;
+    throw new Error("an error happened")
   };
 };
 
@@ -62,10 +62,9 @@ export const getFavorites = async (userId) => {
   try {
     const response = await fetch(`/api/users/${userId}/favorites`);
     const info = await response.json();
-
     return info.data;
   } catch (error) {
-    return error
+    throw new Error("an error happened")
   }
 }
 
@@ -74,9 +73,15 @@ export const removeFavorites = async(user, movie) => {
     user,
     movie
   }
-  await fetch(`/api/users/${user}/favorites/${movie}`, {
-    method:'DELETE',
-    body: JSON.stringify(ids),
-    headers: {'Content-Type': 'application/json'}
-  });
+  try {
+    const initialFetch = await fetch(`/api/users/${user}/favorites/${movie}`, {
+      method:'DELETE',
+      body: JSON.stringify(ids),
+      headers: {'Content-Type': 'application/json'}
+    });
+    const response = initialFetch.json()
+    return response;
+  } catch (error) {
+    throw new Error("an error happened")
+  }
 }
