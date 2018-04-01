@@ -54,6 +54,15 @@ export const cleanMovie = {
     vote_average:6.1
   }
 
+export const notFavorite = {
+  movie_id: 338970,
+  overview: "Lara Croft...",
+  poster_path:"http://image.tmdb.org/t/p/w185//ePyN2nX9t8SOl70eRW47Q29zUFO.jpg",
+  release_date: "2018-03-08",
+  title: "Tomb Raider",
+  vote_average: 6.2,
+}
+
 export const info =  {
     movie_id: 337167,
     overview: "Believing they have left behind...",
