@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { shallow } from 'enyzme';
+import { shallow } from 'enzyme';
 
-describe('App', () =>{
+describe('App', () => {
   let wrapper;
 
   beforeEach(() => {
@@ -16,9 +16,7 @@ describe('App', () =>{
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  it('Should match the snapshot', () =>{
-    expect(wrapper).toMatchSnapshot()
-  })
+  
 
 })
 

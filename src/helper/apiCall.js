@@ -38,7 +38,7 @@ export const postCreateUser = async (userInfo) => {
     });
     const user = await createUser.json();
     return user;
-  } catch (error){
+  } catch (error) {
     throw new Error("an error happened")
   }
 };

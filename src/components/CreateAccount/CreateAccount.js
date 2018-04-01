@@ -74,8 +74,8 @@ class CreateAccount extends Component {
     );
   }
 }
-
 CreateAccount.propTypes = {
+
   handleUser: PropTypes.func,
   history: PropTypes.object
 };
