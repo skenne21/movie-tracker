@@ -1,7 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import CreateAccount from './CreateAccount';
+import * as apiCall from '../../helper/apiCall'
 
+jest.mock('../../helper/apiCall')
 
 describe('CreateAccount', () => {
   let wrapper, mockHandleUser, mockPush;
@@ -62,8 +64,7 @@ describe('CreateAccount', () => {
 
   })
 
-  it.skip('Should call handleNewUSer if there is not an error', async () => {
-
+  it('Should call handleNewUSer if there is not an error', async () => {
     const user = {
       status: "success",
       data: {
@@ -76,10 +77,7 @@ describe('CreateAccount', () => {
 
     const mockEvent = { preventDefault: jest.fn()};
 
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      ok: 'true',
-      json: () =>  Promise.resolve(response)
-    }));
+    window.fetch = await jest.fn().mockImplementation(() => Promise.resolve(response))
 
     const response = {
       status: "true",
@@ -90,16 +88,10 @@ describe('CreateAccount', () => {
         email: "jhon@aol.col"
       }
     }
-
-    wrapper.instance().handleSubmit(mockEvent)
+    await wrapper.instance().handleSubmit(mockEvent)
 
     const spy = jest.spyOn(wrapper.instance(), 'handleNewUser')
 
-
     expect(spy).toHaveBeenCalled();
   })
-
-  
-  
 })
-
