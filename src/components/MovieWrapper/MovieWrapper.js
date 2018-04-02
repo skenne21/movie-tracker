@@ -7,7 +7,6 @@ const MovieWrapper = (props) =>  {
 
   const determinePath = () => {
     if(props.user.length) {
-      console.log(props.history)
       switch(props.history.location.pathname) {
       case "/":
         return createMovie(props.movies)
