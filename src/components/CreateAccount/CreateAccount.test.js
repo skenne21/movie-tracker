@@ -42,34 +42,22 @@ describe('CreateAccount', () => {
     expect(wrapper.state('name')).toEqual('Bob');
   })
 
-  it.skip('Should call handleError, if the user returns an error', () => {
-
-    const results = {error:"already exists."};
-
-    const mockEvent = { preventDefault: jest.fn()};
-
-
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      ok: 'true',
-      json: () =>  Promise.resolve(results)
-    }));
-
-    wrapper.instance().handleSubmit(mockEvent);
+  it('Should call handleError, if the user returns an error', async () => {
+    const mockEvent = {preventDefault: jest.fn()};
 
     const expected = jest.spyOn(wrapper.instance(), 'handleError')
+    await wrapper.instance().handleSubmit(mockEvent);
 
 
-    expect(expected).toHaveBeenCalled()
-
-
+    await expect(expected).toHaveBeenCalled();
   })
 
-  it.only('Should call handleNewUSer if there is not an error', async () => {
+  it('Should call handleNewUSer if there is not an error', async () => {
     const mockEvent = { preventDefault: jest.fn()};
 
+    const spy = jest.spyOn(wrapper.instance(), 'handleNewUser')
     await wrapper.instance().handleSubmit(mockEvent)
 
-    const spy = jest.spyOn(wrapper.instance(), 'handleNewUser')
 
     await expect(spy).toHaveBeenCalled();
   })
