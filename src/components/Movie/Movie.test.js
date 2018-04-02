@@ -2,9 +2,9 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import Movie from './Movie';
 import * as mocks from '../../mocks/mockMovieData'
-import { createFavorites } from '../../helper/favoriteHelper'
+import { createFavorites } from '../../helper/createFavorites'
 
-jest.mock('../../helper/favoriteHelper')
+jest.mock('../../helper/createFavorites')
 
 describe('Movie', () => {
   let wrapper;

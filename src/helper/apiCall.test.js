@@ -1,11 +1,11 @@
 import * as apiCalls from './apiCall';
 import { apiKey } from '../apiKey.js';
 import * as mockData from '../mocks/mockMovieData';
-import { cleanMovies} from './cleanMovies';
+import { cleanMovies } from './cleanMovies';
 
 jest.mock('./cleanMovies');
 
- describe.skip('Helper', () => {
+ describe('Helper', () => {
 
   describe('Fetch recent movies', () => {
     let response, url;
@@ -78,13 +78,17 @@ jest.mock('./cleanMovies');
 
     it('throws an error if the status is not okay', async () => {
       window.fetch = jest.fn().mockImplementation(() =>
-        Promise.resolve({
-          status: 500
+        Promise.reject({
+          status: 500,
+          message: 'Error'
         })
       )
+      const expected = {
+        status: 500,
+        message: 'Error'
+      }
       const apiCall = apiCalls.signIn(mockEvent, email, password)
-
-      await expect(apiCall).rejects.toEqual(Error('an error happened'))
+      expect(apiCall).rejects.toEqual(expected)
     });
 
     it('should return user object', () => {
@@ -147,13 +151,23 @@ jest.mock('./cleanMovies');
 
     it('should throw an error', () => {
       window.fetch = jest.fn().mockImplementation(() =>
-        Promise.resolve({
-          status: 500
+        Promise.reject({
+          status: 500,
+          message: 'Error'
         })
       )
-      const apiCall = apiCalls.postCreateUser(userInformation)
+      const expected = {
+        status: 500,
+        message: 'Error'
+      }
+      const userInfo = {
+        name: "Bob",
+        email: 'bob@gmail.com',
+        password: 'password'
+      }
 
-      expect(apiCall).rejects.toEqual(Error('an error happened'))
+      const apiCall = apiCalls.postCreateUser(userInfo)
+      expect(apiCall).rejects.toEqual(expected)
     });
 
     it('should return a user object', async () => {
@@ -204,13 +218,20 @@ jest.mock('./cleanMovies');
 
     it('should throw an error', () => {
       window.fetch = jest.fn().mockImplementation(() =>
-        Promise.resolve({
-          status: 500
+        Promise.reject({
+          status: 500,
+          message: 'Error'
         })
       )
-      const apiCall = apiCalls.postFavorites(movie, 1)
+      const expected = {
+        status: 500,
+        message: 'Error'
+      }
+      const userId = 1;
+      const movie = mockData.cleanMovie;
 
-      expect(apiCall).rejects.toEqual(Error('an error happened'))
+      const apiCall = apiCalls.postFavorites(movie, userId)
+      expect(apiCall).rejects.toEqual(expected)
     });
 
     it('should return a status-success object', async () => {
@@ -250,13 +271,19 @@ jest.mock('./cleanMovies');
 
     it('should throw an error', () => {
       window.fetch = jest.fn().mockImplementation(() =>
-        Promise.resolve({
-          status: 500
+        Promise.reject({
+          status: 500,
+          message: 'Error'
         })
       )
-      const apiCall = apiCalls.getFavorites(1)
+      const expected = {
+        status: 500,
+        message: 'Error'
+      }
+      const userId = 1;
 
-      expect(apiCall).rejects.toEqual(Error('an error happened'))
+      const apiCall = apiCalls.getFavorites(userId)
+      expect(apiCall).rejects.toEqual(expected)
     });
 
     it('should return a resolved object of movies', async () => {
@@ -315,12 +342,25 @@ jest.mock('./cleanMovies');
 
     it('should throw an error', () => {
       window.fetch = jest.fn().mockImplementation(() =>
-        Promise.resolve({
-          status: 500
+        Promise.reject({
+          status: 500,
+          message: 'Error'
         })
       )
-      const apiCall = apiCalls.removeFavorites(1, 11716)
-      expect(apiCall).rejects.toEqual(Error('an error happened'))
+      const expected = {
+        status: 500,
+        message: 'Error'
+      }
+      const user = {
+        name: "Bob",
+        email: 'bob@gmail.com',
+        password: 'password',
+        favorites: mockData.cleanData
+      }
+      const movie = mockData.cleanMovie
+
+      const apiCall = apiCalls.removeFavorites(user, movie)
+      expect(apiCall).rejects.toEqual(expected)
     });
 
     it('should return a resolved object', async () => {
@@ -333,18 +373,4 @@ jest.mock('./cleanMovies');
       expect(apiCall).toEqual(results)
     });
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });

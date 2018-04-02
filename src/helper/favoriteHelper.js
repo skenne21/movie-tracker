@@ -1,20 +1,12 @@
 import { postFavorites, getFavorites, removeFavorites } from './apiCall';
 
-export const createFavorites = async (movie, user, handleUser, favsMovie) => {
-  const userFavorites = await getFavorites(user[0].id)
-  if (!userFavorites.error) {
-    const favorites = userFavorites.find(fav => fav.movie_id === movie.movie_id)
-    favorites ?  updateFavorites(user, movie, userFavorites, handleUser) : addFavorites(movie, user, handleUser);
-  }
-};
-
 export const addFavorites = async (movie, user, handleUser) => {
   await postFavorites(movie, user[0].id);
   const userFavorites = await getFavorites(user[0].id)
   const updatedUser = Object.assign({}, ...user, {favorites: userFavorites});
   handleUser(updatedUser);
 }
-//
+
 export const updateFavorites = (user, movie, userFavorites, handleUser) => {
   removeFavorites(user[0].id, movie.movie_id);
   const newFavorites = userFavorites.filter( fav => fav.movie_id !== movie.movie_id);

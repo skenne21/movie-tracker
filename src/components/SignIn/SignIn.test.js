@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import SignIn from './SignIn';
-import { cleanData, cleanMovie } from '../../mocks/mockMovieData'; 
+import { cleanData, cleanMovie } from '../../mocks/mockMovieData';
 
 describe('SignIn' ,() => {
   let wrapper, user, history, mockHandleUser, mockRemoveuser;
@@ -19,7 +19,7 @@ describe('SignIn' ,() => {
     mockRemoveuser = jest.fn()
     history = { location: {pathname:'/signin'}}
     wrapper = shallow(
-      <SignIn 
+      <SignIn
         user={user}
         history={history}
         handleUser={mockHandleUser}
@@ -39,7 +39,7 @@ describe('SignIn' ,() => {
 
   it('Should have a defualt password set to a empty string', () => {
 
-    expect(wrapper.state('password')).toEqual('');   
+    expect(wrapper.state('password')).toEqual('');
   });
 
   it('Should have a default errorMessage to a empty string', () => {
@@ -48,7 +48,7 @@ describe('SignIn' ,() => {
 
   it('Should add the event to state when the input changes',() => {
 
-    const event = { target: { 
+    const event = { target: {
       name: 'email',
       value: 'bob@gmail.com'
     }};
@@ -65,5 +65,5 @@ describe('SignIn' ,() => {
     expect(expected).toHaveBeenCalledWith(event)
   })
 
-    
+
 })

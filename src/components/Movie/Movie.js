@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createFavorites } from '../../helper/favoriteHelper'
+import { createFavorites } from '../../helper/createFavorites';
 import './Movie.css';
 
 const Movie = ({movie, user, handleUser, favsMovie}) => {
@@ -15,7 +15,7 @@ const Movie = ({movie, user, handleUser, favsMovie}) => {
     !user.length ?
       alert('Please LogIn or Create An Account!')
       :
-      createFavorites(movie, user, handleUser, favsMovie);
+      createFavorites(movie, user, handleUser);
   };
 
 
