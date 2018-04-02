@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn Should match the snapshout 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SignIn
+    handleUser={[Function]}
+    history={
+        Object {
+            "location": Object {
+              "pathname": "/signin",
+            },
+          }
+    }
+    removeUser={[Function]}
+    user={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <form
+          onSubmit={[Function]}
+>
+          <input
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="Enter Email"
+                    type="email"
+                    value=""
+          />
+          <input
+                    name="password"
+                    onChange={[Function]}
+                    placeholder="Enter Your Password"
+                    type="text"
+                    value=""
+          />
+          <button
+                    type="Submit"
+          >
+                    Sign In
+          </button>
+          <br />
+          <p>
+                    tman2272@aol.com password
+          </p>
+</form>,
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          to="/account"
+>
+          Create an Account
+</NavLink>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              name="email"
+              onChange={[Function]}
+              placeholder="Enter Email"
+              type="email"
+              value=""
+/>,
+            <input
+              name="password"
+              onChange={[Function]}
+              placeholder="Enter Your Password"
+              type="text"
+              value=""
+/>,
+            <button
+              type="Submit"
+>
+              Sign In
+</button>,
+            <br />,
+            <p>
+              tman2272@aol.com password
+</p>,
+          ],
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "email",
+              "onChange": [Function],
+              "placeholder": "Enter Email",
+              "type": "email",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "password",
+              "onChange": [Function],
+              "placeholder": "Enter Your Password",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sign In",
+              "type": "Submit",
+            },
+            "ref": null,
+            "rendered": "Sign In",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "tman2272@aol.com password",
+            },
+            "ref": null,
+            "rendered": "tman2272@aol.com password",
+            "type": "p",
+          },
+        ],
+        "type": "form",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "ariaCurrent": "true",
+          "children": "Create an Account",
+          "to": "/account",
+        },
+        "ref": null,
+        "rendered": "Create an Account",
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <form
+            onSubmit={[Function]}
+>
+            <input
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="Enter Email"
+                        type="email"
+                        value=""
+            />
+            <input
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Enter Your Password"
+                        type="text"
+                        value=""
+            />
+            <button
+                        type="Submit"
+            >
+                        Sign In
+            </button>
+            <br />
+            <p>
+                        tman2272@aol.com password
+            </p>
+</form>,
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            to="/account"
+>
+            Create an Account
+</NavLink>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                name="email"
+                onChange={[Function]}
+                placeholder="Enter Email"
+                type="email"
+                value=""
+/>,
+              <input
+                name="password"
+                onChange={[Function]}
+                placeholder="Enter Your Password"
+                type="text"
+                value=""
+/>,
+              <button
+                type="Submit"
+>
+                Sign In
+</button>,
+              <br />,
+              <p>
+                tman2272@aol.com password
+</p>,
+            ],
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "email",
+                "onChange": [Function],
+                "placeholder": "Enter Email",
+                "type": "email",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "password",
+                "onChange": [Function],
+                "placeholder": "Enter Your Password",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sign In",
+                "type": "Submit",
+              },
+              "ref": null,
+              "rendered": "Sign In",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "tman2272@aol.com password",
+              },
+              "ref": null,
+              "rendered": "tman2272@aol.com password",
+              "type": "p",
+            },
+          ],
+          "type": "form",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": "Create an Account",
+            "to": "/account",
+          },
+          "ref": null,
+          "rendered": "Create an Account",
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
