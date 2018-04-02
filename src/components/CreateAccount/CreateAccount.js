@@ -22,6 +22,7 @@ class CreateAccount extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
+    // need try catch here 
     const createUser = await postCreateUser(this.state);
     createUser.status ?
       this.handleNewUser(event):

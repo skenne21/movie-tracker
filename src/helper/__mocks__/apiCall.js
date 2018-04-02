@@ -1,3 +1,5 @@
+import * as mockData from '../../mocks/mockMovieData'
+
 export const postCreateUser = jest.fn()
   .mockImplementationOnce(() => ({
     error: "An error happened"
@@ -13,7 +15,7 @@ export const postCreateUser = jest.fn()
   }))
 
 export const signIn = jest.fn()
-  .mockImplementationOnce(() => ({
+  .mockImplementation(() => ({
     status: "success",
     data: {
       id: 13,
@@ -22,3 +24,26 @@ export const signIn = jest.fn()
       email: "jhonson@aol.col"
     }
    }))
+
+export const postFavorites = jest.fn()
+  .mockImplementation(() => ({
+    id: 11,
+    message: "Movie was added to favorites",
+    status: "success"
+  }))
+
+export const getFavorites = jest.fn()
+  .mockImplementation(() => (mockData.cleanData))
+
+export const removeFavorites = jest.fn()
+  .mockImplementation(() => ({
+    body: 'ReadableStream',
+    bodyUsed: false,
+    headers: {},
+    ok: true,
+    redirected: false,
+    status: 200,
+    statusText: "OK",
+    type: "basic",
+    url: "http://localhost:3001/api/users/1/favorites/284054"
+  }))

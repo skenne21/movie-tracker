@@ -55,7 +55,7 @@ export const postFavorites = async (movie, userId) => {
     const favoritesId = response.json();
     return favoritesId;
   } catch (error) {
-    throw new Error("an error happened")
+    throw error
   };
 };
 

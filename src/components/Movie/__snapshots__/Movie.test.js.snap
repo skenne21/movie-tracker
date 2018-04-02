@@ -1,5 +1,305 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Movie should call getFavorites 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Movie
+    favsMovie={true}
+    handleUser={[Function]}
+    movie={
+        Object {
+            "movie_id": 337167,
+            "overview": "Believing they have left behind...",
+            "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+            "release_date": "2018-02-07",
+            "title": "Fifty Shades Freed",
+            "vote_average": 6.1,
+          }
+    }
+    user={
+        Array [
+            Object {
+              "person": "bob",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="favorites"
+          id={true}
+          onClick={[Function]}
+>
+          ❤︎
+</button>,
+        <h1
+          className="title"
+>
+          Fifty Shades Freed
+</h1>,
+        <img
+          alt="movie poster"
+          id="image"
+          src="http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+/>,
+        <p
+          className="rating"
+>
+          6.1
+</p>,
+        <p
+          className="date"
+>
+          2018-02-07
+</p>,
+        <p
+          className="summary"
+>
+          Summary: 
+          Believing they have left behind...
+</p>,
+      ],
+      "className": "movie",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "❤︎",
+          "className": "favorites",
+          "id": true,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "❤︎",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Fifty Shades Freed",
+          "className": "title",
+        },
+        "ref": null,
+        "rendered": "Fifty Shades Freed",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "movie poster",
+          "id": "image",
+          "src": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 6.1,
+          "className": "rating",
+        },
+        "ref": null,
+        "rendered": 6.1,
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "2018-02-07",
+          "className": "date",
+        },
+        "ref": null,
+        "rendered": "2018-02-07",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Summary: ",
+            "Believing they have left behind...",
+          ],
+          "className": "summary",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Summary: ",
+          "Believing they have left behind...",
+        ],
+        "type": "p",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="favorites"
+            id={true}
+            onClick={[Function]}
+>
+            ❤︎
+</button>,
+          <h1
+            className="title"
+>
+            Fifty Shades Freed
+</h1>,
+          <img
+            alt="movie poster"
+            id="image"
+            src="http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+/>,
+          <p
+            className="rating"
+>
+            6.1
+</p>,
+          <p
+            className="date"
+>
+            2018-02-07
+</p>,
+          <p
+            className="summary"
+>
+            Summary: 
+            Believing they have left behind...
+</p>,
+        ],
+        "className": "movie",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "❤︎",
+            "className": "favorites",
+            "id": true,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "❤︎",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Fifty Shades Freed",
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": "Fifty Shades Freed",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "movie poster",
+            "id": "image",
+            "src": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 6.1,
+            "className": "rating",
+          },
+          "ref": null,
+          "rendered": 6.1,
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "2018-02-07",
+            "className": "date",
+          },
+          "ref": null,
+          "rendered": "2018-02-07",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Summary: ",
+              "Believing they have left behind...",
+            ],
+            "className": "summary",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Summary: ",
+            "Believing they have left behind...",
+          ],
+          "type": "p",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
 exports[`Movie should invoke handleClick to create an alert if there is not a user 1`] = `
 ShallowWrapper {
   "length": 1,

@@ -46,7 +46,7 @@ class SignIn extends Component {
     this.props.handleUser(newUser);
     // localStorage.setItem('currentUser', JSON.stringify(user))
     this.props.history.push('/');
-  } 
+  }
 
   handleSignOut = () => {
     this.props.removeUser();
@@ -55,10 +55,6 @@ class SignIn extends Component {
   handleError = (error) => {
     this.setState({errorMessage: error.message});
     alert('Email and Password do not match!');
-  }
-
-  createAccount = async () => {
-
   }
 
   render() {
