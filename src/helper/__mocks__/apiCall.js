@@ -1,5 +1,8 @@
-export const postCreateUser = jest.fn().mockImplementation(() => {
-  return {
+export const postCreateUser = jest.fn()
+  .mockImplementationOnce(() => ({
+    error: "An error happened"
+  }))
+  .mockImplementationOnce(() => ({
     status: "true",
     data: {
       id: 13,
@@ -7,11 +10,10 @@ export const postCreateUser = jest.fn().mockImplementation(() => {
       password: "bugslife",
       email: "jhon@aol.col"
     }
-  }
-})
+  }))
 
-export const signIn = jest.fn().mockImplementation(() => {
-  return {
+export const signIn = jest.fn()
+  .mockImplementationOnce(() => ({
     status: "success",
     data: {
       id: 13,
@@ -19,5 +21,4 @@ export const signIn = jest.fn().mockImplementation(() => {
       password: "bugs456",
       email: "jhonson@aol.col"
     }
-  }
-})
+   }))
