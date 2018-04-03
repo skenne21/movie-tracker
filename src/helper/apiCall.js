@@ -15,16 +15,15 @@ export const fetchRecentMovies = async () => {
 
 export const signIn = async (event, email, password) => {
   try {
-    const signIn = await fetch('/api/users', {
+    const signInUser = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({email, password}),
       headers: {'Content-Type': 'application/json'}
     });
-    const user = await signIn.json();
+    const user = await signInUser.json();
     return user;
   } catch (error) {
-    return error
-    // throw new Error("an error happened")
+    throw error
   }
 };
 
@@ -40,7 +39,7 @@ export const postCreateUser = async (userInfo) => {
     const user = await createUser.json();
     return user;
   } catch (error) {
-    throw new Error("an error happened")
+    throw error
   }
 };
 
@@ -55,7 +54,7 @@ export const postFavorites = async (movie, userId) => {
     const favoritesId = response.json();
     return favoritesId;
   } catch (error) {
-    throw new Error("an error happened")
+    throw error
   };
 };
 
@@ -65,7 +64,7 @@ export const getFavorites = async (userId) => {
     const info = await response.json();
     return info.data;
   } catch (error) {
-    throw new Error("an error happened")
+    throw error
   }
 }
 
@@ -83,6 +82,6 @@ export const removeFavorites = async(user, movie) => {
     const response = initialFetch.json()
     return response;
   } catch (error) {
-    throw new Error("an error happened")
+    throw error
   }
 }

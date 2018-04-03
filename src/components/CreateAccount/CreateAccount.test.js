@@ -52,7 +52,7 @@ describe('CreateAccount', () => {
     await expect(expected).toHaveBeenCalled();
   })
 
-  it('Should call handleNewUSer if there is not an error', async () => {
+  it('Should call handleNewUser if there is not an error', async () => {
     const mockEvent = { preventDefault: jest.fn()};
 
     const spy = jest.spyOn(wrapper.instance(), 'handleNewUser')

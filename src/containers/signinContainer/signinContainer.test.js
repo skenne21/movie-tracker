@@ -2,18 +2,23 @@ import { mapStateToProps, mapDispatchToProps } from './signinContainer';
 import * as actions from '../../actions/index';
 
 describe('appContainer', () => {
+  let user;
 
-  describe('mapStateToProps', () => {
-    const user = {
+  beforeEach(() => {
+    user = {
       name: 'Taylor',
       email: 'tman2272@aol.com',
       password: 'password'
     };
-    
+  });
+
+  describe('mapStateToProps', () => {
+
     it('correctly maps the user to props', () => {
       const mockState = { user: [user] };
       const mapped = mapStateToProps(mockState);
       const expected = [user];
+      
       expect(mapped.user).toEqual(expected);
     });
   });
@@ -32,11 +37,6 @@ describe('appContainer', () => {
 
     it('should call dispatch with the correct params on handleUser', () => {
       const mockDispatch = jest.fn();
-      const user = {
-        name: 'Taylor',
-        email: 'tman2272@aol.com',
-        password: 'password'
-      };
       const mapped = mapDispatchToProps(mockDispatch);
       const expected = actions.updateUser(user);
 

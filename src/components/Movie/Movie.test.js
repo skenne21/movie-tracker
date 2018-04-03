@@ -2,7 +2,9 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import Movie from './Movie';
 import * as mocks from '../../mocks/mockMovieData'
+import { createFavorites } from '../../helper/createFavorites'
 
+jest.mock('../../helper/createFavorites')
 
 describe('Movie', () => {
   let wrapper;
@@ -53,15 +55,19 @@ describe('Movie', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it.skip('should call getFavorites', async () => {
-    wrapper.getFavorites = jest.fn().mockImplementation(() => Promise.resolve(mocks.cleanData));
-
-
+  it('should call getFavorites', () => {
+    const user = [{person: "bob"}];
+    wrapper = shallow(
+      <Movie
+        key={mockKey}
+        movie={mocks.cleanMovie}
+        user={user}
+        handleUser={mockHandleUser}
+        favsMovie={favsMovie}
+      />)
     wrapper.find('button').simulate('click')
 
-    const expected = await wrapper.updateFavorites(mockUser.favorites)
-
-    expect(expected).toHaveBeenCalled()
+    expect(wrapper).toMatchSnapshot();
   });
 
 

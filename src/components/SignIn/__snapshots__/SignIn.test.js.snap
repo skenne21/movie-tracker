@@ -11,6 +11,7 @@ ShallowWrapper {
             "location": Object {
               "pathname": "/signin",
             },
+            "push": [Function],
           }
     }
     removeUser={[Function]}
