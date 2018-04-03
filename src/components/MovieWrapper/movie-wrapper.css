@@ -1,0 +1,5 @@
+.movie-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  width: 800px;
+}

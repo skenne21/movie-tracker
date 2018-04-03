@@ -43,7 +43,7 @@ class CreateAccount extends Component {
   render() {
     const { name, email, password } = this.state;
     return (
-      <div>
+      <div className="account-page">
         <form onSubmit={this.handleSubmit}>
           <input type="text"
             name="name"
