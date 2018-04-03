@@ -8,7 +8,7 @@ const Header = () => {
       <NavLink to="/favorites">Favorites</NavLink>
     </header>
 
-  )
-}
+  );
+};
 
 export default Header;
