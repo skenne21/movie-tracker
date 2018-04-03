@@ -21,7 +21,13 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <header>
-          MovieTracker
+          <Link
+                    className="home_link"
+                    replace={false}
+                    to="/"
+          >
+                     MovieTracker
+          </Link>
 </header>,
         <NavLink
           activeClassName="active"
@@ -59,10 +65,29 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "MovieTracker",
+          "children": <Link
+            className="home_link"
+            replace={false}
+            to="/"
+>
+             MovieTracker
+</Link>,
         },
         "ref": null,
-        "rendered": "MovieTracker",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": " MovieTracker",
+            "className": "home_link",
+            "replace": false,
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": " MovieTracker",
+          "type": [Function],
+        },
         "type": "header",
       },
       Object {
@@ -169,7 +194,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <header>
-            MovieTracker
+            <Link
+                        className="home_link"
+                        replace={false}
+                        to="/"
+            >
+                         MovieTracker
+            </Link>
 </header>,
           <NavLink
             activeClassName="active"
@@ -207,10 +238,29 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "MovieTracker",
+            "children": <Link
+              className="home_link"
+              replace={false}
+              to="/"
+>
+               MovieTracker
+</Link>,
           },
           "ref": null,
-          "rendered": "MovieTracker",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": " MovieTracker",
+              "className": "home_link",
+              "replace": false,
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": " MovieTracker",
+            "type": [Function],
+          },
           "type": "header",
         },
         Object {

@@ -22,7 +22,6 @@ class CreateAccount extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    // need try catch here 
     const createUser = await postCreateUser(this.state);
     createUser.status ?
       this.handleNewUser(event):
@@ -62,7 +61,7 @@ class CreateAccount extends Component {
             required
           />
           <input
-            type="text"
+            type="password"
             name="password"
             value={password}
             placeholder="Enter Your Password"

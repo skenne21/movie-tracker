@@ -69,7 +69,7 @@ class SignIn extends Component {
             onChange={this.handleChange}
           />
           <input
-            type="text"
+            type="password"
             name="password"
             value={password}
             placeholder="Enter Your Password"

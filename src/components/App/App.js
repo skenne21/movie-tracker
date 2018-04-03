@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import SignIn from '../../containers/signinContainer/signinContainer';
-import { Switch, Route, NavLink } from 'react-router-dom';
+import { Switch, Route, NavLink, Link } from 'react-router-dom';
 import MovieWrapper from '../../containers/movieContainer/movieContainer';
 import CreateAccount from
   '../../containers/createAccountContainer/createAccountContainer';
@@ -23,7 +23,7 @@ export class App extends Component {
     return (
       <div className="App">
         <header>
-            MovieTracker
+          <Link to="/" className="home_link"> MovieTracker</Link>
         </header>
         <NavLink to="/favorites">Favorites</NavLink>
         <Switch>
