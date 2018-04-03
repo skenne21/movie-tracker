@@ -11,7 +11,7 @@ ShallowWrapper {
         Object {
             "movie_id": 337167,
             "overview": "Believing they have left behind...",
-            "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+            "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
             "release_date": "2018-02-07",
             "title": "Fifty Shades Freed",
             "vote_average": 6.1,
@@ -50,27 +50,37 @@ ShallowWrapper {
 >
           Fifty Shades Freed
 </h1>,
-        <img
-          alt="movie poster"
-          id="image"
-          src="http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
-/>,
-        <p
-          className="rating"
+        <div
+          className="movie-styling"
 >
-          6.1
-</p>,
-        <p
-          className="date"
->
-          2018-02-07
-</p>,
-        <p
-          className="summary"
->
-          Summary: 
-          Believing they have left behind...
-</p>,
+          <img
+                    alt="movie poster"
+                    id="image"
+                    src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+          />
+          <div
+                    className="movie-info-container"
+          >
+                    <p
+                              className="rating"
+                    >
+                              Score: 
+                              6.1
+                    </p>
+                    <p
+                              className="date"
+                    >
+                              Release Date: 
+                              2018-02-07
+                    </p>
+                    <p
+                              className="summary"
+                    >
+                              Summary: 
+                              Believing they have left behind...
+                    </p>
+          </div>
+</div>,
       ],
       "className": "movie",
     },
@@ -107,55 +117,140 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "alt": "movie poster",
-          "id": "image",
-          "src": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": 6.1,
-          "className": "rating",
-        },
-        "ref": null,
-        "rendered": 6.1,
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "2018-02-07",
-          "className": "date",
-        },
-        "ref": null,
-        "rendered": "2018-02-07",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            "Summary: ",
-            "Believing they have left behind...",
+            <img
+              alt="movie poster"
+              id="image"
+              src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+/>,
+            <div
+              className="movie-info-container"
+>
+              <p
+                            className="rating"
+              >
+                            Score: 
+                            6.1
+              </p>
+              <p
+                            className="date"
+              >
+                            Release Date: 
+                            2018-02-07
+              </p>
+              <p
+                            className="summary"
+              >
+                            Summary: 
+                            Believing they have left behind...
+              </p>
+</div>,
           ],
-          "className": "summary",
+          "className": "movie-styling",
         },
         "ref": null,
         "rendered": Array [
-          "Summary: ",
-          "Believing they have left behind...",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "movie poster",
+              "id": "image",
+              "src": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="rating"
+>
+                  Score: 
+                  6.1
+</p>,
+                <p
+                  className="date"
+>
+                  Release Date: 
+                  2018-02-07
+</p>,
+                <p
+                  className="summary"
+>
+                  Summary: 
+                  Believing they have left behind...
+</p>,
+              ],
+              "className": "movie-info-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Score: ",
+                    6.1,
+                  ],
+                  "className": "rating",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Score: ",
+                  6.1,
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Release Date: ",
+                    "2018-02-07",
+                  ],
+                  "className": "date",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Release Date: ",
+                  "2018-02-07",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Summary: ",
+                    "Believing they have left behind...",
+                  ],
+                  "className": "summary",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Summary: ",
+                  "Believing they have left behind...",
+                ],
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
         ],
-        "type": "p",
+        "type": "div",
       },
     ],
     "type": "article",
@@ -179,27 +274,37 @@ ShallowWrapper {
 >
             Fifty Shades Freed
 </h1>,
-          <img
-            alt="movie poster"
-            id="image"
-            src="http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
-/>,
-          <p
-            className="rating"
+          <div
+            className="movie-styling"
 >
-            6.1
-</p>,
-          <p
-            className="date"
->
-            2018-02-07
-</p>,
-          <p
-            className="summary"
->
-            Summary: 
-            Believing they have left behind...
-</p>,
+            <img
+                        alt="movie poster"
+                        id="image"
+                        src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+            />
+            <div
+                        className="movie-info-container"
+            >
+                        <p
+                                    className="rating"
+                        >
+                                    Score: 
+                                    6.1
+                        </p>
+                        <p
+                                    className="date"
+                        >
+                                    Release Date: 
+                                    2018-02-07
+                        </p>
+                        <p
+                                    className="summary"
+                        >
+                                    Summary: 
+                                    Believing they have left behind...
+                        </p>
+            </div>
+</div>,
         ],
         "className": "movie",
       },
@@ -236,55 +341,140 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "movie poster",
-            "id": "image",
-            "src": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": 6.1,
-            "className": "rating",
-          },
-          "ref": null,
-          "rendered": 6.1,
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "2018-02-07",
-            "className": "date",
-          },
-          "ref": null,
-          "rendered": "2018-02-07",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              "Summary: ",
-              "Believing they have left behind...",
+              <img
+                alt="movie poster"
+                id="image"
+                src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+/>,
+              <div
+                className="movie-info-container"
+>
+                <p
+                                className="rating"
+                >
+                                Score: 
+                                6.1
+                </p>
+                <p
+                                className="date"
+                >
+                                Release Date: 
+                                2018-02-07
+                </p>
+                <p
+                                className="summary"
+                >
+                                Summary: 
+                                Believing they have left behind...
+                </p>
+</div>,
             ],
-            "className": "summary",
+            "className": "movie-styling",
           },
           "ref": null,
           "rendered": Array [
-            "Summary: ",
-            "Believing they have left behind...",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "movie poster",
+                "id": "image",
+                "src": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p
+                    className="rating"
+>
+                    Score: 
+                    6.1
+</p>,
+                  <p
+                    className="date"
+>
+                    Release Date: 
+                    2018-02-07
+</p>,
+                  <p
+                    className="summary"
+>
+                    Summary: 
+                    Believing they have left behind...
+</p>,
+                ],
+                "className": "movie-info-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Score: ",
+                      6.1,
+                    ],
+                    "className": "rating",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Score: ",
+                    6.1,
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Release Date: ",
+                      "2018-02-07",
+                    ],
+                    "className": "date",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Release Date: ",
+                    "2018-02-07",
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Summary: ",
+                      "Believing they have left behind...",
+                    ],
+                    "className": "summary",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Summary: ",
+                    "Believing they have left behind...",
+                  ],
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
           ],
-          "type": "p",
+          "type": "div",
         },
       ],
       "type": "article",
@@ -311,7 +501,7 @@ ShallowWrapper {
         Object {
             "movie_id": 337167,
             "overview": "Believing they have left behind...",
-            "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+            "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
             "release_date": "2018-02-07",
             "title": "Fifty Shades Freed",
             "vote_average": 6.1,
@@ -344,27 +534,37 @@ ShallowWrapper {
 >
           Fifty Shades Freed
 </h1>,
-        <img
-          alt="movie poster"
-          id="image"
-          src="http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
-/>,
-        <p
-          className="rating"
+        <div
+          className="movie-styling"
 >
-          6.1
-</p>,
-        <p
-          className="date"
->
-          2018-02-07
-</p>,
-        <p
-          className="summary"
->
-          Summary: 
-          Believing they have left behind...
-</p>,
+          <img
+                    alt="movie poster"
+                    id="image"
+                    src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+          />
+          <div
+                    className="movie-info-container"
+          >
+                    <p
+                              className="rating"
+                    >
+                              Score: 
+                              6.1
+                    </p>
+                    <p
+                              className="date"
+                    >
+                              Release Date: 
+                              2018-02-07
+                    </p>
+                    <p
+                              className="summary"
+                    >
+                              Summary: 
+                              Believing they have left behind...
+                    </p>
+          </div>
+</div>,
       ],
       "className": "movie",
     },
@@ -401,55 +601,140 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "alt": "movie poster",
-          "id": "image",
-          "src": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": 6.1,
-          "className": "rating",
-        },
-        "ref": null,
-        "rendered": 6.1,
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "2018-02-07",
-          "className": "date",
-        },
-        "ref": null,
-        "rendered": "2018-02-07",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            "Summary: ",
-            "Believing they have left behind...",
+            <img
+              alt="movie poster"
+              id="image"
+              src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+/>,
+            <div
+              className="movie-info-container"
+>
+              <p
+                            className="rating"
+              >
+                            Score: 
+                            6.1
+              </p>
+              <p
+                            className="date"
+              >
+                            Release Date: 
+                            2018-02-07
+              </p>
+              <p
+                            className="summary"
+              >
+                            Summary: 
+                            Believing they have left behind...
+              </p>
+</div>,
           ],
-          "className": "summary",
+          "className": "movie-styling",
         },
         "ref": null,
         "rendered": Array [
-          "Summary: ",
-          "Believing they have left behind...",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "movie poster",
+              "id": "image",
+              "src": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="rating"
+>
+                  Score: 
+                  6.1
+</p>,
+                <p
+                  className="date"
+>
+                  Release Date: 
+                  2018-02-07
+</p>,
+                <p
+                  className="summary"
+>
+                  Summary: 
+                  Believing they have left behind...
+</p>,
+              ],
+              "className": "movie-info-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Score: ",
+                    6.1,
+                  ],
+                  "className": "rating",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Score: ",
+                  6.1,
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Release Date: ",
+                    "2018-02-07",
+                  ],
+                  "className": "date",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Release Date: ",
+                  "2018-02-07",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Summary: ",
+                    "Believing they have left behind...",
+                  ],
+                  "className": "summary",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Summary: ",
+                  "Believing they have left behind...",
+                ],
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
         ],
-        "type": "p",
+        "type": "div",
       },
     ],
     "type": "article",
@@ -473,27 +758,37 @@ ShallowWrapper {
 >
             Fifty Shades Freed
 </h1>,
-          <img
-            alt="movie poster"
-            id="image"
-            src="http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
-/>,
-          <p
-            className="rating"
+          <div
+            className="movie-styling"
 >
-            6.1
-</p>,
-          <p
-            className="date"
->
-            2018-02-07
-</p>,
-          <p
-            className="summary"
->
-            Summary: 
-            Believing they have left behind...
-</p>,
+            <img
+                        alt="movie poster"
+                        id="image"
+                        src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+            />
+            <div
+                        className="movie-info-container"
+            >
+                        <p
+                                    className="rating"
+                        >
+                                    Score: 
+                                    6.1
+                        </p>
+                        <p
+                                    className="date"
+                        >
+                                    Release Date: 
+                                    2018-02-07
+                        </p>
+                        <p
+                                    className="summary"
+                        >
+                                    Summary: 
+                                    Believing they have left behind...
+                        </p>
+            </div>
+</div>,
         ],
         "className": "movie",
       },
@@ -530,55 +825,140 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "movie poster",
-            "id": "image",
-            "src": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": 6.1,
-            "className": "rating",
-          },
-          "ref": null,
-          "rendered": 6.1,
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "2018-02-07",
-            "className": "date",
-          },
-          "ref": null,
-          "rendered": "2018-02-07",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              "Summary: ",
-              "Believing they have left behind...",
+              <img
+                alt="movie poster"
+                id="image"
+                src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+/>,
+              <div
+                className="movie-info-container"
+>
+                <p
+                                className="rating"
+                >
+                                Score: 
+                                6.1
+                </p>
+                <p
+                                className="date"
+                >
+                                Release Date: 
+                                2018-02-07
+                </p>
+                <p
+                                className="summary"
+                >
+                                Summary: 
+                                Believing they have left behind...
+                </p>
+</div>,
             ],
-            "className": "summary",
+            "className": "movie-styling",
           },
           "ref": null,
           "rendered": Array [
-            "Summary: ",
-            "Believing they have left behind...",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "movie poster",
+                "id": "image",
+                "src": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p
+                    className="rating"
+>
+                    Score: 
+                    6.1
+</p>,
+                  <p
+                    className="date"
+>
+                    Release Date: 
+                    2018-02-07
+</p>,
+                  <p
+                    className="summary"
+>
+                    Summary: 
+                    Believing they have left behind...
+</p>,
+                ],
+                "className": "movie-info-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Score: ",
+                      6.1,
+                    ],
+                    "className": "rating",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Score: ",
+                    6.1,
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Release Date: ",
+                      "2018-02-07",
+                    ],
+                    "className": "date",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Release Date: ",
+                    "2018-02-07",
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Summary: ",
+                      "Believing they have left behind...",
+                    ],
+                    "className": "summary",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Summary: ",
+                    "Believing they have left behind...",
+                  ],
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
           ],
-          "type": "p",
+          "type": "div",
         },
       ],
       "type": "article",
@@ -605,7 +985,7 @@ ShallowWrapper {
         Object {
             "movie_id": 337167,
             "overview": "Believing they have left behind...",
-            "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+            "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
             "release_date": "2018-02-07",
             "title": "Fifty Shades Freed",
             "vote_average": 6.1,
@@ -620,7 +1000,7 @@ ShallowWrapper {
                   Object {
                     "movie_id": 337167,
                     "overview": "Believing they have left behind...",
-                    "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                    "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
                     "release_date": "2018-02-07",
                     "title": "Fifty Shades Freed",
                     "vote_average": 6.1,
@@ -628,7 +1008,7 @@ ShallowWrapper {
                   Object {
                     "movie_id": 284054,
                     "overview": "King T'Challa returns home....",
-                    "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                    "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
                     "release_date": "2018-02-13",
                     "title": "Black Panther",
                     "vote_average": 7.4,
@@ -667,27 +1047,37 @@ ShallowWrapper {
 >
           Fifty Shades Freed
 </h1>,
-        <img
-          alt="movie poster"
-          id="image"
-          src="http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
-/>,
-        <p
-          className="rating"
+        <div
+          className="movie-styling"
 >
-          6.1
-</p>,
-        <p
-          className="date"
->
-          2018-02-07
-</p>,
-        <p
-          className="summary"
->
-          Summary: 
-          Believing they have left behind...
-</p>,
+          <img
+                    alt="movie poster"
+                    id="image"
+                    src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+          />
+          <div
+                    className="movie-info-container"
+          >
+                    <p
+                              className="rating"
+                    >
+                              Score: 
+                              6.1
+                    </p>
+                    <p
+                              className="date"
+                    >
+                              Release Date: 
+                              2018-02-07
+                    </p>
+                    <p
+                              className="summary"
+                    >
+                              Summary: 
+                              Believing they have left behind...
+                    </p>
+          </div>
+</div>,
       ],
       "className": "movie",
     },
@@ -724,55 +1114,140 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "alt": "movie poster",
-          "id": "image",
-          "src": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": 6.1,
-          "className": "rating",
-        },
-        "ref": null,
-        "rendered": 6.1,
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "2018-02-07",
-          "className": "date",
-        },
-        "ref": null,
-        "rendered": "2018-02-07",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            "Summary: ",
-            "Believing they have left behind...",
+            <img
+              alt="movie poster"
+              id="image"
+              src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+/>,
+            <div
+              className="movie-info-container"
+>
+              <p
+                            className="rating"
+              >
+                            Score: 
+                            6.1
+              </p>
+              <p
+                            className="date"
+              >
+                            Release Date: 
+                            2018-02-07
+              </p>
+              <p
+                            className="summary"
+              >
+                            Summary: 
+                            Believing they have left behind...
+              </p>
+</div>,
           ],
-          "className": "summary",
+          "className": "movie-styling",
         },
         "ref": null,
         "rendered": Array [
-          "Summary: ",
-          "Believing they have left behind...",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "movie poster",
+              "id": "image",
+              "src": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="rating"
+>
+                  Score: 
+                  6.1
+</p>,
+                <p
+                  className="date"
+>
+                  Release Date: 
+                  2018-02-07
+</p>,
+                <p
+                  className="summary"
+>
+                  Summary: 
+                  Believing they have left behind...
+</p>,
+              ],
+              "className": "movie-info-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Score: ",
+                    6.1,
+                  ],
+                  "className": "rating",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Score: ",
+                  6.1,
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Release Date: ",
+                    "2018-02-07",
+                  ],
+                  "className": "date",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Release Date: ",
+                  "2018-02-07",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Summary: ",
+                    "Believing they have left behind...",
+                  ],
+                  "className": "summary",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Summary: ",
+                  "Believing they have left behind...",
+                ],
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
         ],
-        "type": "p",
+        "type": "div",
       },
     ],
     "type": "article",
@@ -796,27 +1271,37 @@ ShallowWrapper {
 >
             Fifty Shades Freed
 </h1>,
-          <img
-            alt="movie poster"
-            id="image"
-            src="http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
-/>,
-          <p
-            className="rating"
+          <div
+            className="movie-styling"
 >
-            6.1
-</p>,
-          <p
-            className="date"
->
-            2018-02-07
-</p>,
-          <p
-            className="summary"
->
-            Summary: 
-            Believing they have left behind...
-</p>,
+            <img
+                        alt="movie poster"
+                        id="image"
+                        src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+            />
+            <div
+                        className="movie-info-container"
+            >
+                        <p
+                                    className="rating"
+                        >
+                                    Score: 
+                                    6.1
+                        </p>
+                        <p
+                                    className="date"
+                        >
+                                    Release Date: 
+                                    2018-02-07
+                        </p>
+                        <p
+                                    className="summary"
+                        >
+                                    Summary: 
+                                    Believing they have left behind...
+                        </p>
+            </div>
+</div>,
         ],
         "className": "movie",
       },
@@ -853,55 +1338,140 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "movie poster",
-            "id": "image",
-            "src": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": 6.1,
-            "className": "rating",
-          },
-          "ref": null,
-          "rendered": 6.1,
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "2018-02-07",
-            "className": "date",
-          },
-          "ref": null,
-          "rendered": "2018-02-07",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              "Summary: ",
-              "Believing they have left behind...",
+              <img
+                alt="movie poster"
+                id="image"
+                src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg"
+/>,
+              <div
+                className="movie-info-container"
+>
+                <p
+                                className="rating"
+                >
+                                Score: 
+                                6.1
+                </p>
+                <p
+                                className="date"
+                >
+                                Release Date: 
+                                2018-02-07
+                </p>
+                <p
+                                className="summary"
+                >
+                                Summary: 
+                                Believing they have left behind...
+                </p>
+</div>,
             ],
-            "className": "summary",
+            "className": "movie-styling",
           },
           "ref": null,
           "rendered": Array [
-            "Summary: ",
-            "Believing they have left behind...",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "movie poster",
+                "id": "image",
+                "src": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p
+                    className="rating"
+>
+                    Score: 
+                    6.1
+</p>,
+                  <p
+                    className="date"
+>
+                    Release Date: 
+                    2018-02-07
+</p>,
+                  <p
+                    className="summary"
+>
+                    Summary: 
+                    Believing they have left behind...
+</p>,
+                ],
+                "className": "movie-info-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Score: ",
+                      6.1,
+                    ],
+                    "className": "rating",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Score: ",
+                    6.1,
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Release Date: ",
+                      "2018-02-07",
+                    ],
+                    "className": "date",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Release Date: ",
+                    "2018-02-07",
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Summary: ",
+                      "Believing they have left behind...",
+                    ],
+                    "className": "summary",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Summary: ",
+                    "Believing they have left behind...",
+                  ],
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
           ],
-          "type": "p",
+          "type": "div",
         },
       ],
       "type": "article",

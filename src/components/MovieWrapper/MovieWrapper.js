@@ -19,7 +19,7 @@ const MovieWrapper = (props) =>  {
       }
     } else {
       return (
-        <div>
+        <div className="Login_text">
           <p>To view favorites, login.</p>
           {createMovie(props.movies)}
         </div>

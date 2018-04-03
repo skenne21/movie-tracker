@@ -57,6 +57,7 @@ ShallowWrapper {
                 Submit
         </button>
 </form>,
+      "className": "account-page",
     },
     "ref": null,
     "rendered": Object {
@@ -203,6 +204,7 @@ ShallowWrapper {
                     Submit
           </button>
 </form>,
+        "className": "account-page",
       },
       "ref": null,
       "rendered": Object {

@@ -3,3 +3,10 @@
   flex-flow: row wrap;
   width: 800px;
 }
+
+.Login_text {
+  position: absolute;
+  top: 20px;
+  margin: 0;
+
+}

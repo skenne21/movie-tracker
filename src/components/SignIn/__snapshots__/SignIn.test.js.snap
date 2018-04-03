@@ -53,9 +53,6 @@ ShallowWrapper {
                     Sign In
           </button>
           <br />
-          <p>
-                    tman2272@aol.com password
-          </p>
 </form>,
         <NavLink
           activeClassName="active"
@@ -65,6 +62,7 @@ ShallowWrapper {
           Create an Account
 </NavLink>,
       ],
+      "className": "sign-in-form",
     },
     "ref": null,
     "rendered": Array [
@@ -94,9 +92,6 @@ ShallowWrapper {
               Sign In
 </button>,
             <br />,
-            <p>
-              tman2272@aol.com password
-</p>,
           ],
           "onSubmit": [Function],
         },
@@ -153,17 +148,6 @@ ShallowWrapper {
             "rendered": null,
             "type": "br",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "tman2272@aol.com password",
-            },
-            "ref": null,
-            "rendered": "tman2272@aol.com password",
-            "type": "p",
-          },
         ],
         "type": "form",
       },
@@ -214,9 +198,6 @@ ShallowWrapper {
                         Sign In
             </button>
             <br />
-            <p>
-                        tman2272@aol.com password
-            </p>
 </form>,
           <NavLink
             activeClassName="active"
@@ -226,6 +207,7 @@ ShallowWrapper {
             Create an Account
 </NavLink>,
         ],
+        "className": "sign-in-form",
       },
       "ref": null,
       "rendered": Array [
@@ -255,9 +237,6 @@ ShallowWrapper {
                 Sign In
 </button>,
               <br />,
-              <p>
-                tman2272@aol.com password
-</p>,
             ],
             "onSubmit": [Function],
           },
@@ -313,17 +292,6 @@ ShallowWrapper {
               "ref": null,
               "rendered": null,
               "type": "br",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "tman2272@aol.com password",
-              },
-              "ref": null,
-              "rendered": "tman2272@aol.com password",
-              "type": "p",
             },
           ],
           "type": "form",
