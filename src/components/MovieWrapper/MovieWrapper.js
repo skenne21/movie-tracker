@@ -5,15 +5,15 @@ import SignIn from '../../containers/signinContainer/signinContainer';
 import './movie-wrapper.css';
 
 
-const MovieWrapper = (props) =>  {
+const MovieWrapper = ({user, movies, history, addFavorites, handleUser}) =>  {
 
   const determinePath = () => {
-    if (props.user.length) {
-      switch (props.history.location.pathname) {
+    if (user.length) {
+      switch (history.location.pathname) {
       case "/":
-        return createMovie(props.movies);
+        return createMovie(movies);
       case "/favorites":
-        return createMovie(props.user[0].favorites);
+        return createMovie(user[0].favorites);
       default:
         return null;
       }
@@ -21,7 +21,7 @@ const MovieWrapper = (props) =>  {
       return (
         <div className="Login_text">
           <p>To view favorites, login.</p>
-          {createMovie(props.movies)}
+          {createMovie(movies)}
         </div>
       );
     }
@@ -32,24 +32,24 @@ const MovieWrapper = (props) =>  {
     const mappedMovies = movies.map(movie => {
       let selected;
 
-      if (props.user.length && props.user[0].favorites) {
+      if (user.length && user[0].favorites) {
         selected =
-        props.user[0].favorites.find(favs => favs.movie_id === movie.movie_id);
+        user[0].favorites.find(favs => favs.movie_id === movie.movie_id);
       }
 
       return <Movie
         favsMovie={selected ? 'favs' : ''}
         key={movie.movie_id}
         movie={movie}
-        user={props.user}
-        addFavorites={props.addFavorites}
-        handleUser={props.handleUser}
+        user={user}
+        addFavorites={addFavorites}
+        handleUser={handleUser}
       />;
     });
 
     return (
       <div className="movie-container">
-        <SignIn history={props.history}/>
+        <SignIn history={history}/>
         <div className='movie-wrapper'>
           {mappedMovies}
         </div>
