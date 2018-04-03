@@ -1,19 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import SignIn from './SignIn';
-import { signIn } from '../../helper/apiCall'
-import { cleanData, cleanMovie } from '../../mocks/mockMovieData';
 
-jest.mock('../../helper/apiCall')
+import { cleanData } from '../../mocks/mockMovieData';
 
-describe('SignIn' ,() => {
+jest.mock('../../helper/apiCall');
+
+describe('SignIn', () => {
   let wrapper, user, history, mockHandleUser, mockRemoveuser;
 
   beforeEach(() => {
     user = [];
     mockHandleUser = jest.fn();
-    mockRemoveuser = jest.fn()
-    history = { location: {pathname:'/signin'}, push: jest.fn()}
+    mockRemoveuser = jest.fn();
+    history = { location: {pathname:'/signin'}, push: jest.fn()};
     wrapper = shallow(
       <SignIn
         user={user}
@@ -21,7 +21,7 @@ describe('SignIn' ,() => {
         handleUser={mockHandleUser}
         removeUser={mockRemoveuser}
       />
-    )
+    );
   });
 
   it('Should match the snapshout', () => {
@@ -42,7 +42,7 @@ describe('SignIn' ,() => {
     expect(wrapper.state('errorMessage')).toEqual('');
   });
 
-  it('Should add the event to state when the input changes',() => {
+  it('Should add the event to state when the input changes', () => {
 
     const event = { target: {
       name: 'email',
@@ -51,45 +51,44 @@ describe('SignIn' ,() => {
 
     expect(wrapper.state('email')).toEqual('');
     wrapper.instance().handleChange(event);
-    expect(wrapper.state('email')).toEqual('bob@gmail.com')
-  })
+    expect(wrapper.state('email')).toEqual('bob@gmail.com');
+  });
 
   it('Should call handleSignIn if there is not a user', async() => {
-    const event = { preventDefault: jest.fn()}
-    const spy = jest.spyOn(wrapper.instance(), 'handleSignIn')
+    const event = { preventDefault: jest.fn()};
+    const spy = jest.spyOn(wrapper.instance(), 'handleSignIn');
     wrapper.instance().handleSubmit(event);
 
-    expect(spy).toHaveBeenCalledWith(event)
-  })
+    expect(spy).toHaveBeenCalledWith(event);
+  });
 
   it('handleSignIn should set state back to default', async () => {
-    const mockEvent = {}
-    wrapper.setState({email: 'bob@gmail.com', password: 'password'})
-    expect(wrapper.state('email')).toEqual('bob@gmail.com')
-    expect(wrapper.state('password')).toEqual('password')
+    const mockEvent = {};
+    wrapper.setState({email: 'bob@gmail.com', password: 'password'});
+    expect(wrapper.state('email')).toEqual('bob@gmail.com');
+    expect(wrapper.state('password')).toEqual('password');
 
-    await wrapper.instance().handleSignIn(mockEvent)
+    await wrapper.instance().handleSignIn(mockEvent);
 
-    expect(wrapper.state('email')).toEqual('')
-    expect(wrapper.state('password')).toEqual('')
+    expect(wrapper.state('email')).toEqual('');
+    expect(wrapper.state('password')).toEqual('');
   });
 
-  it('handleSignIn should call handleError if an error is returned', async () => {
-    const mockEvent = {}
-    const user = {error: 'an error occurred'}
+  it('handleSignIn should call handleError if an error is returned',
+    async () => {
+      const mockEvent = {};
+      const user = {error: 'an error occurred'};
 
-    const spy = jest.spyOn(wrapper.instance(), 'handleError')
-    await wrapper.instance().handleSignIn(mockEvent)
+      const spy = jest.spyOn(wrapper.instance(), 'handleError');
+      await wrapper.instance().handleSignIn(mockEvent);
 
-    expect(spy).toHaveBeenCalledWith(user.error)
-  });
+      expect(spy).toHaveBeenCalledWith(user.error);
+    });
 
   it('setupUser calls handleUser with a new user object', async () => {
-    const user = {email: 'bob@gmail.com', password: 'password', id: 1}
-
     const newUser = Object.assign({}, user, {favorites: cleanData});
 
-    await wrapper.instance().setupUser(user);
+    await wrapper.instance().setupUser(newUser);
     expect(mockHandleUser).toHaveBeenCalled();
   });
 
@@ -97,14 +96,14 @@ describe('SignIn' ,() => {
     const expected = mockRemoveuser;
     wrapper.instance().handleSignOut();
 
-    expect(expected).toHaveBeenCalled()
+    expect(expected).toHaveBeenCalled();
   });
 
   it('handleError should set state to error', () => {
-    const error = {message: 'an error occurred'}
-    expect(wrapper.state('errorMessage')).toEqual('')
-    wrapper.instance().handleError(error)
+    const error = {message: 'an error occurred'};
+    expect(wrapper.state('errorMessage')).toEqual('');
+    wrapper.instance().handleError(error);
 
-    expect(wrapper.state('errorMessage')).toEqual(error.message)
+    expect(wrapper.state('errorMessage')).toEqual(error.message);
   });
-})
+});

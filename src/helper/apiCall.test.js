@@ -5,14 +5,15 @@ import { cleanMovies } from './cleanMovies';
 
 jest.mock('./cleanMovies');
 
- describe('Helper', () => {
+describe('Helper', () => {
 
   describe('Fetch recent movies', () => {
-    let response, url;
+    let response, url, base;
 
     beforeEach(() => {
       response = mockData.rawData;
-      url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`;
+      base = 'https://api.themoviedb.org/3/movie/';
+      url = `${base}now_playing?api_key=${apiKey}&language=en-US&page=1`;
       window.fetch = jest.fn().mockImplementation(() => (
         Promise.resolve({ok: true, json: () => Promise.resolve(response)})
       ));
@@ -43,7 +44,7 @@ jest.mock('./cleanMovies');
     let password;
 
     beforeEach(() => {
-      mockEvent = {target: {}}
+      mockEvent = {target: {}};
       url = '/api/users';
       email = 'tman220@gmail.com';
       password = 'password';
@@ -55,13 +56,13 @@ jest.mock('./cleanMovies');
         json: () => Promise.resolve(
           {
             data: {
-                id: 1,
-                name: "Taylor",
-                password: "password",
-                email: "tman2272@aol.com"
-              }
+              id: 1,
+              name: "Taylor",
+              password: "password",
+              email: "tman2272@aol.com"
+            }
           })
-      }))
+      }));
       const expected = [
         url,
         {
@@ -69,11 +70,11 @@ jest.mock('./cleanMovies');
           body: JSON.stringify({email, password}),
           headers: { 'Content-Type': 'application/json'}
         }
-      ]
+      ];
 
-      apiCalls.signIn(mockEvent, email, password)
+      apiCalls.signIn(mockEvent, email, password);
 
-      expect(window.fetch).toHaveBeenCalledWith(...expected)
+      expect(window.fetch).toHaveBeenCalledWith(...expected);
     });
 
     it('throws an error if the status is not okay', async () => {
@@ -82,13 +83,13 @@ jest.mock('./cleanMovies');
           status: 500,
           message: 'Error'
         })
-      )
+      );
       const expected = {
         status: 500,
         message: 'Error'
-      }
-      const apiCall = apiCalls.signIn(mockEvent, email, password)
-      expect(apiCall).rejects.toEqual(expected)
+      };
+      const apiCall = apiCalls.signIn(mockEvent, email, password);
+      expect(apiCall).rejects.toEqual(expected);
     });
 
     it('should return user object', () => {
@@ -97,25 +98,25 @@ jest.mock('./cleanMovies');
         json: () => Promise.resolve(
           {
             data: {
-                id: 1,
-                name: "Taylor",
-                password: "password",
-                email: "tman2272@aol.com"
-              }
+              id: 1,
+              name: "Taylor",
+              password: "password",
+              email: "tman2272@aol.com"
+            }
           })
-      }))
+      }));
       const expected = Promise.resolve({
         data: {
           id: 1,
           name: "Taylor",
           password: "password",
           email: "tman2272@aol.com"
-          }
-        })
+        }
+      });
 
-        const apiCall = apiCalls.signIn(mockEvent, email, password);
+      const apiCall = apiCalls.signIn(mockEvent, email, password);
 
-        expect(apiCall).toEqual(expected)
+      expect(apiCall).toEqual(expected);
     });
   });
 
@@ -124,15 +125,19 @@ jest.mock('./cleanMovies');
     let results;
 
     beforeEach(() => {
-      userInformation = {name: "Bug", email: "bugsarecool@gmail.com", password: "yes"}
-      results = {status: "success", message: "New user created", id: 20}
+      userInformation = {
+        name: "Bug", 
+        email: "bugsarecool@gmail.com",
+        password: "yes"
+      };
+      results = {status: "success", message: "New user created", id: 20};
     });
 
     it('calls fetch with correct params', async () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         json: () => Promise.resolve(results)
-      }))
+      }));
       const expected = [
         '/api/users/new',
         {
@@ -142,11 +147,11 @@ jest.mock('./cleanMovies');
             'Content-Type': 'application/json'
           }
         }
-      ]
+      ];
 
-      await apiCalls.postCreateUser(userInformation)
+      await apiCalls.postCreateUser(userInformation);
 
-      expect(window.fetch).toHaveBeenCalledWith(...expected)
+      expect(window.fetch).toHaveBeenCalledWith(...expected);
     });
 
     it('should throw an error', () => {
@@ -155,30 +160,30 @@ jest.mock('./cleanMovies');
           status: 500,
           message: 'Error'
         })
-      )
+      );
       const expected = {
         status: 500,
         message: 'Error'
-      }
+      };
       const userInfo = {
         name: "Bob",
         email: 'bob@gmail.com',
         password: 'password'
-      }
+      };
 
-      const apiCall = apiCalls.postCreateUser(userInfo)
-      expect(apiCall).rejects.toEqual(expected)
+      const apiCall = apiCalls.postCreateUser(userInfo);
+      expect(apiCall).rejects.toEqual(expected);
     });
 
     it('should return a user object', async () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         json: () => Promise.resolve(results)
-      }))
+      }));
 
-      const apiCall = await apiCalls.postCreateUser(userInformation)
+      const apiCall = await apiCalls.postCreateUser(userInformation);
 
-      expect(apiCall).toEqual(results)
+      expect(apiCall).toEqual(results);
     });
   });
 
@@ -192,7 +197,7 @@ jest.mock('./cleanMovies');
         id: 11,
         message: "Movie was added to favorites",
         status: "success"
-      }
+      };
       info = mockData.info;
       movie = mockData.cleanMovie;
     });
@@ -201,7 +206,7 @@ jest.mock('./cleanMovies');
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         json: () => Promise.resolve(results)
-      }))
+      }));
 
       const expected = [
         '/api/users/favorites/new',
@@ -209,11 +214,11 @@ jest.mock('./cleanMovies');
           body: JSON.stringify(info),
           headers: {'Content-Type': 'application/json'}
         }
-      ]
+      ];
 
       apiCalls.postFavorites(movie, 1);
 
-      expect(window.fetch).toHaveBeenCalledWith(...expected)
+      expect(window.fetch).toHaveBeenCalledWith(...expected);
     });
 
     it('should throw an error', () => {
@@ -222,16 +227,16 @@ jest.mock('./cleanMovies');
           status: 500,
           message: 'Error'
         })
-      )
+      );
       const expected = {
         status: 500,
         message: 'Error'
-      }
+      };
       const userId = 1;
       const movie = mockData.cleanMovie;
 
-      const apiCall = apiCalls.postFavorites(movie, userId)
-      expect(apiCall).rejects.toEqual(expected)
+      const apiCall = apiCalls.postFavorites(movie, userId);
+      expect(apiCall).rejects.toEqual(expected);
     });
 
     it('should return a status-success object', async () => {
@@ -242,7 +247,7 @@ jest.mock('./cleanMovies');
 
       const apiCall = await apiCalls.postFavorites(movie, 1);
 
-      expect(apiCall).toEqual(results)
+      expect(apiCall).toEqual(results);
     });
   });
 
@@ -254,19 +259,19 @@ jest.mock('./cleanMovies');
         status: "success",
         data: mockData.cleanData,
         message: "Retrieved All favorites"
-      }
+      };
     });
 
     it('should be called with correct params', () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         json: () => Promise.resolve(results)
-      }))
-      const url = '/api/users/1/favorites'
+      }));
+      const url = '/api/users/1/favorites';
 
       apiCalls.getFavorites(1);
 
-      expect(window.fetch).toHaveBeenCalledWith(url)
+      expect(window.fetch).toHaveBeenCalledWith(url);
     });
 
     it('should throw an error', () => {
@@ -275,15 +280,15 @@ jest.mock('./cleanMovies');
           status: 500,
           message: 'Error'
         })
-      )
+      );
       const expected = {
         status: 500,
         message: 'Error'
-      }
+      };
       const userId = 1;
 
-      const apiCall = apiCalls.getFavorites(userId)
-      expect(apiCall).rejects.toEqual(expected)
+      const apiCall = apiCalls.getFavorites(userId);
+      expect(apiCall).rejects.toEqual(expected);
     });
 
     it('should return a resolved object of movies', async () => {
@@ -291,11 +296,10 @@ jest.mock('./cleanMovies');
         ok: true,
         json: () => Promise.resolve(results)
       }));
-      const url = '/api/users/1/favorites'
 
       const apiCall = await apiCalls.getFavorites(1);
 
-      expect(apiCall).toEqual(results.data)
+      expect(apiCall).toEqual(results.data);
     });
   });
 
@@ -316,10 +320,10 @@ jest.mock('./cleanMovies');
         statusText: "OK",
         type: "basic",
         url: "http://localhost:3001/api/users/1/favorites/284054"
-      }
+      };
       userId = 1;
       movieId = 337167;
-      dataPassed = {user: userId, movie: movieId}
+      dataPassed = {user: userId, movie: movieId};
     });
 
     it('should be called with the correct params', () => {
@@ -330,14 +334,14 @@ jest.mock('./cleanMovies');
       const expected = [
         `/api/users/${userId}/favorites/${movieId}`,
         {
-        method: 'DELETE',
-        body: JSON.stringify(dataPassed),
-        headers: {'Content-Type': 'application/json'}
-      }]
+          method: 'DELETE',
+          body: JSON.stringify(dataPassed),
+          headers: {'Content-Type': 'application/json'}
+        }];
 
-      apiCalls.removeFavorites(userId, movieId)
+      apiCalls.removeFavorites(userId, movieId);
 
-      expect(window.fetch).toHaveBeenCalledWith(...expected)
+      expect(window.fetch).toHaveBeenCalledWith(...expected);
     });
 
     it('should throw an error', () => {
@@ -346,21 +350,21 @@ jest.mock('./cleanMovies');
           status: 500,
           message: 'Error'
         })
-      )
+      );
       const expected = {
         status: 500,
         message: 'Error'
-      }
+      };
       const user = {
         name: "Bob",
         email: 'bob@gmail.com',
         password: 'password',
         favorites: mockData.cleanData
-      }
-      const movie = mockData.cleanMovie
+      };
+      const movie = mockData.cleanMovie;
 
-      const apiCall = apiCalls.removeFavorites(user, movie)
-      expect(apiCall).rejects.toEqual(expected)
+      const apiCall = apiCalls.removeFavorites(user, movie);
+      expect(apiCall).rejects.toEqual(expected);
     });
 
     it('should return a resolved object', async () => {
@@ -369,8 +373,8 @@ jest.mock('./cleanMovies');
         json: () => Promise.resolve(results)
       }));
 
-      const apiCall = await apiCalls.removeFavorites(userId, movieId)
-      expect(apiCall).toEqual(results)
+      const apiCall = await apiCalls.removeFavorites(userId, movieId);
+      expect(apiCall).toEqual(results);
     });
   });
 });

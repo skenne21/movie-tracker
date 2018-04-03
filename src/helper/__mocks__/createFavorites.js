@@ -1,1 +1,1 @@
-export const createFavorites = jest.fn()
+export const createFavorites = jest.fn();

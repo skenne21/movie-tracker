@@ -1,10 +1,9 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import Movie from './Movie';
-import * as mocks from '../../mocks/mockMovieData'
-import { createFavorites } from '../../helper/createFavorites'
+import * as mocks from '../../mocks/mockMovieData';
 
-jest.mock('../../helper/createFavorites')
+jest.mock('../../helper/createFavorites');
 
 describe('Movie', () => {
   let wrapper;
@@ -20,7 +19,7 @@ describe('Movie', () => {
       password: "ilovemywife",
       email: "billybob@gmail.com",
       favorites: [mocks.cleanData]
-    }]
+    }];
     mockHandleUser = jest.fn();
     favsMovie = true;
     mockKey = 337167;
@@ -32,28 +31,29 @@ describe('Movie', () => {
         user={mockUser}
         handleUser={mockHandleUser}
         favsMovie={favsMovie}
-      />)
+      />);
   });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should invoke handleClick to create an alert if there is not a user', () => {
-    const user = [];
-    wrapper = shallow(
-      <Movie
-        key={mockKey}
-        movie={mocks.cleanMovie}
-        user={user}
-        handleUser={mockHandleUser}
-        favsMovie={favsMovie}
-      />)
+  it('should invoke handleClick to create an alert if there is not a user',
+    () => {
+      const user = [];
+      wrapper = shallow(
+        <Movie
+          key={mockKey}
+          movie={mocks.cleanMovie}
+          user={user}
+          handleUser={mockHandleUser}
+          favsMovie={favsMovie}
+        />);
 
-    wrapper.find('button').simulate('click');
+      wrapper.find('button').simulate('click');
 
-    expect(wrapper).toMatchSnapshot();
-  });
+      expect(wrapper).toMatchSnapshot();
+    });
 
   it('should call getFavorites', () => {
     const user = [{person: "bob"}];
@@ -64,8 +64,8 @@ describe('Movie', () => {
         user={user}
         handleUser={mockHandleUser}
         favsMovie={favsMovie}
-      />)
-    wrapper.find('button').simulate('click')
+      />);
+    wrapper.find('button').simulate('click');
 
     expect(wrapper).toMatchSnapshot();
   });

@@ -21,7 +21,11 @@ const Movie = ({movie, user, handleUser, favsMovie}) => {
 
   return (
     <article className='movie'>
-      <button id={favsMovie} className='favorites'onClick={handleClick}>❤︎</button>
+      <button id={favsMovie}
+        className='favorites'
+        onClick={handleClick}>
+        ❤
+        ︎</button>
       <h1 className='title'>{title}</h1>
       <img id='image' src={poster_path} alt='movie poster'/>
       <p className='rating'>{vote_average}</p>
@@ -33,7 +37,12 @@ const Movie = ({movie, user, handleUser, favsMovie}) => {
 
 Movie.propTypes = {
   movie: PropTypes.object,
-  user: PropTypes.array
+  user: PropTypes.array,
+  handleUser: PropTypes.func,
+  favsMovie: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.string
+  ])
 };
 
 export default Movie;

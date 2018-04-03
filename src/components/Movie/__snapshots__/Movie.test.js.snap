@@ -43,7 +43,7 @@ ShallowWrapper {
           id={true}
           onClick={[Function]}
 >
-          ❤︎
+          ❤ ︎
 </button>,
         <h1
           className="title"
@@ -81,13 +81,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "❤︎",
+          "children": "❤ ︎",
           "className": "favorites",
           "id": true,
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": "❤︎",
+        "rendered": "❤ ︎",
         "type": "button",
       },
       Object {
@@ -172,7 +172,7 @@ ShallowWrapper {
             id={true}
             onClick={[Function]}
 >
-            ❤︎
+            ❤ ︎
 </button>,
           <h1
             className="title"
@@ -210,13 +210,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "❤︎",
+            "children": "❤ ︎",
             "className": "favorites",
             "id": true,
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "❤︎",
+          "rendered": "❤ ︎",
           "type": "button",
         },
         Object {
@@ -337,7 +337,7 @@ ShallowWrapper {
           id={true}
           onClick={[Function]}
 >
-          ❤︎
+          ❤ ︎
 </button>,
         <h1
           className="title"
@@ -375,13 +375,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "❤︎",
+          "children": "❤ ︎",
           "className": "favorites",
           "id": true,
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": "❤︎",
+        "rendered": "❤ ︎",
         "type": "button",
       },
       Object {
@@ -466,7 +466,7 @@ ShallowWrapper {
             id={true}
             onClick={[Function]}
 >
-            ❤︎
+            ❤ ︎
 </button>,
           <h1
             className="title"
@@ -504,13 +504,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "❤︎",
+            "children": "❤ ︎",
             "className": "favorites",
             "id": true,
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "❤︎",
+          "rendered": "❤ ︎",
           "type": "button",
         },
         Object {
@@ -660,7 +660,7 @@ ShallowWrapper {
           id={true}
           onClick={[Function]}
 >
-          ❤︎
+          ❤ ︎
 </button>,
         <h1
           className="title"
@@ -698,13 +698,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "❤︎",
+          "children": "❤ ︎",
           "className": "favorites",
           "id": true,
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": "❤︎",
+        "rendered": "❤ ︎",
         "type": "button",
       },
       Object {
@@ -789,7 +789,7 @@ ShallowWrapper {
             id={true}
             onClick={[Function]}
 >
-            ❤︎
+            ❤ ︎
 </button>,
           <h1
             className="title"
@@ -827,13 +827,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "❤︎",
+            "children": "❤ ︎",
             "className": "favorites",
             "id": true,
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "❤︎",
+          "rendered": "❤ ︎",
           "type": "button",
         },
         Object {
