@@ -26,7 +26,7 @@ const Movie = ({movie, user, handleUser, favsMovie}) => {
         onClick={handleClick}>
         ❤
         ︎</button>
-      <h1 className='title'>{title}</h1>
+      <h1 id='title'>{title}</h1>
       <div className="movie-styling">
         <img id='image' src={poster_path} alt='movie poster'/>
         <div className="movie-info-container">
