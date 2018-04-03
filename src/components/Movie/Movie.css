@@ -21,8 +21,13 @@
   color: #d0d0d0;
   font-family: 'Vesper Libre', serif;;
   display: block;
+  /* height: 40px; */
   margin: 0;
   text-align: center;
+  white-space: nowrap;
+  width: 300px;
+  margin: auto;
+  overflow-x: auto;
 }
 .movie-styling {
   display: flex;
@@ -34,12 +39,16 @@
   display: inline-flex;
   height: 100%;
 }
+.movie-styling:hover {
+  animation-name: movie-styling;
+  animation-duration: 4s;
+}
 .movie-info-container {
   overflow-y: auto;
   height: 100%;
 }
 .favorites {
-  background-color: var(--card-bg);
+  background: transparent;
   position: absolute;
   top: 10px;
   right: 25px;
@@ -62,4 +71,7 @@
 ::-webkit-scrollbar-track {
     display: none;
 }
-
+@keyframes movie-styling {
+    0%  {top:0px;}
+    50%  {top:200px;}
+}
