@@ -59,7 +59,7 @@ class SignIn extends Component {
   render() {
     const { email, password } = this.state;
     return (
-      <div>
+      <div className="sign-in-form">
         <form onSubmit={this.handleSubmit}>
           <input
             type="email"

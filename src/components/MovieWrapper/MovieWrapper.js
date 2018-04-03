@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Movie from '../Movie/Movie';
 import SignIn from '../../containers/signinContainer/signinContainer';
+import './movie-wrapper.css';
 
 
 const MovieWrapper = (props) =>  {
@@ -32,7 +33,7 @@ const MovieWrapper = (props) =>  {
       let selected;
 
       if (props.user.length && props.user[0].favorites) {
-        selected = 
+        selected =
         props.user[0].favorites.find(favs => favs.movie_id === movie.movie_id);
       }
 
@@ -47,9 +48,11 @@ const MovieWrapper = (props) =>  {
     });
 
     return (
-      <div className='movie'>
+      <div className="movie-container">
         <SignIn history={props.history}/>
-        {mappedMovies}
+        <div className='movie-wrapper'>
+          {mappedMovies}
+        </div>
       </div>
     );
   };

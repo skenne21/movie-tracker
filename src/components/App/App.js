@@ -22,8 +22,9 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
+        <header className="header">
           <Link to="/" className="home_link"> MovieTracker</Link>
+            MovieTracker
         </header>
         <NavLink to="/favorites">Favorites</NavLink>
         <Switch>

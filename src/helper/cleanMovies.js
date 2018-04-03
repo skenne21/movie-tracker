@@ -1,6 +1,6 @@
 export const cleanMovies = (movies) => {
   const cleanMovies = movies.map( movie => {
-    const url = 'http://image.tmdb.org/t/p/w185/';
+    const url = 'http://image.tmdb.org/t/p/w500/';
     const path = movie.poster_path;
     const image = `${url}${path}`;
     return {

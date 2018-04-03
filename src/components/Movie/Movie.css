@@ -1,26 +1,39 @@
 .movie {
   position: relative;
-  display: inline-block;
   vertical-align: top;
-  width: 30%;
-  height: 100%;
-  background-color: purple;
+  width: 400px;
+  height: 200px;
+  background-color: var(--card-bg);
   border: 3px solid gray;
   border-radius: 30px;
   margin: 5px;
+  overflow-y: hidden;
+  padding: 10px 20px 20px 20px;
 }
-
 .movie p {
   width: 80%;
   margin: 4px auto;
 }
-
-#image {
-  width: 80%;
+#title {
+  display: block;
+  margin: 0;
+}
+.movie-styling {
+  display: flex;
+  height: 100%;
 }
 
+#image {
+  display: inline-flex;
+  height: 200px;
+  /* width: 185px; */
+}
+.movie-info-container {
+  overflow-y: auto;
+  height: 100%;
+}
 .favorites {
-  background-color: purple;
+  background-color: var(--card-bg);
   position: absolute;
   top: 10px;
   right: 25px;
@@ -29,9 +42,17 @@
   font-size: 3em;
   border-radius: 50%;
   border: none;
-  color: #FFA500;
+  color: var(--fave-color);
 }
 
 #favs {
   color: green;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
 }
