@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import SignIn from '../../containers/signinContainer/signinContainer';
-import { Switch, Route, NavLink, Link } from 'react-router-dom';
+import { Switch, Route, NavLink} from 'react-router-dom';
 import MovieWrapper from '../../containers/movieContainer/movieContainer';
 import CreateAccount from
   '../../containers/createAccountContainer/createAccountContainer';
 import * as movieData from '../../helper/apiCall';
 import PropTypes from 'prop-types';
+import Header from '../Header/Header';
 
 export class App extends Component {
 
@@ -22,11 +23,7 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="header">
-          <Link to="/" className="home_link"> MovieTracker</Link>
-            MovieTracker
-        </header>
-        <NavLink to="/favorites">Favorites</NavLink>
+        <Header />
         <Switch>
           <Route
             exact path="/"

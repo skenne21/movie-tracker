@@ -43,7 +43,7 @@ describe('FavoriteHelper', () => {
         movie_id: 284054,
         overview: "King T'Challa returns home....",
         poster_path:
-        "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+        "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
         release_date: "2018-02-13",
         title: "Black Panther",
         vote_average: 7.4

@@ -10,7 +10,7 @@ ShallowWrapper {
             Object {
               "movie_id": 337167,
               "overview": "Believing they have left behind...",
-              "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+              "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
               "release_date": "2018-02-07",
               "title": "Fifty Shades Freed",
               "vote_average": 6.1,
@@ -36,29 +36,34 @@ ShallowWrapper {
           To view favorites, login.
 </p>,
         <div
-          className="movie"
+          className="movie-container"
 >
           <Connect(SignIn)
                     history={undefined}
           />
-          <Movie
-                    addFavorites={undefined}
-                    favsMovie=""
-                    handleUser={undefined}
-                    movie={
-                              Object {
-                                        "movie_id": 337167,
-                                        "overview": "Believing they have left behind...",
-                                        "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                                        "release_date": "2018-02-07",
-                                        "title": "Fifty Shades Freed",
-                                        "vote_average": 6.1,
-                                      }
-                    }
-                    user={Array []}
-          />
+          <div
+                    className="movie-wrapper"
+          >
+                    <Movie
+                              addFavorites={undefined}
+                              favsMovie=""
+                              handleUser={undefined}
+                              movie={
+                                        Object {
+                                                  "movie_id": 337167,
+                                                  "overview": "Believing they have left behind...",
+                                                  "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                  "release_date": "2018-02-07",
+                                                  "title": "Fifty Shades Freed",
+                                                  "vote_average": 6.1,
+                                                }
+                              }
+                              user={Array []}
+                    />
+          </div>
 </div>,
       ],
+      "className": "Login_text",
     },
     "ref": null,
     "rendered": Array [
@@ -82,26 +87,28 @@ ShallowWrapper {
             <Connect(SignIn)
               history={undefined}
 />,
-            Array [
+            <div
+              className="movie-wrapper"
+>
               <Movie
-                addFavorites={undefined}
-                favsMovie=""
-                handleUser={undefined}
-                movie={
-                                Object {
-                                                "movie_id": 337167,
-                                                "overview": "Believing they have left behind...",
-                                                "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                                                "release_date": "2018-02-07",
-                                                "title": "Fifty Shades Freed",
-                                                "vote_average": 6.1,
-                                              }
-                }
-                user={Array []}
-/>,
-            ],
+                            addFavorites={undefined}
+                            favsMovie=""
+                            handleUser={undefined}
+                            movie={
+                                          Object {
+                                                        "movie_id": 337167,
+                                                        "overview": "Believing they have left behind...",
+                                                        "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                        "release_date": "2018-02-07",
+                                                        "title": "Fifty Shades Freed",
+                                                        "vote_average": 6.1,
+                                                      }
+                            }
+                            user={Array []}
+              />
+</div>,
           ],
-          "className": "movie",
+          "className": "movie-container",
         },
         "ref": null,
         "rendered": Array [
@@ -118,25 +125,55 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "337167",
-            "nodeType": "function",
+            "key": undefined,
+            "nodeType": "host",
             "props": Object {
-              "addFavorites": undefined,
-              "favsMovie": "",
-              "handleUser": undefined,
-              "movie": Object {
-                "movie_id": 337167,
-                "overview": "Believing they have left behind...",
-                "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                "release_date": "2018-02-07",
-                "title": "Fifty Shades Freed",
-                "vote_average": 6.1,
-              },
-              "user": Array [],
+              "children": Array [
+                <Movie
+                  addFavorites={undefined}
+                  favsMovie=""
+                  handleUser={undefined}
+                  movie={
+                                    Object {
+                                                      "movie_id": 337167,
+                                                      "overview": "Believing they have left behind...",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                      "release_date": "2018-02-07",
+                                                      "title": "Fifty Shades Freed",
+                                                      "vote_average": 6.1,
+                                                    }
+                  }
+                  user={Array []}
+/>,
+              ],
+              "className": "movie-wrapper",
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "337167",
+                "nodeType": "function",
+                "props": Object {
+                  "addFavorites": undefined,
+                  "favsMovie": "",
+                  "handleUser": undefined,
+                  "movie": Object {
+                    "movie_id": 337167,
+                    "overview": "Believing they have left behind...",
+                    "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                    "release_date": "2018-02-07",
+                    "title": "Fifty Shades Freed",
+                    "vote_average": 6.1,
+                  },
+                  "user": Array [],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": "div",
@@ -155,29 +192,34 @@ ShallowWrapper {
             To view favorites, login.
 </p>,
           <div
-            className="movie"
+            className="movie-container"
 >
             <Connect(SignIn)
                         history={undefined}
             />
-            <Movie
-                        addFavorites={undefined}
-                        favsMovie=""
-                        handleUser={undefined}
-                        movie={
-                                    Object {
-                                                "movie_id": 337167,
-                                                "overview": "Believing they have left behind...",
-                                                "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                                                "release_date": "2018-02-07",
-                                                "title": "Fifty Shades Freed",
-                                                "vote_average": 6.1,
-                                              }
-                        }
-                        user={Array []}
-            />
+            <div
+                        className="movie-wrapper"
+            >
+                        <Movie
+                                    addFavorites={undefined}
+                                    favsMovie=""
+                                    handleUser={undefined}
+                                    movie={
+                                                Object {
+                                                            "movie_id": 337167,
+                                                            "overview": "Believing they have left behind...",
+                                                            "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                            "release_date": "2018-02-07",
+                                                            "title": "Fifty Shades Freed",
+                                                            "vote_average": 6.1,
+                                                          }
+                                    }
+                                    user={Array []}
+                        />
+            </div>
 </div>,
         ],
+        "className": "Login_text",
       },
       "ref": null,
       "rendered": Array [
@@ -201,26 +243,28 @@ ShallowWrapper {
               <Connect(SignIn)
                 history={undefined}
 />,
-              Array [
+              <div
+                className="movie-wrapper"
+>
                 <Movie
-                  addFavorites={undefined}
-                  favsMovie=""
-                  handleUser={undefined}
-                  movie={
-                                    Object {
-                                                      "movie_id": 337167,
-                                                      "overview": "Believing they have left behind...",
-                                                      "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                                                      "release_date": "2018-02-07",
-                                                      "title": "Fifty Shades Freed",
-                                                      "vote_average": 6.1,
-                                                    }
-                  }
-                  user={Array []}
-/>,
-              ],
+                                addFavorites={undefined}
+                                favsMovie=""
+                                handleUser={undefined}
+                                movie={
+                                                Object {
+                                                                "movie_id": 337167,
+                                                                "overview": "Believing they have left behind...",
+                                                                "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                                "release_date": "2018-02-07",
+                                                                "title": "Fifty Shades Freed",
+                                                                "vote_average": 6.1,
+                                                              }
+                                }
+                                user={Array []}
+                />
+</div>,
             ],
-            "className": "movie",
+            "className": "movie-container",
           },
           "ref": null,
           "rendered": Array [
@@ -237,25 +281,55 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "337167",
-              "nodeType": "function",
+              "key": undefined,
+              "nodeType": "host",
               "props": Object {
-                "addFavorites": undefined,
-                "favsMovie": "",
-                "handleUser": undefined,
-                "movie": Object {
-                  "movie_id": 337167,
-                  "overview": "Believing they have left behind...",
-                  "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                  "release_date": "2018-02-07",
-                  "title": "Fifty Shades Freed",
-                  "vote_average": 6.1,
-                },
-                "user": Array [],
+                "children": Array [
+                  <Movie
+                    addFavorites={undefined}
+                    favsMovie=""
+                    handleUser={undefined}
+                    movie={
+                                        Object {
+                                                            "movie_id": 337167,
+                                                            "overview": "Believing they have left behind...",
+                                                            "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                            "release_date": "2018-02-07",
+                                                            "title": "Fifty Shades Freed",
+                                                            "vote_average": 6.1,
+                                                          }
+                    }
+                    user={Array []}
+/>,
+                ],
+                "className": "movie-wrapper",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "337167",
+                  "nodeType": "function",
+                  "props": Object {
+                    "addFavorites": undefined,
+                    "favsMovie": "",
+                    "handleUser": undefined,
+                    "movie": Object {
+                      "movie_id": 337167,
+                      "overview": "Believing they have left behind...",
+                      "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                      "release_date": "2018-02-07",
+                      "title": "Fifty Shades Freed",
+                      "vote_average": 6.1,
+                    },
+                    "user": Array [],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
             },
           ],
           "type": "div",
@@ -291,7 +365,7 @@ ShallowWrapper {
             Object {
               "movie_id": 337167,
               "overview": "Believing they have left behind...",
-              "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+              "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
               "release_date": "2018-02-07",
               "title": "Fifty Shades Freed",
               "vote_average": 6.1,
@@ -306,7 +380,7 @@ ShallowWrapper {
                 Object {
                   "movie_id": 337167,
                   "overview": "Believing they have left behind...",
-                  "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                  "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
                   "release_date": "2018-02-07",
                   "title": "Fifty Shades Freed",
                   "vote_average": 6.1,
@@ -314,7 +388,7 @@ ShallowWrapper {
                 Object {
                   "movie_id": 284054,
                   "overview": "King T'Challa returns home....",
-                  "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                  "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
                   "release_date": "2018-02-13",
                   "title": "Black Panther",
                   "vote_average": 7.4,
@@ -349,53 +423,55 @@ ShallowWrapper {
                             }
           }
 />,
-        Array [
+        <div
+          className="movie-wrapper"
+>
           <Movie
-            addFavorites={undefined}
-            favsMovie="favs"
-            handleUser={undefined}
-            movie={
-                        Object {
-                                    "movie_id": 337167,
-                                    "overview": "Believing they have left behind...",
-                                    "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                                    "release_date": "2018-02-07",
-                                    "title": "Fifty Shades Freed",
-                                    "vote_average": 6.1,
-                                  }
-            }
-            user={
-                        Array [
-                                    Object {
-                                      "email": "billybob@gmail.com",
-                                      "favorites": Array [
+                    addFavorites={undefined}
+                    favsMovie="favs"
+                    handleUser={undefined}
+                    movie={
+                              Object {
+                                        "movie_id": 337167,
+                                        "overview": "Believing they have left behind...",
+                                        "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                        "release_date": "2018-02-07",
+                                        "title": "Fifty Shades Freed",
+                                        "vote_average": 6.1,
+                                      }
+                    }
+                    user={
+                              Array [
                                         Object {
-                                          "movie_id": 337167,
-                                          "overview": "Believing they have left behind...",
-                                          "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                                          "release_date": "2018-02-07",
-                                          "title": "Fifty Shades Freed",
-                                          "vote_average": 6.1,
+                                          "email": "billybob@gmail.com",
+                                          "favorites": Array [
+                                            Object {
+                                              "movie_id": 337167,
+                                              "overview": "Believing they have left behind...",
+                                              "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                              "release_date": "2018-02-07",
+                                              "title": "Fifty Shades Freed",
+                                              "vote_average": 6.1,
+                                            },
+                                            Object {
+                                              "movie_id": 284054,
+                                              "overview": "King T'Challa returns home....",
+                                              "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                              "release_date": "2018-02-13",
+                                              "title": "Black Panther",
+                                              "vote_average": 7.4,
+                                            },
+                                          ],
+                                          "id": 1,
+                                          "name": "Bob",
+                                          "password": "ilovemywife",
                                         },
-                                        Object {
-                                          "movie_id": 284054,
-                                          "overview": "King T'Challa returns home....",
-                                          "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-                                          "release_date": "2018-02-13",
-                                          "title": "Black Panther",
-                                          "vote_average": 7.4,
-                                        },
-                                      ],
-                                      "id": 1,
-                                      "name": "Bob",
-                                      "password": "ilovemywife",
-                                    },
-                                  ]
-            }
-/>,
-        ],
+                                      ]
+                    }
+          />
+</div>,
       ],
-      "className": "movie",
+      "className": "movie-container",
     },
     "ref": null,
     "rendered": Array [
@@ -416,50 +492,107 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "337167",
-        "nodeType": "function",
+        "key": undefined,
+        "nodeType": "host",
         "props": Object {
-          "addFavorites": undefined,
-          "favsMovie": "favs",
-          "handleUser": undefined,
-          "movie": Object {
-            "movie_id": 337167,
-            "overview": "Believing they have left behind...",
-            "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-            "release_date": "2018-02-07",
-            "title": "Fifty Shades Freed",
-            "vote_average": 6.1,
-          },
-          "user": Array [
-            Object {
-              "email": "billybob@gmail.com",
-              "favorites": Array [
-                Object {
-                  "movie_id": 337167,
-                  "overview": "Believing they have left behind...",
-                  "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                  "release_date": "2018-02-07",
-                  "title": "Fifty Shades Freed",
-                  "vote_average": 6.1,
-                },
-                Object {
-                  "movie_id": 284054,
-                  "overview": "King T'Challa returns home....",
-                  "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-                  "release_date": "2018-02-13",
-                  "title": "Black Panther",
-                  "vote_average": 7.4,
-                },
-              ],
-              "id": 1,
-              "name": "Bob",
-              "password": "ilovemywife",
-            },
+          "children": Array [
+            <Movie
+              addFavorites={undefined}
+              favsMovie="favs"
+              handleUser={undefined}
+              movie={
+                            Object {
+                                          "movie_id": 337167,
+                                          "overview": "Believing they have left behind...",
+                                          "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                          "release_date": "2018-02-07",
+                                          "title": "Fifty Shades Freed",
+                                          "vote_average": 6.1,
+                                        }
+              }
+              user={
+                            Array [
+                                          Object {
+                                            "email": "billybob@gmail.com",
+                                            "favorites": Array [
+                                              Object {
+                                                "movie_id": 337167,
+                                                "overview": "Believing they have left behind...",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                "release_date": "2018-02-07",
+                                                "title": "Fifty Shades Freed",
+                                                "vote_average": 6.1,
+                                              },
+                                              Object {
+                                                "movie_id": 284054,
+                                                "overview": "King T'Challa returns home....",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                                "release_date": "2018-02-13",
+                                                "title": "Black Panther",
+                                                "vote_average": 7.4,
+                                              },
+                                            ],
+                                            "id": 1,
+                                            "name": "Bob",
+                                            "password": "ilovemywife",
+                                          },
+                                        ]
+              }
+/>,
           ],
+          "className": "movie-wrapper",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "337167",
+            "nodeType": "function",
+            "props": Object {
+              "addFavorites": undefined,
+              "favsMovie": "favs",
+              "handleUser": undefined,
+              "movie": Object {
+                "movie_id": 337167,
+                "overview": "Believing they have left behind...",
+                "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                "release_date": "2018-02-07",
+                "title": "Fifty Shades Freed",
+                "vote_average": 6.1,
+              },
+              "user": Array [
+                Object {
+                  "email": "billybob@gmail.com",
+                  "favorites": Array [
+                    Object {
+                      "movie_id": 337167,
+                      "overview": "Believing they have left behind...",
+                      "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                      "release_date": "2018-02-07",
+                      "title": "Fifty Shades Freed",
+                      "vote_average": 6.1,
+                    },
+                    Object {
+                      "movie_id": 284054,
+                      "overview": "King T'Challa returns home....",
+                      "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                      "release_date": "2018-02-13",
+                      "title": "Black Panther",
+                      "vote_average": 7.4,
+                    },
+                  ],
+                  "id": 1,
+                  "name": "Bob",
+                  "password": "ilovemywife",
+                },
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -480,53 +613,55 @@ ShallowWrapper {
                                   }
             }
 />,
-          Array [
+          <div
+            className="movie-wrapper"
+>
             <Movie
-              addFavorites={undefined}
-              favsMovie="favs"
-              handleUser={undefined}
-              movie={
-                            Object {
-                                          "movie_id": 337167,
-                                          "overview": "Believing they have left behind...",
-                                          "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                                          "release_date": "2018-02-07",
-                                          "title": "Fifty Shades Freed",
-                                          "vote_average": 6.1,
-                                        }
-              }
-              user={
-                            Array [
-                                          Object {
-                                            "email": "billybob@gmail.com",
-                                            "favorites": Array [
-                                              Object {
+                        addFavorites={undefined}
+                        favsMovie="favs"
+                        handleUser={undefined}
+                        movie={
+                                    Object {
                                                 "movie_id": 337167,
                                                 "overview": "Believing they have left behind...",
-                                                "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
                                                 "release_date": "2018-02-07",
                                                 "title": "Fifty Shades Freed",
                                                 "vote_average": 6.1,
-                                              },
-                                              Object {
-                                                "movie_id": 284054,
-                                                "overview": "King T'Challa returns home....",
-                                                "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-                                                "release_date": "2018-02-13",
-                                                "title": "Black Panther",
-                                                "vote_average": 7.4,
-                                              },
-                                            ],
-                                            "id": 1,
-                                            "name": "Bob",
-                                            "password": "ilovemywife",
-                                          },
-                                        ]
-              }
-/>,
-          ],
+                                              }
+                        }
+                        user={
+                                    Array [
+                                                Object {
+                                                  "email": "billybob@gmail.com",
+                                                  "favorites": Array [
+                                                    Object {
+                                                      "movie_id": 337167,
+                                                      "overview": "Believing they have left behind...",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                      "release_date": "2018-02-07",
+                                                      "title": "Fifty Shades Freed",
+                                                      "vote_average": 6.1,
+                                                    },
+                                                    Object {
+                                                      "movie_id": 284054,
+                                                      "overview": "King T'Challa returns home....",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                                      "release_date": "2018-02-13",
+                                                      "title": "Black Panther",
+                                                      "vote_average": 7.4,
+                                                    },
+                                                  ],
+                                                  "id": 1,
+                                                  "name": "Bob",
+                                                  "password": "ilovemywife",
+                                                },
+                                              ]
+                        }
+            />
+</div>,
         ],
-        "className": "movie",
+        "className": "movie-container",
       },
       "ref": null,
       "rendered": Array [
@@ -547,50 +682,107 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "337167",
-          "nodeType": "function",
+          "key": undefined,
+          "nodeType": "host",
           "props": Object {
-            "addFavorites": undefined,
-            "favsMovie": "favs",
-            "handleUser": undefined,
-            "movie": Object {
-              "movie_id": 337167,
-              "overview": "Believing they have left behind...",
-              "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-              "release_date": "2018-02-07",
-              "title": "Fifty Shades Freed",
-              "vote_average": 6.1,
-            },
-            "user": Array [
-              Object {
-                "email": "billybob@gmail.com",
-                "favorites": Array [
-                  Object {
-                    "movie_id": 337167,
-                    "overview": "Believing they have left behind...",
-                    "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                    "release_date": "2018-02-07",
-                    "title": "Fifty Shades Freed",
-                    "vote_average": 6.1,
-                  },
-                  Object {
-                    "movie_id": 284054,
-                    "overview": "King T'Challa returns home....",
-                    "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-                    "release_date": "2018-02-13",
-                    "title": "Black Panther",
-                    "vote_average": 7.4,
-                  },
-                ],
-                "id": 1,
-                "name": "Bob",
-                "password": "ilovemywife",
-              },
+            "children": Array [
+              <Movie
+                addFavorites={undefined}
+                favsMovie="favs"
+                handleUser={undefined}
+                movie={
+                                Object {
+                                                "movie_id": 337167,
+                                                "overview": "Believing they have left behind...",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                "release_date": "2018-02-07",
+                                                "title": "Fifty Shades Freed",
+                                                "vote_average": 6.1,
+                                              }
+                }
+                user={
+                                Array [
+                                                Object {
+                                                  "email": "billybob@gmail.com",
+                                                  "favorites": Array [
+                                                    Object {
+                                                      "movie_id": 337167,
+                                                      "overview": "Believing they have left behind...",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                      "release_date": "2018-02-07",
+                                                      "title": "Fifty Shades Freed",
+                                                      "vote_average": 6.1,
+                                                    },
+                                                    Object {
+                                                      "movie_id": 284054,
+                                                      "overview": "King T'Challa returns home....",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                                      "release_date": "2018-02-13",
+                                                      "title": "Black Panther",
+                                                      "vote_average": 7.4,
+                                                    },
+                                                  ],
+                                                  "id": 1,
+                                                  "name": "Bob",
+                                                  "password": "ilovemywife",
+                                                },
+                                              ]
+                }
+/>,
             ],
+            "className": "movie-wrapper",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "337167",
+              "nodeType": "function",
+              "props": Object {
+                "addFavorites": undefined,
+                "favsMovie": "favs",
+                "handleUser": undefined,
+                "movie": Object {
+                  "movie_id": 337167,
+                  "overview": "Believing they have left behind...",
+                  "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                  "release_date": "2018-02-07",
+                  "title": "Fifty Shades Freed",
+                  "vote_average": 6.1,
+                },
+                "user": Array [
+                  Object {
+                    "email": "billybob@gmail.com",
+                    "favorites": Array [
+                      Object {
+                        "movie_id": 337167,
+                        "overview": "Believing they have left behind...",
+                        "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                        "release_date": "2018-02-07",
+                        "title": "Fifty Shades Freed",
+                        "vote_average": 6.1,
+                      },
+                      Object {
+                        "movie_id": 284054,
+                        "overview": "King T'Challa returns home....",
+                        "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                        "release_date": "2018-02-13",
+                        "title": "Black Panther",
+                        "vote_average": 7.4,
+                      },
+                    ],
+                    "id": 1,
+                    "name": "Bob",
+                    "password": "ilovemywife",
+                  },
+                ],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",
@@ -623,7 +815,7 @@ ShallowWrapper {
             Object {
               "movie_id": 337167,
               "overview": "Believing they have left behind...",
-              "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+              "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
               "release_date": "2018-02-07",
               "title": "Fifty Shades Freed",
               "vote_average": 6.1,
@@ -638,7 +830,7 @@ ShallowWrapper {
                 Object {
                   "movie_id": 337167,
                   "overview": "Believing they have left behind...",
-                  "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                  "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
                   "release_date": "2018-02-07",
                   "title": "Fifty Shades Freed",
                   "vote_average": 6.1,
@@ -646,7 +838,7 @@ ShallowWrapper {
                 Object {
                   "movie_id": 284054,
                   "overview": "King T'Challa returns home....",
-                  "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                  "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
                   "release_date": "2018-02-13",
                   "title": "Black Panther",
                   "vote_average": 7.4,
@@ -681,96 +873,98 @@ ShallowWrapper {
                             }
           }
 />,
-        Array [
+        <div
+          className="movie-wrapper"
+>
           <Movie
-            addFavorites={undefined}
-            favsMovie="favs"
-            handleUser={undefined}
-            movie={
-                        Object {
-                                    "movie_id": 337167,
-                                    "overview": "Believing they have left behind...",
-                                    "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                                    "release_date": "2018-02-07",
-                                    "title": "Fifty Shades Freed",
-                                    "vote_average": 6.1,
-                                  }
-            }
-            user={
-                        Array [
-                                    Object {
-                                      "email": "billybob@gmail.com",
-                                      "favorites": Array [
+                    addFavorites={undefined}
+                    favsMovie="favs"
+                    handleUser={undefined}
+                    movie={
+                              Object {
+                                        "movie_id": 337167,
+                                        "overview": "Believing they have left behind...",
+                                        "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                        "release_date": "2018-02-07",
+                                        "title": "Fifty Shades Freed",
+                                        "vote_average": 6.1,
+                                      }
+                    }
+                    user={
+                              Array [
                                         Object {
-                                          "movie_id": 337167,
-                                          "overview": "Believing they have left behind...",
-                                          "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                                          "release_date": "2018-02-07",
-                                          "title": "Fifty Shades Freed",
-                                          "vote_average": 6.1,
+                                          "email": "billybob@gmail.com",
+                                          "favorites": Array [
+                                            Object {
+                                              "movie_id": 337167,
+                                              "overview": "Believing they have left behind...",
+                                              "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                              "release_date": "2018-02-07",
+                                              "title": "Fifty Shades Freed",
+                                              "vote_average": 6.1,
+                                            },
+                                            Object {
+                                              "movie_id": 284054,
+                                              "overview": "King T'Challa returns home....",
+                                              "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                              "release_date": "2018-02-13",
+                                              "title": "Black Panther",
+                                              "vote_average": 7.4,
+                                            },
+                                          ],
+                                          "id": 1,
+                                          "name": "Bob",
+                                          "password": "ilovemywife",
                                         },
-                                        Object {
-                                          "movie_id": 284054,
-                                          "overview": "King T'Challa returns home....",
-                                          "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-                                          "release_date": "2018-02-13",
-                                          "title": "Black Panther",
-                                          "vote_average": 7.4,
-                                        },
-                                      ],
-                                      "id": 1,
-                                      "name": "Bob",
-                                      "password": "ilovemywife",
-                                    },
-                                  ]
-            }
-/>,
+                                      ]
+                    }
+          />
           <Movie
-            addFavorites={undefined}
-            favsMovie="favs"
-            handleUser={undefined}
-            movie={
-                        Object {
-                                    "movie_id": 284054,
-                                    "overview": "King T'Challa returns home....",
-                                    "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-                                    "release_date": "2018-02-13",
-                                    "title": "Black Panther",
-                                    "vote_average": 7.4,
-                                  }
-            }
-            user={
-                        Array [
-                                    Object {
-                                      "email": "billybob@gmail.com",
-                                      "favorites": Array [
+                    addFavorites={undefined}
+                    favsMovie="favs"
+                    handleUser={undefined}
+                    movie={
+                              Object {
+                                        "movie_id": 284054,
+                                        "overview": "King T'Challa returns home....",
+                                        "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                        "release_date": "2018-02-13",
+                                        "title": "Black Panther",
+                                        "vote_average": 7.4,
+                                      }
+                    }
+                    user={
+                              Array [
                                         Object {
-                                          "movie_id": 337167,
-                                          "overview": "Believing they have left behind...",
-                                          "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                                          "release_date": "2018-02-07",
-                                          "title": "Fifty Shades Freed",
-                                          "vote_average": 6.1,
+                                          "email": "billybob@gmail.com",
+                                          "favorites": Array [
+                                            Object {
+                                              "movie_id": 337167,
+                                              "overview": "Believing they have left behind...",
+                                              "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                              "release_date": "2018-02-07",
+                                              "title": "Fifty Shades Freed",
+                                              "vote_average": 6.1,
+                                            },
+                                            Object {
+                                              "movie_id": 284054,
+                                              "overview": "King T'Challa returns home....",
+                                              "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                              "release_date": "2018-02-13",
+                                              "title": "Black Panther",
+                                              "vote_average": 7.4,
+                                            },
+                                          ],
+                                          "id": 1,
+                                          "name": "Bob",
+                                          "password": "ilovemywife",
                                         },
-                                        Object {
-                                          "movie_id": 284054,
-                                          "overview": "King T'Challa returns home....",
-                                          "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-                                          "release_date": "2018-02-13",
-                                          "title": "Black Panther",
-                                          "vote_average": 7.4,
-                                        },
-                                      ],
-                                      "id": 1,
-                                      "name": "Bob",
-                                      "password": "ilovemywife",
-                                    },
-                                  ]
-            }
-/>,
-        ],
+                                      ]
+                    }
+          />
+</div>,
       ],
-      "className": "movie",
+      "className": "movie-container",
     },
     "ref": null,
     "rendered": Array [
@@ -791,118 +985,10 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "337167",
-        "nodeType": "function",
+        "key": undefined,
+        "nodeType": "host",
         "props": Object {
-          "addFavorites": undefined,
-          "favsMovie": "favs",
-          "handleUser": undefined,
-          "movie": Object {
-            "movie_id": 337167,
-            "overview": "Believing they have left behind...",
-            "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-            "release_date": "2018-02-07",
-            "title": "Fifty Shades Freed",
-            "vote_average": 6.1,
-          },
-          "user": Array [
-            Object {
-              "email": "billybob@gmail.com",
-              "favorites": Array [
-                Object {
-                  "movie_id": 337167,
-                  "overview": "Believing they have left behind...",
-                  "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                  "release_date": "2018-02-07",
-                  "title": "Fifty Shades Freed",
-                  "vote_average": 6.1,
-                },
-                Object {
-                  "movie_id": 284054,
-                  "overview": "King T'Challa returns home....",
-                  "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-                  "release_date": "2018-02-13",
-                  "title": "Black Panther",
-                  "vote_average": 7.4,
-                },
-              ],
-              "id": 1,
-              "name": "Bob",
-              "password": "ilovemywife",
-            },
-          ],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "284054",
-        "nodeType": "function",
-        "props": Object {
-          "addFavorites": undefined,
-          "favsMovie": "favs",
-          "handleUser": undefined,
-          "movie": Object {
-            "movie_id": 284054,
-            "overview": "King T'Challa returns home....",
-            "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-            "release_date": "2018-02-13",
-            "title": "Black Panther",
-            "vote_average": 7.4,
-          },
-          "user": Array [
-            Object {
-              "email": "billybob@gmail.com",
-              "favorites": Array [
-                Object {
-                  "movie_id": 337167,
-                  "overview": "Believing they have left behind...",
-                  "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                  "release_date": "2018-02-07",
-                  "title": "Fifty Shades Freed",
-                  "vote_average": 6.1,
-                },
-                Object {
-                  "movie_id": 284054,
-                  "overview": "King T'Challa returns home....",
-                  "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-                  "release_date": "2018-02-13",
-                  "title": "Black Panther",
-                  "vote_average": 7.4,
-                },
-              ],
-              "id": 1,
-              "name": "Bob",
-              "password": "ilovemywife",
-            },
-          ],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <Connect(SignIn)
-            history={
-                        Object {
-                                    "location": Object {
-                                      "pathname": "/favorites",
-                                    },
-                                  }
-            }
-/>,
-          Array [
+          "children": Array [
             <Movie
               addFavorites={undefined}
               favsMovie="favs"
@@ -911,7 +997,7 @@ ShallowWrapper {
                             Object {
                                           "movie_id": 337167,
                                           "overview": "Believing they have left behind...",
-                                          "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                          "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
                                           "release_date": "2018-02-07",
                                           "title": "Fifty Shades Freed",
                                           "vote_average": 6.1,
@@ -925,7 +1011,7 @@ ShallowWrapper {
                                               Object {
                                                 "movie_id": 337167,
                                                 "overview": "Believing they have left behind...",
-                                                "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
                                                 "release_date": "2018-02-07",
                                                 "title": "Fifty Shades Freed",
                                                 "vote_average": 6.1,
@@ -933,7 +1019,7 @@ ShallowWrapper {
                                               Object {
                                                 "movie_id": 284054,
                                                 "overview": "King T'Challa returns home....",
-                                                "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
                                                 "release_date": "2018-02-13",
                                                 "title": "Black Panther",
                                                 "vote_average": 7.4,
@@ -954,7 +1040,7 @@ ShallowWrapper {
                             Object {
                                           "movie_id": 284054,
                                           "overview": "King T'Challa returns home....",
-                                          "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                          "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
                                           "release_date": "2018-02-13",
                                           "title": "Black Panther",
                                           "vote_average": 7.4,
@@ -968,7 +1054,7 @@ ShallowWrapper {
                                               Object {
                                                 "movie_id": 337167,
                                                 "overview": "Believing they have left behind...",
-                                                "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
                                                 "release_date": "2018-02-07",
                                                 "title": "Fifty Shades Freed",
                                                 "vote_average": 6.1,
@@ -976,7 +1062,7 @@ ShallowWrapper {
                                               Object {
                                                 "movie_id": 284054,
                                                 "overview": "King T'Challa returns home....",
-                                                "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
                                                 "release_date": "2018-02-13",
                                                 "title": "Black Panther",
                                                 "vote_average": 7.4,
@@ -990,8 +1076,218 @@ ShallowWrapper {
               }
 />,
           ],
+          "className": "movie-wrapper",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "337167",
+            "nodeType": "function",
+            "props": Object {
+              "addFavorites": undefined,
+              "favsMovie": "favs",
+              "handleUser": undefined,
+              "movie": Object {
+                "movie_id": 337167,
+                "overview": "Believing they have left behind...",
+                "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                "release_date": "2018-02-07",
+                "title": "Fifty Shades Freed",
+                "vote_average": 6.1,
+              },
+              "user": Array [
+                Object {
+                  "email": "billybob@gmail.com",
+                  "favorites": Array [
+                    Object {
+                      "movie_id": 337167,
+                      "overview": "Believing they have left behind...",
+                      "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                      "release_date": "2018-02-07",
+                      "title": "Fifty Shades Freed",
+                      "vote_average": 6.1,
+                    },
+                    Object {
+                      "movie_id": 284054,
+                      "overview": "King T'Challa returns home....",
+                      "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                      "release_date": "2018-02-13",
+                      "title": "Black Panther",
+                      "vote_average": 7.4,
+                    },
+                  ],
+                  "id": 1,
+                  "name": "Bob",
+                  "password": "ilovemywife",
+                },
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "284054",
+            "nodeType": "function",
+            "props": Object {
+              "addFavorites": undefined,
+              "favsMovie": "favs",
+              "handleUser": undefined,
+              "movie": Object {
+                "movie_id": 284054,
+                "overview": "King T'Challa returns home....",
+                "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                "release_date": "2018-02-13",
+                "title": "Black Panther",
+                "vote_average": 7.4,
+              },
+              "user": Array [
+                Object {
+                  "email": "billybob@gmail.com",
+                  "favorites": Array [
+                    Object {
+                      "movie_id": 337167,
+                      "overview": "Believing they have left behind...",
+                      "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                      "release_date": "2018-02-07",
+                      "title": "Fifty Shades Freed",
+                      "vote_average": 6.1,
+                    },
+                    Object {
+                      "movie_id": 284054,
+                      "overview": "King T'Challa returns home....",
+                      "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                      "release_date": "2018-02-13",
+                      "title": "Black Panther",
+                      "vote_average": 7.4,
+                    },
+                  ],
+                  "id": 1,
+                  "name": "Bob",
+                  "password": "ilovemywife",
+                },
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
-        "className": "movie",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Connect(SignIn)
+            history={
+                        Object {
+                                    "location": Object {
+                                      "pathname": "/favorites",
+                                    },
+                                  }
+            }
+/>,
+          <div
+            className="movie-wrapper"
+>
+            <Movie
+                        addFavorites={undefined}
+                        favsMovie="favs"
+                        handleUser={undefined}
+                        movie={
+                                    Object {
+                                                "movie_id": 337167,
+                                                "overview": "Believing they have left behind...",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                "release_date": "2018-02-07",
+                                                "title": "Fifty Shades Freed",
+                                                "vote_average": 6.1,
+                                              }
+                        }
+                        user={
+                                    Array [
+                                                Object {
+                                                  "email": "billybob@gmail.com",
+                                                  "favorites": Array [
+                                                    Object {
+                                                      "movie_id": 337167,
+                                                      "overview": "Believing they have left behind...",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                      "release_date": "2018-02-07",
+                                                      "title": "Fifty Shades Freed",
+                                                      "vote_average": 6.1,
+                                                    },
+                                                    Object {
+                                                      "movie_id": 284054,
+                                                      "overview": "King T'Challa returns home....",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                                      "release_date": "2018-02-13",
+                                                      "title": "Black Panther",
+                                                      "vote_average": 7.4,
+                                                    },
+                                                  ],
+                                                  "id": 1,
+                                                  "name": "Bob",
+                                                  "password": "ilovemywife",
+                                                },
+                                              ]
+                        }
+            />
+            <Movie
+                        addFavorites={undefined}
+                        favsMovie="favs"
+                        handleUser={undefined}
+                        movie={
+                                    Object {
+                                                "movie_id": 284054,
+                                                "overview": "King T'Challa returns home....",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                                "release_date": "2018-02-13",
+                                                "title": "Black Panther",
+                                                "vote_average": 7.4,
+                                              }
+                        }
+                        user={
+                                    Array [
+                                                Object {
+                                                  "email": "billybob@gmail.com",
+                                                  "favorites": Array [
+                                                    Object {
+                                                      "movie_id": 337167,
+                                                      "overview": "Believing they have left behind...",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                      "release_date": "2018-02-07",
+                                                      "title": "Fifty Shades Freed",
+                                                      "vote_average": 6.1,
+                                                    },
+                                                    Object {
+                                                      "movie_id": 284054,
+                                                      "overview": "King T'Challa returns home....",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                                      "release_date": "2018-02-13",
+                                                      "title": "Black Panther",
+                                                      "vote_average": 7.4,
+                                                    },
+                                                  ],
+                                                  "id": 1,
+                                                  "name": "Bob",
+                                                  "password": "ilovemywife",
+                                                },
+                                              ]
+                        }
+            />
+</div>,
+        ],
+        "className": "movie-container",
       },
       "ref": null,
       "rendered": Array [
@@ -1012,97 +1308,197 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "337167",
-          "nodeType": "function",
+          "key": undefined,
+          "nodeType": "host",
           "props": Object {
-            "addFavorites": undefined,
-            "favsMovie": "favs",
-            "handleUser": undefined,
-            "movie": Object {
-              "movie_id": 337167,
-              "overview": "Believing they have left behind...",
-              "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-              "release_date": "2018-02-07",
-              "title": "Fifty Shades Freed",
-              "vote_average": 6.1,
-            },
-            "user": Array [
-              Object {
-                "email": "billybob@gmail.com",
-                "favorites": Array [
-                  Object {
-                    "movie_id": 337167,
-                    "overview": "Believing they have left behind...",
-                    "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                    "release_date": "2018-02-07",
-                    "title": "Fifty Shades Freed",
-                    "vote_average": 6.1,
-                  },
-                  Object {
-                    "movie_id": 284054,
-                    "overview": "King T'Challa returns home....",
-                    "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-                    "release_date": "2018-02-13",
-                    "title": "Black Panther",
-                    "vote_average": 7.4,
-                  },
-                ],
-                "id": 1,
-                "name": "Bob",
-                "password": "ilovemywife",
-              },
+            "children": Array [
+              <Movie
+                addFavorites={undefined}
+                favsMovie="favs"
+                handleUser={undefined}
+                movie={
+                                Object {
+                                                "movie_id": 337167,
+                                                "overview": "Believing they have left behind...",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                "release_date": "2018-02-07",
+                                                "title": "Fifty Shades Freed",
+                                                "vote_average": 6.1,
+                                              }
+                }
+                user={
+                                Array [
+                                                Object {
+                                                  "email": "billybob@gmail.com",
+                                                  "favorites": Array [
+                                                    Object {
+                                                      "movie_id": 337167,
+                                                      "overview": "Believing they have left behind...",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                      "release_date": "2018-02-07",
+                                                      "title": "Fifty Shades Freed",
+                                                      "vote_average": 6.1,
+                                                    },
+                                                    Object {
+                                                      "movie_id": 284054,
+                                                      "overview": "King T'Challa returns home....",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                                      "release_date": "2018-02-13",
+                                                      "title": "Black Panther",
+                                                      "vote_average": 7.4,
+                                                    },
+                                                  ],
+                                                  "id": 1,
+                                                  "name": "Bob",
+                                                  "password": "ilovemywife",
+                                                },
+                                              ]
+                }
+/>,
+              <Movie
+                addFavorites={undefined}
+                favsMovie="favs"
+                handleUser={undefined}
+                movie={
+                                Object {
+                                                "movie_id": 284054,
+                                                "overview": "King T'Challa returns home....",
+                                                "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                                "release_date": "2018-02-13",
+                                                "title": "Black Panther",
+                                                "vote_average": 7.4,
+                                              }
+                }
+                user={
+                                Array [
+                                                Object {
+                                                  "email": "billybob@gmail.com",
+                                                  "favorites": Array [
+                                                    Object {
+                                                      "movie_id": 337167,
+                                                      "overview": "Believing they have left behind...",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                                                      "release_date": "2018-02-07",
+                                                      "title": "Fifty Shades Freed",
+                                                      "vote_average": 6.1,
+                                                    },
+                                                    Object {
+                                                      "movie_id": 284054,
+                                                      "overview": "King T'Challa returns home....",
+                                                      "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                                                      "release_date": "2018-02-13",
+                                                      "title": "Black Panther",
+                                                      "vote_average": 7.4,
+                                                    },
+                                                  ],
+                                                  "id": 1,
+                                                  "name": "Bob",
+                                                  "password": "ilovemywife",
+                                                },
+                                              ]
+                }
+/>,
             ],
+            "className": "movie-wrapper",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "284054",
-          "nodeType": "function",
-          "props": Object {
-            "addFavorites": undefined,
-            "favsMovie": "favs",
-            "handleUser": undefined,
-            "movie": Object {
-              "movie_id": 284054,
-              "overview": "King T'Challa returns home....",
-              "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-              "release_date": "2018-02-13",
-              "title": "Black Panther",
-              "vote_average": 7.4,
-            },
-            "user": Array [
-              Object {
-                "email": "billybob@gmail.com",
-                "favorites": Array [
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "337167",
+              "nodeType": "function",
+              "props": Object {
+                "addFavorites": undefined,
+                "favsMovie": "favs",
+                "handleUser": undefined,
+                "movie": Object {
+                  "movie_id": 337167,
+                  "overview": "Believing they have left behind...",
+                  "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                  "release_date": "2018-02-07",
+                  "title": "Fifty Shades Freed",
+                  "vote_average": 6.1,
+                },
+                "user": Array [
                   Object {
-                    "movie_id": 337167,
-                    "overview": "Believing they have left behind...",
-                    "poster_path": "http://image.tmdb.org/t/p/w185//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
-                    "release_date": "2018-02-07",
-                    "title": "Fifty Shades Freed",
-                    "vote_average": 6.1,
-                  },
-                  Object {
-                    "movie_id": 284054,
-                    "overview": "King T'Challa returns home....",
-                    "poster_path": "http://image.tmdb.org/t/p/w185//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-                    "release_date": "2018-02-13",
-                    "title": "Black Panther",
-                    "vote_average": 7.4,
+                    "email": "billybob@gmail.com",
+                    "favorites": Array [
+                      Object {
+                        "movie_id": 337167,
+                        "overview": "Believing they have left behind...",
+                        "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                        "release_date": "2018-02-07",
+                        "title": "Fifty Shades Freed",
+                        "vote_average": 6.1,
+                      },
+                      Object {
+                        "movie_id": 284054,
+                        "overview": "King T'Challa returns home....",
+                        "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                        "release_date": "2018-02-13",
+                        "title": "Black Panther",
+                        "vote_average": 7.4,
+                      },
+                    ],
+                    "id": 1,
+                    "name": "Bob",
+                    "password": "ilovemywife",
                   },
                 ],
-                "id": 1,
-                "name": "Bob",
-                "password": "ilovemywife",
               },
-            ],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "284054",
+              "nodeType": "function",
+              "props": Object {
+                "addFavorites": undefined,
+                "favsMovie": "favs",
+                "handleUser": undefined,
+                "movie": Object {
+                  "movie_id": 284054,
+                  "overview": "King T'Challa returns home....",
+                  "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                  "release_date": "2018-02-13",
+                  "title": "Black Panther",
+                  "vote_average": 7.4,
+                },
+                "user": Array [
+                  Object {
+                    "email": "billybob@gmail.com",
+                    "favorites": Array [
+                      Object {
+                        "movie_id": 337167,
+                        "overview": "Believing they have left behind...",
+                        "poster_path": "http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg",
+                        "release_date": "2018-02-07",
+                        "title": "Fifty Shades Freed",
+                        "vote_average": 6.1,
+                      },
+                      Object {
+                        "movie_id": 284054,
+                        "overview": "King T'Challa returns home....",
+                        "poster_path": "http://image.tmdb.org/t/p/w500//uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+                        "release_date": "2018-02-13",
+                        "title": "Black Panther",
+                        "vote_average": 7.4,
+                      },
+                    ],
+                    "id": 1,
+                    "name": "Bob",
+                    "password": "ilovemywife",
+                  },
+                ],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

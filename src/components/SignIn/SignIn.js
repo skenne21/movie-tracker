@@ -78,7 +78,6 @@ class SignIn extends Component {
           <button type="Submit">{this.props.user.length ?
             "Sign Out":
             "Sign In"}</button><br/>
-          <p>tman2272@aol.com password</p>
         </form>
         <NavLink to="/account">Create an Account</NavLink>
       </div>
