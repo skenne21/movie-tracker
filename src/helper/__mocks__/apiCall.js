@@ -1,5 +1,7 @@
 import * as mockData from '../../mocks/mockMovieData'
 
+export const fetchRecentMovies = jest.fn().mockImplementation(() => (mockData.cleanData))
+
 export const postCreateUser = jest.fn()
   .mockImplementationOnce(() => ({
     error: "An error happened"
@@ -15,7 +17,7 @@ export const postCreateUser = jest.fn()
   }))
 
 export const signIn = jest.fn()
-  .mockImplementation(() => ({
+  .mockImplementationOnce(() => ({
     status: "success",
     data: {
       id: 13,
@@ -23,7 +25,19 @@ export const signIn = jest.fn()
       password: "bugs456",
       email: "jhonson@aol.col"
     }
-   }))
+  }))
+  .mockImplementationOnce(() => ({
+    status: "success",
+    data: {
+      id: 13,
+      name: "bob",
+      password: "bugs456",
+      email: "jhonson@aol.col"
+    }
+  }))
+  .mockImplementationOnce(() => ({
+    error: 'an error occurred'
+  }))
 
 export const postFavorites = jest.fn()
   .mockImplementation(() => ({
