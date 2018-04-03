@@ -1,6 +1,7 @@
-import * as mockData from '../../mocks/mockMovieData'
+import * as mockData from '../../mocks/mockMovieData';
 
-export const fetchRecentMovies = jest.fn().mockImplementation(() => (mockData.cleanData))
+export const fetchRecentMovies = 
+jest.fn().mockImplementation(() => (mockData.cleanData));
 
 export const postCreateUser = jest.fn()
   .mockImplementationOnce(() => ({
@@ -14,7 +15,7 @@ export const postCreateUser = jest.fn()
       password: "bugslife",
       email: "jhon@aol.col"
     }
-  }))
+  }));
 
 export const signIn = jest.fn()
   .mockImplementationOnce(() => ({
@@ -37,17 +38,17 @@ export const signIn = jest.fn()
   }))
   .mockImplementationOnce(() => ({
     error: 'an error occurred'
-  }))
+  }));
 
 export const postFavorites = jest.fn()
   .mockImplementation(() => ({
     id: 11,
     message: "Movie was added to favorites",
     status: "success"
-  }))
+  }));
 
 export const getFavorites = jest.fn()
-  .mockImplementation(() => (mockData.cleanData))
+  .mockImplementation(() => (mockData.cleanData));
 
 export const removeFavorites = jest.fn()
   .mockImplementation(() => ({
@@ -60,4 +61,4 @@ export const removeFavorites = jest.fn()
     statusText: "OK",
     type: "basic",
     url: "http://localhost:3001/api/users/1/favorites/284054"
-  }))
+  }));

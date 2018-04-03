@@ -42,9 +42,8 @@ class SignIn extends Component {
 
   setupUser = async (user) => {
     const userFavorites = await getFavorites(user.id);
-    const newUser = Object.assign({}, user, {favorites: userFavorites})
+    const newUser = Object.assign({}, user, {favorites: userFavorites});
     this.props.handleUser(newUser);
-    // localStorage.setItem('currentUser', JSON.stringify(user))
     this.props.history.push('/');
   }
 

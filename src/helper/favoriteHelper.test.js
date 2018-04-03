@@ -1,8 +1,7 @@
-import * as apiCall from './apiCall';
 import * as faveHelpers from './favoriteHelper';
 import * as mockData from '../mocks/mockMovieData';
 
-jest.mock('./apiCall')
+jest.mock('./apiCall');
 
 describe('FavoriteHelper', () => {
 
@@ -14,17 +13,18 @@ describe('FavoriteHelper', () => {
         password: "ilovemywife",
         email: "billybob@gmail.com",
         favorites: mockData.cleanData
-      }]
-      const mockMovie = mockData.notFavorite
-      const mockHandleUser = jest.fn()
-      const mockUserFavorites = [...mockData.cleanData]
-      const expected = Object.assign({}, ...mockUser, {favorites: mockUserFavorites})
+      }];
+      const mockMovie = mockData.notFavorite;
+      const mockHandleUser = jest.fn();
+      const mockUserFavorites = [...mockData.cleanData];
+      const expected = 
+      Object.assign({}, ...mockUser, {favorites: mockUserFavorites});
 
-      await faveHelpers.addFavorites(mockMovie, mockUser, mockHandleUser)
+      await faveHelpers.addFavorites(mockMovie, mockUser, mockHandleUser);
 
-      expect(mockHandleUser).toHaveBeenCalledWith(expected)
-      });
+      expect(mockHandleUser).toHaveBeenCalledWith(expected);
     });
+  });
 
   describe('updateFavorites', () => {
     it('should call handleUser and remove movie from store', () => {
@@ -34,10 +34,10 @@ describe('FavoriteHelper', () => {
         password: "ilovemywife",
         email: "billybob@gmail.com",
         favorites: mockData.cleanData
-      }]
-      const mockMovie = mockData.cleanMovie
-      const mockHandleUser = jest.fn()
-      const mockUserFavorites = [...mockData.cleanData]
+      }];
+      const mockMovie = mockData.cleanMovie;
+      const mockHandleUser = jest.fn();
+      const mockUserFavorites = [...mockData.cleanData];
 
       const movie = [{
         movie_id: 284054,
@@ -47,12 +47,13 @@ describe('FavoriteHelper', () => {
         release_date: "2018-02-13",
         title: "Black Panther",
         vote_average: 7.4
-      }]
-      const expected = Object.assign({}, ...mockUser, {favorites: movie})
+      }];
+      const expected = Object.assign({}, ...mockUser, {favorites: movie});
 
-      faveHelpers.updateFavorites(mockUser, mockMovie, mockUserFavorites, mockHandleUser)
+      faveHelpers.updateFavorites(mockUser,
+        mockMovie, mockUserFavorites, mockHandleUser);
 
-      expect(mockHandleUser).toHaveBeenCalledWith(expected)
+      expect(mockHandleUser).toHaveBeenCalledWith(expected);
     });
   });
 

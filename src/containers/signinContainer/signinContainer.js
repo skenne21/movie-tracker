@@ -7,7 +7,7 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  handleUser: (user, favorites) => dispatch(actions.updateUser(user)),
+  handleUser: (user) => dispatch(actions.updateUser(user)),
   removeUser: () => dispatch(actions.removeUser())
 });
 

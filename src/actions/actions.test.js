@@ -10,9 +10,9 @@ describe('Actions', () => {
       movies: cleanData
     };
 
-    expect(actions.loadMovies(cleanData)).toEqual(expected)
+    expect(actions.loadMovies(cleanData)).toEqual(expected);
 
-  })
+  });
 
   it('Updates the user', () => {
     const user = {
@@ -26,17 +26,17 @@ describe('Actions', () => {
     const expected = { 
       type: 'UPDATE_USER',
       user: user
-    }
+    };
 
-    expect(actions.updateUser(user)).toEqual(expected)
+    expect(actions.updateUser(user)).toEqual(expected);
     
-  })
+  });
 
   it('Should remove the user', () => {
     const expected = {
       type: 'REMOVE_USER'
     };
 
-    expect(actions.removeUser()).toEqual(expected)
-  })
-})
+    expect(actions.removeUser()).toEqual(expected);
+  });
+});
