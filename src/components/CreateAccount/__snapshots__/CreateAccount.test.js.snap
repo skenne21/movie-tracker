@@ -48,7 +48,7 @@ ShallowWrapper {
                 onChange={[Function]}
                 placeholder="Enter Your Password"
                 required={true}
-                type="text"
+                type="password"
                 value=""
         />
         <button
@@ -86,7 +86,7 @@ ShallowWrapper {
             onChange={[Function]}
             placeholder="Enter Your Password"
             required={true}
-            type="text"
+            type="password"
             value=""
 />,
           <button
@@ -140,7 +140,7 @@ ShallowWrapper {
             "onChange": [Function],
             "placeholder": "Enter Your Password",
             "required": true,
-            "type": "text",
+            "type": "password",
             "value": "",
           },
           "ref": null,
@@ -194,7 +194,7 @@ ShallowWrapper {
                     onChange={[Function]}
                     placeholder="Enter Your Password"
                     required={true}
-                    type="text"
+                    type="password"
                     value=""
           />
           <button
@@ -232,7 +232,7 @@ ShallowWrapper {
               onChange={[Function]}
               placeholder="Enter Your Password"
               required={true}
-              type="text"
+              type="password"
               value=""
 />,
             <button
@@ -286,7 +286,7 @@ ShallowWrapper {
               "onChange": [Function],
               "placeholder": "Enter Your Password",
               "required": true,
-              "type": "text",
+              "type": "password",
               "value": "",
             },
             "ref": null,
