@@ -1,12 +1,25 @@
 .movie-wrapper {
   display: flex;
   flex-flow: row wrap;
-  /* width: 800px; */
+  justify-content: center;
 }
 
-.Login_text {
-  position: absolute;
+.pre-login-wrapper {
+  display: block;
+  position: relative;
   top: 20px;
   margin: 0;
+  width: 100%;
+}
 
+.prompt-login {
+  color: var(--font-color);
+  position: absolute;
+  width: 166px;
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

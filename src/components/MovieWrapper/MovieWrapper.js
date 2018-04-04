@@ -19,8 +19,8 @@ const MovieWrapper = ({user, movies, history, addFavorites, handleUser}) =>  {
       }
     } else {
       return (
-        <div className="Login_text">
-          <p>To view favorites, login.</p>
+        <div className="pre-login-wrapper">
+          <p className="prompt-login">To view favorites, login.</p>
           {createMovie(movies)}
         </div>
       );

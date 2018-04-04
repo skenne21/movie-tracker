@@ -1,11 +1,16 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom'; 
+import { NavLink, Link } from 'react-router-dom';
+import './header.css'
 
 const Header = () => {
   return (
     <header className="header">
-      <Link to="/" className="home_link"> MovieTracker</Link>
-      <NavLink to="/favorites">Favorites</NavLink>
+      <Link to="/" className="home-link"> MovieTracker </Link>
+      <NavLink to="/favorites"
+               className="fave-nav-link"
+               activeClassName="clicked-fave-link">
+               Favorites
+      </NavLink>
     </header>
 
   );

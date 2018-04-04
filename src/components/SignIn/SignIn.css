@@ -1,1 +1,32 @@
-/* hello */
+.sign-in-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  background-color: var(--card-bg);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  position: fixed;
+  margin: 5px;
+  min-height: 100px;
+  min-width: 145px;
+  text-align: center;
+  width: 10%;
+}
+.sign-in-form p {
+  margin: 5px;
+}
+.submit-btn {
+  min-width: 150px;
+  width: 100%;
+}
+.pre-sign-in {
+  box-sizing: border-box;
+  width: 100%;
+}
+.post-sign-in {
+  box-sizing: border-box;
+  display: none;
+  width: 100%;
+}

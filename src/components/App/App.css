@@ -1,20 +1,3 @@
 .App {
-  display: flex;
-}
-
-.header {
-  display: block;
-  text-align: center;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-.works {
-  width: 100%;
+  margin-bottom: 50px;
 }
