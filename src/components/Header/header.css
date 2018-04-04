@@ -1,6 +1,6 @@
 .header {
   display: block;
-  height: 70px;
+  height: 90px;
   margin: 0 auto;
   text-align: center;
   width: 258px;
@@ -14,6 +14,8 @@
   font-size: 38px;
 }
 .fave-nav-link {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
   text-decoration: none;
   color: var(--font-color);
 }

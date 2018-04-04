@@ -87,10 +87,13 @@ class SignIn extends Component {
           />
           <button type="Submit" className="submit-btn">{this.props.user.length ?
             "Sign Out":
-            "Sign In"}</button><br/>
+            "Sign In"}</button>
         </form>
         <p>or</p>
-        <NavLink to="/account">Create an Account</NavLink>
+        <NavLink to="/account"
+                 className="create-acc-navlink">
+          Create an Account
+        </NavLink>
       </div>
     );
   }

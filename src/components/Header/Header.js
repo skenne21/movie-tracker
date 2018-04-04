@@ -9,7 +9,7 @@ const Header = () => {
       <NavLink to="/favorites"
                className="fave-nav-link"
                activeClassName="clicked-fave-link">
-               Favorites
+               My Favorites
       </NavLink>
     </header>
 
