@@ -30,21 +30,21 @@ const Movie = ({movie, user, handleUser, favsMovie}) => {
         <div className='title'>{title}</div>
       </div>
       <div className="movie-styling">
-      <img id='image' src={poster_path} alt='movie poster'/>
-      <div className="movie-info-container">
-        <p className='rating'>
-          <span className="card-category-title">Score: </span>
+        <img id='image' src={poster_path} alt='movie poster'/>
+        <div className="movie-info-container">
+          <p className='rating'>
+            <span className="card-category-title">Score: </span>
             {vote_average}
-        </p>
-        <p className='date'>
-          <span className="card-category-title">Release Date: </span>
+          </p>
+          <p className='date'>
+            <span className="card-category-title">Release Date: </span>
             {release_date}
-        </p>
-        <p className='summary'>
-          <span className="card-category-title">Summary: </span>
-          {overview}
-        </p>
-      </div>
+          </p>
+          <p className='summary'>
+            <span className="card-category-title">Summary: </span>
+            {overview}
+          </p>
+        </div>
       </div>
     </article>
   );
