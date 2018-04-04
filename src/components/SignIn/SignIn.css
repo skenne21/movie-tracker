@@ -8,8 +8,7 @@
   padding: 10px;
   border-radius: 10px;
   border: 1px solid var(--card-border);
-  position: fixed;
-  margin: 5px;
+  margin: 5px auto;
   min-height: 100px;
   min-width: 145px;
   width: 10%;
