@@ -34,6 +34,7 @@ ShallowWrapper {
           onSubmit={[Function]}
 >
           <input
+                    className="pre-sign-in"
                     name="email"
                     onChange={[Function]}
                     placeholder="Enter Email"
@@ -41,6 +42,7 @@ ShallowWrapper {
                     value=""
           />
           <input
+                    className="pre-sign-in"
                     name="password"
                     onChange={[Function]}
                     placeholder="Enter Your Password"
@@ -48,15 +50,19 @@ ShallowWrapper {
                     value=""
           />
           <button
+                    className="submit-btn"
                     type="Submit"
           >
                     Sign In
           </button>
-          <br />
 </form>,
+        <p>
+          or
+</p>,
         <NavLink
           activeClassName="active"
           ariaCurrent="true"
+          className="create-acc-navlink"
           to="/account"
 >
           Create an Account
@@ -73,6 +79,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <input
+              className="pre-sign-in"
               name="email"
               onChange={[Function]}
               placeholder="Enter Email"
@@ -80,6 +87,7 @@ ShallowWrapper {
               value=""
 />,
             <input
+              className="pre-sign-in"
               name="password"
               onChange={[Function]}
               placeholder="Enter Your Password"
@@ -87,11 +95,11 @@ ShallowWrapper {
               value=""
 />,
             <button
+              className="submit-btn"
               type="Submit"
 >
               Sign In
 </button>,
-            <br />,
           ],
           "onSubmit": [Function],
         },
@@ -102,6 +110,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "className": "pre-sign-in",
               "name": "email",
               "onChange": [Function],
               "placeholder": "Enter Email",
@@ -117,6 +126,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "className": "pre-sign-in",
               "name": "password",
               "onChange": [Function],
               "placeholder": "Enter Your Password",
@@ -133,23 +143,26 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Sign In",
+              "className": "submit-btn",
               "type": "Submit",
             },
             "ref": null,
             "rendered": "Sign In",
             "type": "button",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": "br",
-          },
         ],
         "type": "form",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "or",
+        },
+        "ref": null,
+        "rendered": "or",
+        "type": "p",
       },
       Object {
         "instance": null,
@@ -159,6 +172,7 @@ ShallowWrapper {
           "activeClassName": "active",
           "ariaCurrent": "true",
           "children": "Create an Account",
+          "className": "create-acc-navlink",
           "to": "/account",
         },
         "ref": null,
@@ -179,6 +193,7 @@ ShallowWrapper {
             onSubmit={[Function]}
 >
             <input
+                        className="pre-sign-in"
                         name="email"
                         onChange={[Function]}
                         placeholder="Enter Email"
@@ -186,6 +201,7 @@ ShallowWrapper {
                         value=""
             />
             <input
+                        className="pre-sign-in"
                         name="password"
                         onChange={[Function]}
                         placeholder="Enter Your Password"
@@ -193,15 +209,19 @@ ShallowWrapper {
                         value=""
             />
             <button
+                        className="submit-btn"
                         type="Submit"
             >
                         Sign In
             </button>
-            <br />
 </form>,
+          <p>
+            or
+</p>,
           <NavLink
             activeClassName="active"
             ariaCurrent="true"
+            className="create-acc-navlink"
             to="/account"
 >
             Create an Account
@@ -218,6 +238,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <input
+                className="pre-sign-in"
                 name="email"
                 onChange={[Function]}
                 placeholder="Enter Email"
@@ -225,6 +246,7 @@ ShallowWrapper {
                 value=""
 />,
               <input
+                className="pre-sign-in"
                 name="password"
                 onChange={[Function]}
                 placeholder="Enter Your Password"
@@ -232,11 +254,11 @@ ShallowWrapper {
                 value=""
 />,
               <button
+                className="submit-btn"
                 type="Submit"
 >
                 Sign In
 </button>,
-              <br />,
             ],
             "onSubmit": [Function],
           },
@@ -247,6 +269,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "className": "pre-sign-in",
                 "name": "email",
                 "onChange": [Function],
                 "placeholder": "Enter Email",
@@ -262,6 +285,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "className": "pre-sign-in",
                 "name": "password",
                 "onChange": [Function],
                 "placeholder": "Enter Your Password",
@@ -278,23 +302,26 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Sign In",
+                "className": "submit-btn",
                 "type": "Submit",
               },
               "ref": null,
               "rendered": "Sign In",
               "type": "button",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": "br",
-            },
           ],
           "type": "form",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "or",
+          },
+          "ref": null,
+          "rendered": "or",
+          "type": "p",
         },
         Object {
           "instance": null,
@@ -304,6 +331,7 @@ ShallowWrapper {
             "activeClassName": "active",
             "ariaCurrent": "true",
             "children": "Create an Account",
+            "className": "create-acc-navlink",
             "to": "/account",
           },
           "ref": null,

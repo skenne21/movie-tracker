@@ -1,0 +1,27 @@
+.account-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  background-color: var(--card-bg);
+  color: var(--font-color);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  margin: 5px auto;
+  min-height: 100px;
+  min-width: 145px;
+  width: 50%;
+  margin: 3em auto;
+}
+
+.account-page input {
+  margin: 10px;
+  height: 3em;
+  width: 16em;
+}
+
+.button {
+  width: 85px;
+  height: 3.5em;
+}
