@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { signIn, getFavorites } from '../../helper/apiCall';
 import PropTypes from 'prop-types';
-
+import './SignIn.css';
 
 class SignIn extends Component {
   constructor(props) {
@@ -63,6 +63,11 @@ class SignIn extends Component {
         <form onSubmit={this.handleSubmit}>
           <input
             type="email"
+            className=
+              {this.props.user.length ?
+                "post-sign-in" :
+                "pre-sign-in"
+              }
             name="email"
             value={email}
             placeholder="Enter Email"
@@ -71,15 +76,24 @@ class SignIn extends Component {
           <input
             type="password"
             name="password"
+            className=
+              {this.props.user.length ?
+                "post-sign-in" :
+                "pre-sign-in"
+              }
             value={password}
             placeholder="Enter Your Password"
             onChange={this.handleChange}
           />
-          <button type="Submit">{this.props.user.length ?
+          <button type="Submit" className="submit-btn">{this.props.user.length ?
             "Sign Out":
-            "Sign In"}</button><br/>
+            "Sign In"}</button>
         </form>
-        <NavLink to="/account">Create an Account</NavLink>
+        <p>or</p>
+        <NavLink to="/account"
+                 className="create-acc-navlink">
+          Create an Account
+        </NavLink>
       </div>
     );
   }
