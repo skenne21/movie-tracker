@@ -45,11 +45,15 @@ ShallowWrapper {
 >
           ❤ ︎
 </button>,
-        <h1
-          className="title"
+        <div
+          className="title-container"
 >
-          Fifty Shades Freed
-</h1>,
+          <div
+                    className="title"
+          >
+                    Fifty Shades Freed
+          </div>
+</div>,
         <div
           className="movie-styling"
 >
@@ -64,19 +68,31 @@ ShallowWrapper {
                     <p
                               className="rating"
                     >
-                              Score: 
+                              <span
+                                        className="card-category-title"
+                              >
+                                        Score: 
+                              </span>
                               6.1
                     </p>
                     <p
                               className="date"
                     >
-                              Release Date: 
+                              <span
+                                        className="card-category-title"
+                              >
+                                        Release Date: 
+                              </span>
                               2018-02-07
                     </p>
                     <p
                               className="summary"
                     >
-                              Summary: 
+                              <span
+                                        className="card-category-title"
+                              >
+                                        Summary: 
+                              </span>
                               Believing they have left behind...
                     </p>
           </div>
@@ -105,12 +121,27 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Fifty Shades Freed",
-          "className": "title",
+          "children": <div
+            className="title"
+>
+            Fifty Shades Freed
+</div>,
+          "className": "title-container",
         },
         "ref": null,
-        "rendered": "Fifty Shades Freed",
-        "type": "h1",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Fifty Shades Freed",
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": "Fifty Shades Freed",
+          "type": "div",
+        },
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -129,19 +160,31 @@ ShallowWrapper {
               <p
                             className="rating"
               >
-                            Score: 
+                            <span
+                                          className="card-category-title"
+                            >
+                                          Score: 
+                            </span>
                             6.1
               </p>
               <p
                             className="date"
               >
-                            Release Date: 
+                            <span
+                                          className="card-category-title"
+                            >
+                                          Release Date: 
+                            </span>
                             2018-02-07
               </p>
               <p
                             className="summary"
               >
-                            Summary: 
+                            <span
+                                          className="card-category-title"
+                            >
+                                          Summary: 
+                            </span>
                             Believing they have left behind...
               </p>
 </div>,
@@ -172,19 +215,31 @@ ShallowWrapper {
                 <p
                   className="rating"
 >
-                  Score: 
+                  <span
+                                    className="card-category-title"
+                  >
+                                    Score: 
+                  </span>
                   6.1
 </p>,
                 <p
                   className="date"
 >
-                  Release Date: 
+                  <span
+                                    className="card-category-title"
+                  >
+                                    Release Date: 
+                  </span>
                   2018-02-07
 </p>,
                 <p
                   className="summary"
 >
-                  Summary: 
+                  <span
+                                    className="card-category-title"
+                  >
+                                    Summary: 
+                  </span>
                   Believing they have left behind...
 </p>,
               ],
@@ -198,14 +253,29 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Score: ",
+                    <span
+                      className="card-category-title"
+>
+                      Score: 
+</span>,
                     6.1,
                   ],
                   "className": "rating",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Score: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Score: ",
+                      "className": "card-category-title",
+                    },
+                    "ref": null,
+                    "rendered": "Score: ",
+                    "type": "span",
+                  },
                   6.1,
                 ],
                 "type": "p",
@@ -216,14 +286,29 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Release Date: ",
+                    <span
+                      className="card-category-title"
+>
+                      Release Date: 
+</span>,
                     "2018-02-07",
                   ],
                   "className": "date",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Release Date: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Release Date: ",
+                      "className": "card-category-title",
+                    },
+                    "ref": null,
+                    "rendered": "Release Date: ",
+                    "type": "span",
+                  },
                   "2018-02-07",
                 ],
                 "type": "p",
@@ -234,14 +319,29 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Summary: ",
+                    <span
+                      className="card-category-title"
+>
+                      Summary: 
+</span>,
                     "Believing they have left behind...",
                   ],
                   "className": "summary",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Summary: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Summary: ",
+                      "className": "card-category-title",
+                    },
+                    "ref": null,
+                    "rendered": "Summary: ",
+                    "type": "span",
+                  },
                   "Believing they have left behind...",
                 ],
                 "type": "p",
@@ -269,11 +369,15 @@ ShallowWrapper {
 >
             ❤ ︎
 </button>,
-          <h1
-            className="title"
+          <div
+            className="title-container"
 >
-            Fifty Shades Freed
-</h1>,
+            <div
+                        className="title"
+            >
+                        Fifty Shades Freed
+            </div>
+</div>,
           <div
             className="movie-styling"
 >
@@ -288,19 +392,31 @@ ShallowWrapper {
                         <p
                                     className="rating"
                         >
-                                    Score: 
+                                    <span
+                                                className="card-category-title"
+                                    >
+                                                Score: 
+                                    </span>
                                     6.1
                         </p>
                         <p
                                     className="date"
                         >
-                                    Release Date: 
+                                    <span
+                                                className="card-category-title"
+                                    >
+                                                Release Date: 
+                                    </span>
                                     2018-02-07
                         </p>
                         <p
                                     className="summary"
                         >
-                                    Summary: 
+                                    <span
+                                                className="card-category-title"
+                                    >
+                                                Summary: 
+                                    </span>
                                     Believing they have left behind...
                         </p>
             </div>
@@ -329,12 +445,27 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Fifty Shades Freed",
-            "className": "title",
+            "children": <div
+              className="title"
+>
+              Fifty Shades Freed
+</div>,
+            "className": "title-container",
           },
           "ref": null,
-          "rendered": "Fifty Shades Freed",
-          "type": "h1",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Fifty Shades Freed",
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": "Fifty Shades Freed",
+            "type": "div",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,
@@ -353,19 +484,31 @@ ShallowWrapper {
                 <p
                                 className="rating"
                 >
-                                Score: 
+                                <span
+                                                className="card-category-title"
+                                >
+                                                Score: 
+                                </span>
                                 6.1
                 </p>
                 <p
                                 className="date"
                 >
-                                Release Date: 
+                                <span
+                                                className="card-category-title"
+                                >
+                                                Release Date: 
+                                </span>
                                 2018-02-07
                 </p>
                 <p
                                 className="summary"
                 >
-                                Summary: 
+                                <span
+                                                className="card-category-title"
+                                >
+                                                Summary: 
+                                </span>
                                 Believing they have left behind...
                 </p>
 </div>,
@@ -396,19 +539,31 @@ ShallowWrapper {
                   <p
                     className="rating"
 >
-                    Score: 
+                    <span
+                                        className="card-category-title"
+                    >
+                                        Score: 
+                    </span>
                     6.1
 </p>,
                   <p
                     className="date"
 >
-                    Release Date: 
+                    <span
+                                        className="card-category-title"
+                    >
+                                        Release Date: 
+                    </span>
                     2018-02-07
 </p>,
                   <p
                     className="summary"
 >
-                    Summary: 
+                    <span
+                                        className="card-category-title"
+                    >
+                                        Summary: 
+                    </span>
                     Believing they have left behind...
 </p>,
                 ],
@@ -422,14 +577,29 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "Score: ",
+                      <span
+                        className="card-category-title"
+>
+                        Score: 
+</span>,
                       6.1,
                     ],
                     "className": "rating",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "Score: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Score: ",
+                        "className": "card-category-title",
+                      },
+                      "ref": null,
+                      "rendered": "Score: ",
+                      "type": "span",
+                    },
                     6.1,
                   ],
                   "type": "p",
@@ -440,14 +610,29 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "Release Date: ",
+                      <span
+                        className="card-category-title"
+>
+                        Release Date: 
+</span>,
                       "2018-02-07",
                     ],
                     "className": "date",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "Release Date: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Release Date: ",
+                        "className": "card-category-title",
+                      },
+                      "ref": null,
+                      "rendered": "Release Date: ",
+                      "type": "span",
+                    },
                     "2018-02-07",
                   ],
                   "type": "p",
@@ -458,14 +643,29 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "Summary: ",
+                      <span
+                        className="card-category-title"
+>
+                        Summary: 
+</span>,
                       "Believing they have left behind...",
                     ],
                     "className": "summary",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "Summary: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Summary: ",
+                        "className": "card-category-title",
+                      },
+                      "ref": null,
+                      "rendered": "Summary: ",
+                      "type": "span",
+                    },
                     "Believing they have left behind...",
                   ],
                   "type": "p",
@@ -529,11 +729,15 @@ ShallowWrapper {
 >
           ❤ ︎
 </button>,
-        <h1
-          className="title"
+        <div
+          className="title-container"
 >
-          Fifty Shades Freed
-</h1>,
+          <div
+                    className="title"
+          >
+                    Fifty Shades Freed
+          </div>
+</div>,
         <div
           className="movie-styling"
 >
@@ -548,19 +752,31 @@ ShallowWrapper {
                     <p
                               className="rating"
                     >
-                              Score: 
+                              <span
+                                        className="card-category-title"
+                              >
+                                        Score: 
+                              </span>
                               6.1
                     </p>
                     <p
                               className="date"
                     >
-                              Release Date: 
+                              <span
+                                        className="card-category-title"
+                              >
+                                        Release Date: 
+                              </span>
                               2018-02-07
                     </p>
                     <p
                               className="summary"
                     >
-                              Summary: 
+                              <span
+                                        className="card-category-title"
+                              >
+                                        Summary: 
+                              </span>
                               Believing they have left behind...
                     </p>
           </div>
@@ -589,12 +805,27 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Fifty Shades Freed",
-          "className": "title",
+          "children": <div
+            className="title"
+>
+            Fifty Shades Freed
+</div>,
+          "className": "title-container",
         },
         "ref": null,
-        "rendered": "Fifty Shades Freed",
-        "type": "h1",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Fifty Shades Freed",
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": "Fifty Shades Freed",
+          "type": "div",
+        },
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -613,19 +844,31 @@ ShallowWrapper {
               <p
                             className="rating"
               >
-                            Score: 
+                            <span
+                                          className="card-category-title"
+                            >
+                                          Score: 
+                            </span>
                             6.1
               </p>
               <p
                             className="date"
               >
-                            Release Date: 
+                            <span
+                                          className="card-category-title"
+                            >
+                                          Release Date: 
+                            </span>
                             2018-02-07
               </p>
               <p
                             className="summary"
               >
-                            Summary: 
+                            <span
+                                          className="card-category-title"
+                            >
+                                          Summary: 
+                            </span>
                             Believing they have left behind...
               </p>
 </div>,
@@ -656,19 +899,31 @@ ShallowWrapper {
                 <p
                   className="rating"
 >
-                  Score: 
+                  <span
+                                    className="card-category-title"
+                  >
+                                    Score: 
+                  </span>
                   6.1
 </p>,
                 <p
                   className="date"
 >
-                  Release Date: 
+                  <span
+                                    className="card-category-title"
+                  >
+                                    Release Date: 
+                  </span>
                   2018-02-07
 </p>,
                 <p
                   className="summary"
 >
-                  Summary: 
+                  <span
+                                    className="card-category-title"
+                  >
+                                    Summary: 
+                  </span>
                   Believing they have left behind...
 </p>,
               ],
@@ -682,14 +937,29 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Score: ",
+                    <span
+                      className="card-category-title"
+>
+                      Score: 
+</span>,
                     6.1,
                   ],
                   "className": "rating",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Score: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Score: ",
+                      "className": "card-category-title",
+                    },
+                    "ref": null,
+                    "rendered": "Score: ",
+                    "type": "span",
+                  },
                   6.1,
                 ],
                 "type": "p",
@@ -700,14 +970,29 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Release Date: ",
+                    <span
+                      className="card-category-title"
+>
+                      Release Date: 
+</span>,
                     "2018-02-07",
                   ],
                   "className": "date",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Release Date: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Release Date: ",
+                      "className": "card-category-title",
+                    },
+                    "ref": null,
+                    "rendered": "Release Date: ",
+                    "type": "span",
+                  },
                   "2018-02-07",
                 ],
                 "type": "p",
@@ -718,14 +1003,29 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Summary: ",
+                    <span
+                      className="card-category-title"
+>
+                      Summary: 
+</span>,
                     "Believing they have left behind...",
                   ],
                   "className": "summary",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Summary: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Summary: ",
+                      "className": "card-category-title",
+                    },
+                    "ref": null,
+                    "rendered": "Summary: ",
+                    "type": "span",
+                  },
                   "Believing they have left behind...",
                 ],
                 "type": "p",
@@ -753,11 +1053,15 @@ ShallowWrapper {
 >
             ❤ ︎
 </button>,
-          <h1
-            className="title"
+          <div
+            className="title-container"
 >
-            Fifty Shades Freed
-</h1>,
+            <div
+                        className="title"
+            >
+                        Fifty Shades Freed
+            </div>
+</div>,
           <div
             className="movie-styling"
 >
@@ -772,19 +1076,31 @@ ShallowWrapper {
                         <p
                                     className="rating"
                         >
-                                    Score: 
+                                    <span
+                                                className="card-category-title"
+                                    >
+                                                Score: 
+                                    </span>
                                     6.1
                         </p>
                         <p
                                     className="date"
                         >
-                                    Release Date: 
+                                    <span
+                                                className="card-category-title"
+                                    >
+                                                Release Date: 
+                                    </span>
                                     2018-02-07
                         </p>
                         <p
                                     className="summary"
                         >
-                                    Summary: 
+                                    <span
+                                                className="card-category-title"
+                                    >
+                                                Summary: 
+                                    </span>
                                     Believing they have left behind...
                         </p>
             </div>
@@ -813,12 +1129,27 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Fifty Shades Freed",
-            "className": "title",
+            "children": <div
+              className="title"
+>
+              Fifty Shades Freed
+</div>,
+            "className": "title-container",
           },
           "ref": null,
-          "rendered": "Fifty Shades Freed",
-          "type": "h1",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Fifty Shades Freed",
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": "Fifty Shades Freed",
+            "type": "div",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,
@@ -837,19 +1168,31 @@ ShallowWrapper {
                 <p
                                 className="rating"
                 >
-                                Score: 
+                                <span
+                                                className="card-category-title"
+                                >
+                                                Score: 
+                                </span>
                                 6.1
                 </p>
                 <p
                                 className="date"
                 >
-                                Release Date: 
+                                <span
+                                                className="card-category-title"
+                                >
+                                                Release Date: 
+                                </span>
                                 2018-02-07
                 </p>
                 <p
                                 className="summary"
                 >
-                                Summary: 
+                                <span
+                                                className="card-category-title"
+                                >
+                                                Summary: 
+                                </span>
                                 Believing they have left behind...
                 </p>
 </div>,
@@ -880,19 +1223,31 @@ ShallowWrapper {
                   <p
                     className="rating"
 >
-                    Score: 
+                    <span
+                                        className="card-category-title"
+                    >
+                                        Score: 
+                    </span>
                     6.1
 </p>,
                   <p
                     className="date"
 >
-                    Release Date: 
+                    <span
+                                        className="card-category-title"
+                    >
+                                        Release Date: 
+                    </span>
                     2018-02-07
 </p>,
                   <p
                     className="summary"
 >
-                    Summary: 
+                    <span
+                                        className="card-category-title"
+                    >
+                                        Summary: 
+                    </span>
                     Believing they have left behind...
 </p>,
                 ],
@@ -906,14 +1261,29 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "Score: ",
+                      <span
+                        className="card-category-title"
+>
+                        Score: 
+</span>,
                       6.1,
                     ],
                     "className": "rating",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "Score: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Score: ",
+                        "className": "card-category-title",
+                      },
+                      "ref": null,
+                      "rendered": "Score: ",
+                      "type": "span",
+                    },
                     6.1,
                   ],
                   "type": "p",
@@ -924,14 +1294,29 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "Release Date: ",
+                      <span
+                        className="card-category-title"
+>
+                        Release Date: 
+</span>,
                       "2018-02-07",
                     ],
                     "className": "date",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "Release Date: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Release Date: ",
+                        "className": "card-category-title",
+                      },
+                      "ref": null,
+                      "rendered": "Release Date: ",
+                      "type": "span",
+                    },
                     "2018-02-07",
                   ],
                   "type": "p",
@@ -942,14 +1327,29 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "Summary: ",
+                      <span
+                        className="card-category-title"
+>
+                        Summary: 
+</span>,
                       "Believing they have left behind...",
                     ],
                     "className": "summary",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "Summary: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Summary: ",
+                        "className": "card-category-title",
+                      },
+                      "ref": null,
+                      "rendered": "Summary: ",
+                      "type": "span",
+                    },
                     "Believing they have left behind...",
                   ],
                   "type": "p",
@@ -1042,11 +1442,15 @@ ShallowWrapper {
 >
           ❤ ︎
 </button>,
-        <h1
-          className="title"
+        <div
+          className="title-container"
 >
-          Fifty Shades Freed
-</h1>,
+          <div
+                    className="title"
+          >
+                    Fifty Shades Freed
+          </div>
+</div>,
         <div
           className="movie-styling"
 >
@@ -1061,19 +1465,31 @@ ShallowWrapper {
                     <p
                               className="rating"
                     >
-                              Score: 
+                              <span
+                                        className="card-category-title"
+                              >
+                                        Score: 
+                              </span>
                               6.1
                     </p>
                     <p
                               className="date"
                     >
-                              Release Date: 
+                              <span
+                                        className="card-category-title"
+                              >
+                                        Release Date: 
+                              </span>
                               2018-02-07
                     </p>
                     <p
                               className="summary"
                     >
-                              Summary: 
+                              <span
+                                        className="card-category-title"
+                              >
+                                        Summary: 
+                              </span>
                               Believing they have left behind...
                     </p>
           </div>
@@ -1102,12 +1518,27 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Fifty Shades Freed",
-          "className": "title",
+          "children": <div
+            className="title"
+>
+            Fifty Shades Freed
+</div>,
+          "className": "title-container",
         },
         "ref": null,
-        "rendered": "Fifty Shades Freed",
-        "type": "h1",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Fifty Shades Freed",
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": "Fifty Shades Freed",
+          "type": "div",
+        },
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -1126,19 +1557,31 @@ ShallowWrapper {
               <p
                             className="rating"
               >
-                            Score: 
+                            <span
+                                          className="card-category-title"
+                            >
+                                          Score: 
+                            </span>
                             6.1
               </p>
               <p
                             className="date"
               >
-                            Release Date: 
+                            <span
+                                          className="card-category-title"
+                            >
+                                          Release Date: 
+                            </span>
                             2018-02-07
               </p>
               <p
                             className="summary"
               >
-                            Summary: 
+                            <span
+                                          className="card-category-title"
+                            >
+                                          Summary: 
+                            </span>
                             Believing they have left behind...
               </p>
 </div>,
@@ -1169,19 +1612,31 @@ ShallowWrapper {
                 <p
                   className="rating"
 >
-                  Score: 
+                  <span
+                                    className="card-category-title"
+                  >
+                                    Score: 
+                  </span>
                   6.1
 </p>,
                 <p
                   className="date"
 >
-                  Release Date: 
+                  <span
+                                    className="card-category-title"
+                  >
+                                    Release Date: 
+                  </span>
                   2018-02-07
 </p>,
                 <p
                   className="summary"
 >
-                  Summary: 
+                  <span
+                                    className="card-category-title"
+                  >
+                                    Summary: 
+                  </span>
                   Believing they have left behind...
 </p>,
               ],
@@ -1195,14 +1650,29 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Score: ",
+                    <span
+                      className="card-category-title"
+>
+                      Score: 
+</span>,
                     6.1,
                   ],
                   "className": "rating",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Score: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Score: ",
+                      "className": "card-category-title",
+                    },
+                    "ref": null,
+                    "rendered": "Score: ",
+                    "type": "span",
+                  },
                   6.1,
                 ],
                 "type": "p",
@@ -1213,14 +1683,29 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Release Date: ",
+                    <span
+                      className="card-category-title"
+>
+                      Release Date: 
+</span>,
                     "2018-02-07",
                   ],
                   "className": "date",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Release Date: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Release Date: ",
+                      "className": "card-category-title",
+                    },
+                    "ref": null,
+                    "rendered": "Release Date: ",
+                    "type": "span",
+                  },
                   "2018-02-07",
                 ],
                 "type": "p",
@@ -1231,14 +1716,29 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Summary: ",
+                    <span
+                      className="card-category-title"
+>
+                      Summary: 
+</span>,
                     "Believing they have left behind...",
                   ],
                   "className": "summary",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Summary: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Summary: ",
+                      "className": "card-category-title",
+                    },
+                    "ref": null,
+                    "rendered": "Summary: ",
+                    "type": "span",
+                  },
                   "Believing they have left behind...",
                 ],
                 "type": "p",
@@ -1266,11 +1766,15 @@ ShallowWrapper {
 >
             ❤ ︎
 </button>,
-          <h1
-            className="title"
+          <div
+            className="title-container"
 >
-            Fifty Shades Freed
-</h1>,
+            <div
+                        className="title"
+            >
+                        Fifty Shades Freed
+            </div>
+</div>,
           <div
             className="movie-styling"
 >
@@ -1285,19 +1789,31 @@ ShallowWrapper {
                         <p
                                     className="rating"
                         >
-                                    Score: 
+                                    <span
+                                                className="card-category-title"
+                                    >
+                                                Score: 
+                                    </span>
                                     6.1
                         </p>
                         <p
                                     className="date"
                         >
-                                    Release Date: 
+                                    <span
+                                                className="card-category-title"
+                                    >
+                                                Release Date: 
+                                    </span>
                                     2018-02-07
                         </p>
                         <p
                                     className="summary"
                         >
-                                    Summary: 
+                                    <span
+                                                className="card-category-title"
+                                    >
+                                                Summary: 
+                                    </span>
                                     Believing they have left behind...
                         </p>
             </div>
@@ -1326,12 +1842,27 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Fifty Shades Freed",
-            "className": "title",
+            "children": <div
+              className="title"
+>
+              Fifty Shades Freed
+</div>,
+            "className": "title-container",
           },
           "ref": null,
-          "rendered": "Fifty Shades Freed",
-          "type": "h1",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Fifty Shades Freed",
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": "Fifty Shades Freed",
+            "type": "div",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,
@@ -1350,19 +1881,31 @@ ShallowWrapper {
                 <p
                                 className="rating"
                 >
-                                Score: 
+                                <span
+                                                className="card-category-title"
+                                >
+                                                Score: 
+                                </span>
                                 6.1
                 </p>
                 <p
                                 className="date"
                 >
-                                Release Date: 
+                                <span
+                                                className="card-category-title"
+                                >
+                                                Release Date: 
+                                </span>
                                 2018-02-07
                 </p>
                 <p
                                 className="summary"
                 >
-                                Summary: 
+                                <span
+                                                className="card-category-title"
+                                >
+                                                Summary: 
+                                </span>
                                 Believing they have left behind...
                 </p>
 </div>,
@@ -1393,19 +1936,31 @@ ShallowWrapper {
                   <p
                     className="rating"
 >
-                    Score: 
+                    <span
+                                        className="card-category-title"
+                    >
+                                        Score: 
+                    </span>
                     6.1
 </p>,
                   <p
                     className="date"
 >
-                    Release Date: 
+                    <span
+                                        className="card-category-title"
+                    >
+                                        Release Date: 
+                    </span>
                     2018-02-07
 </p>,
                   <p
                     className="summary"
 >
-                    Summary: 
+                    <span
+                                        className="card-category-title"
+                    >
+                                        Summary: 
+                    </span>
                     Believing they have left behind...
 </p>,
                 ],
@@ -1419,14 +1974,29 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "Score: ",
+                      <span
+                        className="card-category-title"
+>
+                        Score: 
+</span>,
                       6.1,
                     ],
                     "className": "rating",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "Score: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Score: ",
+                        "className": "card-category-title",
+                      },
+                      "ref": null,
+                      "rendered": "Score: ",
+                      "type": "span",
+                    },
                     6.1,
                   ],
                   "type": "p",
@@ -1437,14 +2007,29 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "Release Date: ",
+                      <span
+                        className="card-category-title"
+>
+                        Release Date: 
+</span>,
                       "2018-02-07",
                     ],
                     "className": "date",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "Release Date: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Release Date: ",
+                        "className": "card-category-title",
+                      },
+                      "ref": null,
+                      "rendered": "Release Date: ",
+                      "type": "span",
+                    },
                     "2018-02-07",
                   ],
                   "type": "p",
@@ -1455,14 +2040,29 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "Summary: ",
+                      <span
+                        className="card-category-title"
+>
+                        Summary: 
+</span>,
                       "Believing they have left behind...",
                     ],
                     "className": "summary",
                   },
                   "ref": null,
                   "rendered": Array [
-                    "Summary: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Summary: ",
+                        "className": "card-category-title",
+                      },
+                      "ref": null,
+                      "rendered": "Summary: ",
+                      "type": "span",
+                    },
                     "Believing they have left behind...",
                   ],
                   "type": "p",

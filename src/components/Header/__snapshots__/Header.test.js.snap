@@ -19,18 +19,19 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Link
-          className="home_link"
+          className="home-link"
           replace={false}
           to="/"
 >
-           MovieTracker
+           MovieTracker 
 </Link>,
         <NavLink
-          activeClassName="active"
+          activeClassName="clicked-fave-link"
           ariaCurrent="true"
+          className="fave-nav-link"
           to="/favorites"
 >
-          Favorites
+          My Favorites
 </NavLink>,
       ],
       "className": "header",
@@ -42,13 +43,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": " MovieTracker",
-          "className": "home_link",
+          "children": " MovieTracker ",
+          "className": "home-link",
           "replace": false,
           "to": "/",
         },
         "ref": null,
-        "rendered": " MovieTracker",
+        "rendered": " MovieTracker ",
         "type": [Function],
       },
       Object {
@@ -56,13 +57,14 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "activeClassName": "active",
+          "activeClassName": "clicked-fave-link",
           "ariaCurrent": "true",
-          "children": "Favorites",
+          "children": "My Favorites",
+          "className": "fave-nav-link",
           "to": "/favorites",
         },
         "ref": null,
-        "rendered": "Favorites",
+        "rendered": "My Favorites",
         "type": [Function],
       },
     ],
@@ -76,18 +78,19 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
-            className="home_link"
+            className="home-link"
             replace={false}
             to="/"
 >
-             MovieTracker
+             MovieTracker 
 </Link>,
           <NavLink
-            activeClassName="active"
+            activeClassName="clicked-fave-link"
             ariaCurrent="true"
+            className="fave-nav-link"
             to="/favorites"
 >
-            Favorites
+            My Favorites
 </NavLink>,
         ],
         "className": "header",
@@ -99,13 +102,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": " MovieTracker",
-            "className": "home_link",
+            "children": " MovieTracker ",
+            "className": "home-link",
             "replace": false,
             "to": "/",
           },
           "ref": null,
-          "rendered": " MovieTracker",
+          "rendered": " MovieTracker ",
           "type": [Function],
         },
         Object {
@@ -113,13 +116,14 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "activeClassName": "active",
+            "activeClassName": "clicked-fave-link",
             "ariaCurrent": "true",
-            "children": "Favorites",
+            "children": "My Favorites",
+            "className": "fave-nav-link",
             "to": "/favorites",
           },
           "ref": null,
-          "rendered": "Favorites",
+          "rendered": "My Favorites",
           "type": [Function],
         },
       ],

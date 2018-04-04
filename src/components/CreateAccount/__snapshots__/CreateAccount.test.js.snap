@@ -52,6 +52,7 @@ ShallowWrapper {
                 value=""
         />
         <button
+                className="button"
                 type="submit"
         >
                 Submit
@@ -91,6 +92,7 @@ ShallowWrapper {
             value=""
 />,
           <button
+            className="button"
             type="submit"
 >
             Submit
@@ -154,6 +156,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Submit",
+            "className": "button",
             "type": "submit",
           },
           "ref": null,
@@ -199,6 +202,7 @@ ShallowWrapper {
                     value=""
           />
           <button
+                    className="button"
                     type="submit"
           >
                     Submit
@@ -238,6 +242,7 @@ ShallowWrapper {
               value=""
 />,
             <button
+              className="button"
               type="submit"
 >
               Submit
@@ -301,6 +306,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Submit",
+              "className": "button",
               "type": "submit",
             },
             "ref": null,

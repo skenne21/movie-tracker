@@ -32,7 +32,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <p>
+        <p
+          className="prompt-login"
+>
           To view favorites, login.
 </p>,
         <div
@@ -63,7 +65,7 @@ ShallowWrapper {
           </div>
 </div>,
       ],
-      "className": "Login_text",
+      "className": "pre-login-wrapper",
     },
     "ref": null,
     "rendered": Array [
@@ -73,6 +75,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "To view favorites, login.",
+          "className": "prompt-login",
         },
         "ref": null,
         "rendered": "To view favorites, login.",
@@ -188,7 +191,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <p>
+          <p
+            className="prompt-login"
+>
             To view favorites, login.
 </p>,
           <div
@@ -219,7 +224,7 @@ ShallowWrapper {
             </div>
 </div>,
         ],
-        "className": "Login_text",
+        "className": "pre-login-wrapper",
       },
       "ref": null,
       "rendered": Array [
@@ -229,6 +234,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "To view favorites, login.",
+            "className": "prompt-login",
           },
           "ref": null,
           "rendered": "To view favorites, login.",
