@@ -38,4 +38,4 @@ You can run the testing suite with `npm test`.
 Additional data is available for categories other than "currently playing". We would like to incorporate this into multiple pages on the site along with pulling up additional data for each individual movie. We would also like to make it an option to store a users login on page refresh. 
 
 ## Screenshot
-![full page screenshot](./src/images/Headcount-screenshot-full.png)
+![full page screenshot](./fullscreen.png)
