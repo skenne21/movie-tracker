@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { postCreateUser, signIn } from '../../helper/apiCall';
 import PropTypes from 'prop-types';
+import './CreateAccount.css';
 
 class CreateAccount extends Component {
   constructor() {
@@ -68,7 +69,7 @@ class CreateAccount extends Component {
             onChange={this.handleChange}
             required
           />
-          <button type="submit">Submit</button>
+          <button className="button" type="submit">Submit</button>
         </form>
       </div>
     );
