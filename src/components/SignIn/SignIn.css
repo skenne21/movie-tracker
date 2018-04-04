@@ -1,1 +1,44 @@
-/* hello */
+.sign-in-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  background-color: var(--card-bg);
+  color: var(--font-color);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  margin: 5px auto;
+  min-height: 100px;
+  min-width: 145px;
+  width: 10%;
+}
+.sign-in-form p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  margin: 0 5px;
+}
+.submit-btn {
+  font-family: 'Oswald', sans-serif;
+  min-width: 150px;
+  width: 100%;
+}
+.pre-sign-in {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  box-sizing: border-box;
+  width: 100%;
+}
+.post-sign-in {
+  display: none;
+}
+.create-acc-navlink {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--font-color);
+}
+.create-acc-navlink:hover {
+  color: var(--hover-pink);
+}

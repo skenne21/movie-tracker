@@ -1,52 +1,103 @@
 .movie {
+  color: var(--font-color);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
   position: relative;
   vertical-align: top;
   width: 400px;
   height: 200px;
   background-color: var(--card-bg);
-  border: 3px solid gray;
+  border: 3px solid var(--card-border);
   border-radius: 30px;
   margin: 5px;
   overflow-y: hidden;
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 10px 20px;
 }
 .movie p {
   width: 80%;
   margin: 4px auto;
 }
-#title {
+.title-container {
   display: block;
+  /* overflow-x: auto; */
+  overflow: hidden;
+  height: 40px;
+  margin: auto;
+  width: 295px;
+
+/* To make the width of the container exact. */
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.title {
+  color: #d0d0d0;
+  font-family: 'Vesper Libre', serif;
+  font-size: 24px;
+  display: block;
+  height: 100%;
   margin: 0;
+  text-align: center;
+  left: 0%;
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  left: 0%;
+
+  transition: left 6s, width 6s;
+}
+.title-container:hover div {
+  left: -100%;
+  width: 200%;
+}
+.card-category-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
 }
 .movie-styling {
   display: flex;
-  height: 100%;
+  height: 155px;
+  line-height: 20px;
+  width: 90%;
+  margin: auto;
 }
 
 #image {
+  border-radius: 15px;
   display: inline-flex;
-  height: 200px;
-  /* width: 185px; */
+  height: 100%;
+  margin-right: 10px;
+}
+.movie-styling:hover {
+  animation-name: movie-styling;
+  animation-duration: 4s;
 }
 .movie-info-container {
   overflow-y: auto;
   height: 100%;
+  width: 80%;
+}
+.movie-info-container p {
+  margin: 0;
+  width: 100%;
 }
 .favorites {
-  background-color: var(--card-bg);
+  outline: none;
+  background: transparent;
   position: absolute;
   top: 10px;
   right: 25px;
   width: 50px;
-  height: 50px;
+  height: 30px;
   font-size: 3em;
   border-radius: 50%;
   border: none;
-  color: var(--fave-color);
+  color: var(--fave-btn);
 }
 
 #favs {
-  color: green;
+  color: var(--clicked-fave);
 }
 
 ::-webkit-scrollbar {
@@ -56,4 +107,7 @@
 ::-webkit-scrollbar-track {
     display: none;
 }
-
+@keyframes movie-styling {
+    0%  {top:0px;}
+    50%  {top:200px;}
+}

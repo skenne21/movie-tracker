@@ -1,0 +1,28 @@
+.header {
+  display: block;
+  height: 90px;
+  margin: 0 auto;
+  text-align: center;
+  width: 258px;
+}
+.home-link {
+  color: var(--main-title);
+  display: block;
+  height: 50px;
+  text-decoration: none;
+  font-family: 'Vesper Libre', serif;
+  font-size: 38px;
+}
+.fave-nav-link {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--font-color);
+}
+.fave-nav-link:hover {
+  text-decoration: none;
+  color: var(--hover-pink);
+}
+.clicked-fave-link {
+  color: var(--clicked-fave);
+}
