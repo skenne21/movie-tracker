@@ -1,4 +1,4 @@
-export const rawData = {
+  export const rawData = {
   results: [{
     adult:false,
     id:337167,
