@@ -1,10 +1,12 @@
 # Movie Tracker
 
-## Group: Kailin Cannon, Sabrina Kennedy, and Charles Yach
+## Group: [Kailin Cannon](https://github.com/Kc2693), [Sabrina Kennedy](https://github.com/skenne21), and [Charles Yach](https://github.com/CharlesY712)
 
 ## Description
 
 This project served as practice with using Redux-react, React, BrowserRouter, Async Await, and a PostgreSQL backend server. For this project we started with the 'create-react-app' boilerplate to make a NetFLIX like app that pulls in current movies from the moveDB api, keeps track of user information by posting to the backend, and lets the user store their favorite in both the redux store and PostgreSQL backend. Jest, Enzyme, and manual mock implementation were used to test the app along with PropTypes to validate props passed to each component.
+
+[original project specs](https://github.com/turingschool-examples/movie-tracker)
 
 ## Set Up
 
@@ -38,4 +40,5 @@ You can run the testing suite with `npm test`.
 Additional data is available for categories other than "currently playing". We would like to incorporate this into multiple pages on the site along with pulling up additional data for each individual movie. We would also like to make it an option to store a users login on page refresh. 
 
 ## Screenshot
+
 ![full page screenshot](./fullscreen.png)
